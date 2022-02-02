@@ -30,7 +30,7 @@
 #SBATCH --no-requeue
 
 #! Do not change:
-#SBATCH -p ampere
+#SBATCH -p pascal
 
 #! sbatch directives end here (put any additional directives above this line)
 
@@ -82,7 +82,7 @@ CMD="$application $options"
 
 virtualenv python3.8
 source python3.8/bin/activate
-pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch torchvision
 pip install parlai
 python /home/jw2055/rds/rds-gvdd-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/train.py
 
