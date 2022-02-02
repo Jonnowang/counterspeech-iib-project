@@ -115,6 +115,5 @@ DisplayModel.main(
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
     fromfile_datatype_extension=True,
     model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 
-    skip_generation=False,
     num_examples=10,
 )
