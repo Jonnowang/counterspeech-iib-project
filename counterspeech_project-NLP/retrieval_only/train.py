@@ -43,7 +43,7 @@ DisplayData.main(task="gab")
 DisplayModel.main(
     task='gab',
     model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model',
-    num_examples=2,
+    num_examples=10,
 )
 
 TrainModel.main(
@@ -83,4 +83,11 @@ TrainModel.main(
     
     # depend on your gpu. If you have a V100, this is good
     batchsize=256, eval_batchsize=10, fp16=True, fp16_impl='mem_efficient',
+)
+
+DisplayModel.main(
+    task='gab', 
+    model_file=f'{__location__}/from_pretrained_retrieval/model', 
+    skip_generation=False,
+    num_examples=10,
 )
