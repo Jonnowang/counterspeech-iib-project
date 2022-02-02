@@ -112,7 +112,7 @@ class MyTeacher(DialogTeacher):
 
 DisplayModel.main(
     task="gab",
+    fp16=True,
     model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 
     num_examples=10,
-    fp16=True,
 )
