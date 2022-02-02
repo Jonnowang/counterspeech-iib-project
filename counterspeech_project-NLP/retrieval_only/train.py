@@ -83,7 +83,7 @@ TrainModel.main(
     max_train_time=43200, validation_every_n_epochs=0.25, num_epochs=8.0,
     
     # depend on your gpu. If you have a V100, this is good
-    batchsize=256, eval_batchsize=10, fp16=True, fp16_impl='mem_efficient',
+    batchsize=256, eval_batchsize=10, fp16=True,
 )
 
 DisplayModel.main(
