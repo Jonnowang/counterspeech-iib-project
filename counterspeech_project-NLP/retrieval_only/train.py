@@ -7,6 +7,22 @@ from parlai.scripts.display_model import DisplayModel
 from parlai.core.teachers import register_teacher, DialogTeacher
 
 __location__ = os.getcwd()
+# with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_query.txt") as fq:
+#     queries = fq.readlines()
+# with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_response.txt") as fr:
+#     responses = fr.readlines()
+
+# for query, response in zip(queries[:7000], responses[:7000]):
+#     with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_train.txt", 'a') as f:
+#         f.write(f"text:{query.rstrip()}\tlabels:{response.rstrip()}\tepisode_done:{True}\n")
+
+# for query, response in zip(queries[7000:9000], responses[7000:9000]):
+#     with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_valid.txt", 'a') as f:
+#         f.write(f"text:{query.rstrip()}\tlabels:{response.rstrip()}\tepisode_done:{True}\n")
+
+# for query, response in zip(queries[9000:], responses[9000:]):
+#     with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt", 'a') as f:
+#         f.write(f"text:{query.rstrip()}\tlabels:{response.rstrip()}\tepisode_done:{True}\n")
 
 @register_teacher("gab")
 class MyTeacher(DialogTeacher):
@@ -38,10 +54,16 @@ class MyTeacher(DialogTeacher):
         for query, response in zip(queries, responses):
             yield (query, response), True
         
-DisplayData.main(task="gab")
+DisplayData.main(
+    task="fromfile:parlaiformat",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
+    fromfile_datatype_extension=True,
+)
 
 DisplayModel.main(
-    task='gab',
+    task="fromfile:parlaiformat",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
+    fromfile_datatype_extension=True,
     model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model',
     num_examples=10,
     eval_candidates='batch',
@@ -49,7 +71,9 @@ DisplayModel.main(
 
 TrainModel.main(
     # similar to before
-    task='gab', 
+    task="fromfile:parlaiformat",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
+    fromfile_datatype_extension=True,
     model='transformer/polyencoder',
     model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model',
     
@@ -83,11 +107,13 @@ TrainModel.main(
     max_train_time=43200, validation_every_n_epochs=0.25, num_epochs=8.0,
     
     # depend on your gpu. If you have a V100, this is good
-    batchsize=256, eval_batchsize=10, fp16=True,
+    batchsize=32, eval_batchsize=10, fp16=True,
 )
 
 DisplayModel.main(
-    task='gab', 
+    task="fromfile:parlaiformat",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
+    fromfile_datatype_extension=True,
     model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 
     skip_generation=False,
     num_examples=10,
