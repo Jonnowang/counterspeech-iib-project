@@ -69,7 +69,7 @@ TrainModel.main(
     activation='gelu', embeddings_scale=False, n_segments=2,
     learn_embeddings=True, polyencoder_type='codes',
     poly_n_codes=64, poly_attention_type='basic',
-    dict_endtoken='__start__',
+    dict_endtoken='__start__', eval_candidates='batch',
     
     # some training arguments, specific to this fine-tuning
     # use a small learning rate with ADAM optimizer
