@@ -40,45 +40,47 @@ class MyTeacher(DialogTeacher):
         
 DisplayData.main(task="gab")
 
-# DisplayModel.main(
-#     task='gab',
-#     model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model',
-#     num_examples=2,
-# )
+DisplayModel.main(
+    task='gab',
+    model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model',
+    num_examples=2,
+)
 
-# TrainModel.main(
-#     # similar to before
-#     task='empathetic_dialogues', 
-#     model='transformer/generator',
-#     model_file='from_pretrained/model',
+TrainModel.main(
+    # similar to before
+    task='gab', 
+    model='transformer/polyencoder',
+    model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model',
     
-#     # initialize with a pretrained model
-#     init_model='zoo:tutorial_transformer_generator/model',
+    # initialize with a pretrained model
+    init_model='zoo:pretrained_transformers/poly_model_huge_reddit/model',
     
-#     # arguments we get from the pretrained model.
-#     # Unfortunately, these must be looked up separately for each model.
-#     n_heads=16, n_layers=8, n_positions=512, text_truncate=512,
-#     label_truncate=128, ffn_size=2048, embedding_size=512,
-#     activation='gelu', variant='xlm',
-#     dict_lower=True, dict_tokenizer='bpe',
-#     dict_file='zoo:tutorial_transformer_generator/model.dict',
-#     learn_positional_embeddings=True,
+    # arguments we get from the pretrained model.
+    # Unfortunately, these must be looked up separately for each model.
+    lr_scheduler_patience=0, lr_scheduler_decay=0.4,
+    data_parallel=True, history_size=20, label_truncate=72,
+    text_truncate=360, veps=0.5, vme=8000,
+    save_after_valid=True, log_every_n_secs=20, candidates='batch',
+    dict_tokenizer='bpe', dict_lower=True,
+    variant='xlm', reduction_type='mean', share_encoders=False,
+    learn_positional_embeddings=True, n_layers=12, n_heads=12,
+    ffn_size=3072, attention_dropout=0.1, relu_dropout=0.0,
+    dropout=0.1, n_positions=1024, embedding_size=768,
+    activation='gelu', embeddings_scale=False, n_segments=2,
+    learn_embeddings=True, polyencoder_type='codes',
+    poly_n_codes=64, poly_attention_type='basic',
+    dict_endtoken='__start__',
     
-#     # some training arguments, specific to this fine-tuning
-#     # use a small learning rate with ADAM optimizer
-#     lr=1e-5, optimizer='adam',
-#     warmup_updates=100,
-#     # early stopping on perplexity
-#     validation_metric='ppl',
-#     # train at most 10 minutes, and validate every 0.25 epochs
-#     max_train_time=600, validation_every_n_epochs=0.25,
+    # some training arguments, specific to this fine-tuning
+    # use a small learning rate with ADAM optimizer
+    lr=5e-5, optimizer='adamax',
+    warmup_updates=100, output_scaling=0.06,
+    # early stopping on perplexity
+    validation_metric='accuracy',
+    validation_metric_mode='max',
+    # train at most 10 minutes, and validate every 0.25 epochs
+    max_train_time=43200, validation_every_n_epochs=0.25, num_epochs=8.0,
     
-#     # depend on your gpu. If you have a V100, this is good
-#     batchsize=12, fp16=True, fp16_impl='mem_efficient',
-    
-#     # speeds up validation
-#     skip_generation=True,
-    
-#     # helps us cram more examples into our gpu at a time
-#     dynamic_batching='full',
-# )
+    # depend on your gpu. If you have a V100, this is good
+    batchsize=256, eval_batchsize=10, fp16=True, fp16_impl='mem_efficient',
+)
