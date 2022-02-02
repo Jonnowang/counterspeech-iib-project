@@ -30,9 +30,9 @@ class MyTeacher(DialogTeacher):
         # setup_data should yield tuples of ((text, label), new_episode)
         # That is ((str, str), bool)
         
-        with open(f"{__location__}/data/gab_query.txt") as fq:
+        with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_query.txt") as fq:
             queries = fq.readlines()
-        with open(f"{__location__}/data/gab_response.txt") as fr:
+        with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_response.txt") as fr:
             responses = fr.readlines()
         
         for query, response in zip(queries, responses):
@@ -50,7 +50,7 @@ TrainModel.main(
     # similar to before
     task='gab', 
     model='transformer/polyencoder',
-    model_file=f'{__location__}/from_pretrained_retrieval/model',
+    model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model',
     
     # initialize with a pretrained model
     init_model='zoo:pretrained_transformers/poly_model_huge_reddit/model',
@@ -87,7 +87,7 @@ TrainModel.main(
 
 DisplayModel.main(
     task='gab', 
-    model_file=f'{__location__}/from_pretrained_retrieval/model', 
+    model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 
     skip_generation=False,
     num_examples=10,
 )
