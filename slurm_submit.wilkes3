@@ -53,8 +53,6 @@ module load rhel7/default-gpu              # REQUIRED - loads the basic environm
 
 #! Insert additional module load commands after this line if needed:
 module load python/3.8
-module load cuda/11.1
-module load cudnn/8.0_cuda-11.1
 
 #! Full path to application executable: 
 application=""
@@ -82,7 +80,7 @@ CMD="$application $options"
 
 virtualenv python3.8
 source python3.8/bin/activate
-pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 pip install parlai
 python /home/jw2055/rds/rds-gvdd-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/train.py
 
