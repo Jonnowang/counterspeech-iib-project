@@ -114,8 +114,7 @@ class MyTeacher(DialogTeacher):
 
 EvalModel.main(
     task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
-    fromfile_datatype_extension=True, 
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
     model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 
 )
 
