@@ -4,6 +4,7 @@ from parlai.scripts.interactive import Interactive
 from parlai.scripts.display_data import DisplayData
 from parlai.scripts.train_model import TrainModel
 from parlai.scripts.display_model import DisplayModel
+from parlai.scripts.eval_model import EvalModel
 from parlai.core.teachers import register_teacher, DialogTeacher
 
 __location__ = os.getcwd()
@@ -110,6 +111,13 @@ class MyTeacher(DialogTeacher):
 #     # depend on your gpu. If you have a V100, this is good
 #     batchsize=32, eval_batchsize=10, fp16=True,
 # )
+
+EvalModel.main(
+    task="fromfile:parlaiformat",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
+    fromfile_datatype_extension=True, 
+    model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 
+)
 
 DisplayModel.main(
     task="fromfile:parlaiformat",
