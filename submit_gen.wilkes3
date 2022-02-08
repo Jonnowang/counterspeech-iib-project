@@ -82,6 +82,7 @@ virtualenv python3.8
 source python3.8/bin/activate
 # pip3 install torch==1.10.2+cu113 torchvision==0.11.3+cu113 torchaudio==0.10.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 # pip install parlai
+pip install transformers
 python /home/jw2055/rds/rds-gvdd-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/train.py
 
 ###############################################################
