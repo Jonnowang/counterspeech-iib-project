@@ -43,34 +43,50 @@ DisplayModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
     fromfile_datatype_extension=True,
-    model_file='zoo:blenderbot2/blenderbot2_3B/model',
+    model_file='zoo:blender/blender_3B/model',
     num_examples=10,
     eval_candidates='batch',
 )
+
+# --multitask-weights 1,3,3,3 -veps 0.25 --attention-dropout 0.0
+# --model transformer/generator --embedding-size 2560 --ffn-size 10240 --variant prelayernorm 
+# --n-heads 32 --n-positions 128 --n-encoder-layers 2 --n-decoder-layers 24 --history-add-global-end-token end 
+# --delimiter '  ' --dict-tokenizer bytelevelbpe  --dropout 0.1
+# --label-truncate 128 --log_every_n_secs 10
+# --lr-scheduler reduceonplateau --lr-scheduler-patience 3 --relu-dropout 0.0 --activation gelu 
+# --model-parallel true --save-after-valid True --text-truncate 128 --truncate 128 --warmup_updates 100 
+# --fp16-impl mem_efficient --update-freq 2 --gradient-clip 0.1 --skip-generation True -vp 10 -vmt ppl -vmm min 
+# --model-file /tmp/test_train_27B
 
 TrainModel.main(
     # similar to before
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
     fromfile_datatype_extension=True,
-    model='projects.blenderbot2.agents.blenderbot2:BlenderBot2FidAgent',
+    model='transformer/generator',
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model',
     
     # initialize with a pretrained model
-    init_model='zoo:blenderbot2/blenderbot2_3B/model',
-    dict_file='zoo:blenderbot2/blenderbot2_3B/model.dict',
+    init_model='zoo:blender/blender_3B/model',
+    dict_file='zoo:blender/reddit_3B/model.dict',
     
     # arguments we get from the pretrained model.
     # Unfortunately, these must be looked up separately for each model.
-    gpu=-1, data_parallel=False, gradient_clip=0.1,
-    adam_eps=1e-08, nesterov=True, nus=[0.7],
-    betas=[0.9, 0.999], update_freq=1,
-    no_cuda=False,
+    multitask_weights=[1,3,3,3], veps=0.25, attention_dropout=0.0,
+    embedding_size=2560, ffn_size=10240, variant='prelayernorm',
+    n_heads=32, n_positions=128, n_encoder_layers=2, n_decoder_layers=24,
+    history_add_global_end_token='end', delimiter='  ', dict_tokenizer='bytelevelbpe',
+    dropout=0.1, label_trucate=128, log_every_n_secs=10,
+    lr_scheduler="reduceonplateau", lr_scheduler_patience=3,
+    relu_dropout=0.0, activation='gelu', model_parallel=True,
+    save_after_valid=True, text_truncate=128, truncate=128,
+    update_freq=2, gradient_clip=0.1, skip_generation=True, vp=10,
+    vmt='ppl', vmm='min',
 
     # some training arguments, specific to this fine-tuning
     # use a small learning rate with ADAM optimizer
-    lr=5e-5, optimizer='mem_eff_adam',
-    warmup_updates=100, warmup_rate=0.0001,
+    lr=7e-06, optimizer='adam',
+    warmup_updates=100,
     # early stopping on perplexity
     validation_metric='accuracy',
     validation_metric_mode='max',
@@ -85,7 +101,7 @@ TrainModel.main(
 EvalModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
-    model_file='zoo:blenderbot2/blenderbot2_3B/model',
+    model_file='zoo:blender/blender_3B/model',
     eval_candidates='batch',
 )
 
@@ -93,7 +109,7 @@ DisplayModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
     force_fp16_tokens=True,
-    model_file='zoo:blenderbot2/blenderbot2_3B/model', 
+    model_file='zoo:blender/blender_3B/model', 
     num_examples=10,
     eval_candidates='batch',
 )
