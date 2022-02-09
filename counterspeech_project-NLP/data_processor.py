@@ -28,6 +28,20 @@ for responses in gab_dataset['response']:
             with open(f"{__location__}/counter_speech_cand.txt", 'a') as f:
                 f.write(f"{response.strip()}\n")
 
+for responses in reddit_dataset['response']:
+    try:
+        responses = ast.literal_eval(responses)
+    except:
+        responses = []
+    for response in responses:
+        try: 
+            if existing[response] == 1:
+                pass
+        except KeyError:
+            existing[response] = 1
+            with open(f"{__location__}/counter_speech_cand.txt", 'a') as f:
+                f.write(f"{response.strip()}\n")
+
 # i = 0
 # query_file = list()
 # response_file = list()
