@@ -45,7 +45,6 @@ DisplayModel.main(
     fromfile_datatype_extension=True,
     model_file='zoo:blender/reddit_3B/model',
     num_examples=10,
-    eval_candidates='batch',
 )
 
 # --multitask-weights 1,3,3,3 -veps 0.25 --attention-dropout 0.0
@@ -102,7 +101,6 @@ EvalModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
     model_file='zoo:blender/reddit_3B/model',
-    eval_candidates='batch',
 )
 
 DisplayModel.main(
@@ -111,7 +109,6 @@ DisplayModel.main(
     force_fp16_tokens=True,
     model_file='zoo:blender/reddit_3B/model', 
     num_examples=10,
-    eval_candidates='batch',
 )
 
 # Evaluate Fine Tuned Model
