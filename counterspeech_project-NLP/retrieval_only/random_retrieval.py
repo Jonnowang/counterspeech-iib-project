@@ -2,10 +2,8 @@ import os
 
 from parlai.scripts.interactive import Interactive
 from parlai.scripts.display_data import DisplayData
-from parlai.scripts.train_model import TrainModel
 from parlai.scripts.display_model import DisplayModel
 from parlai.scripts.eval_model import EvalModel
-from parlai.core.teachers import register_teacher, DialogTeacher
 
 __location__ = os.getcwd()
 

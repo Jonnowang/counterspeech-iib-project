@@ -43,7 +43,7 @@ DisplayModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
     fromfile_datatype_extension=True,
-    model_file='zoo:blender/blender_3B/model',
+    model_file='zoo:blender/reddit_3B/model',
     num_examples=10,
     eval_candidates='batch',
 )
@@ -67,7 +67,7 @@ TrainModel.main(
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model',
     
     # initialize with a pretrained model
-    init_model='zoo:blender/blender_3B/model',
+    init_model='zoo:blender/reddit_3B/model',
     dict_file='zoo:blender/reddit_3B/model.dict',
     
     # arguments we get from the pretrained model.
@@ -101,7 +101,7 @@ TrainModel.main(
 EvalModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
-    model_file='zoo:blender/blender_3B/model',
+    model_file='zoo:blender/reddit_3B/model',
     eval_candidates='batch',
 )
 
@@ -109,7 +109,7 @@ DisplayModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
     force_fp16_tokens=True,
-    model_file='zoo:blender/blender_3B/model', 
+    model_file='zoo:blender/reddit_3B/model', 
     num_examples=10,
     eval_candidates='batch',
 )
