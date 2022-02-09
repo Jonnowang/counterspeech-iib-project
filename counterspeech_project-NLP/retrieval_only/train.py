@@ -142,4 +142,5 @@ DisplayModel.main(
     num_examples=10,
     eval_candidates='fixed',
     fixed_candidates_path=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt",
+    encode_candidate_vecs=True,
 )
