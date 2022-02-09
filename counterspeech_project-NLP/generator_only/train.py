@@ -108,6 +108,7 @@ DisplayModel.main(
     force_fp16_tokens=True,
     model_file='zoo:blender/reddit_3B/model', 
     num_examples=10,
+    skip_generation=False,
 )
 
 # Evaluate Fine Tuned Model
@@ -123,4 +124,5 @@ DisplayModel.main(
     force_fp16_tokens=True,
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model', 
     num_examples=10,
+    skip_generation=False,
 )
