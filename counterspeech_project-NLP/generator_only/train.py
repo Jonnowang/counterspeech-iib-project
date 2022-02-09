@@ -3,6 +3,7 @@ import os
 from parlai.scripts.interactive import Interactive
 from parlai.scripts.display_data import DisplayData
 from parlai.scripts.train_model import TrainModel
+from parlai.scripts.multiprocessing_train import MultiProcessTrain
 from parlai.scripts.display_model import DisplayModel
 from parlai.scripts.eval_model import EvalModel
 from parlai.core.teachers import register_teacher, DialogTeacher
@@ -57,7 +58,7 @@ DisplayModel.main(
 # --fp16-impl mem_efficient --update-freq 2 --gradient-clip 0.1 --skip-generation True -vp 10 -vmt ppl -vmm min 
 # --model-file /tmp/test_train_27B
 
-TrainModel.main(
+MultiProcessTrain.main(
     # similar to before
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
