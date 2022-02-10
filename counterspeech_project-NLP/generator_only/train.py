@@ -74,7 +74,7 @@ MultiProcessTrain.main(
     embedding_size=2560, ffn_size=10240, variant='prelayernorm',
     n_heads=32, n_positions=128, n_encoder_layers=2, n_decoder_layers=24,
     history_add_global_end_token='end', delimiter='  ', dict_tokenizer='bytelevelbpe',
-    dropout=0.1, label_trucate=128, log_every_n_secs=10,
+    dropout=0.1, label_truncate=128, log_every_n_secs=10,
     lr_scheduler="reduceonplateau", lr_scheduler_patience=3,
     relu_dropout=0.0, activation='gelu', model_parallel=True,
     save_after_valid=True, text_truncate=128, truncate=128,
