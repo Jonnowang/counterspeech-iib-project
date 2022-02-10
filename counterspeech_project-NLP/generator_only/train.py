@@ -86,7 +86,7 @@ TrainModel.main(
     lr=7e-06, optimizer='adam',
     warmup_updates=100,
     # early stopping on perplexity
-    validation_metric='accuracy',
+    validation_metric='ppl',
     validation_metric_mode='max',
     # train at most 10 minutes, and validate every 0.25 epochs
     max_train_time=43200, validation_every_n_epochs=0.25, num_epochs=8.0,

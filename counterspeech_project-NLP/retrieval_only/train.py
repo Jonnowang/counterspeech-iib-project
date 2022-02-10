@@ -94,7 +94,7 @@ TrainModel.main(
     learn_embeddings=True, polyencoder_type='codes',
     poly_n_codes=64, poly_attention_type='basic',
     dict_endtoken='__start__', eval_candidates='fixed',
-    encode_candidate_vecs=True,
+    encode_candidate_vecs=True, ignore_bad_candidates=True,
 
     # some training arguments, specific to this fine-tuning
     # use a small learning rate with ADAM optimizer
