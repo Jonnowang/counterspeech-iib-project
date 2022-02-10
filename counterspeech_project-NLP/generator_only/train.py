@@ -2,8 +2,8 @@ import os
 
 from parlai.scripts.display_data import DisplayData
 from parlai.scripts.display_model import DisplayModel
-from parlai.scripts.multiprocessing_train import MultiProcessTrain
-from parlai.scripts.multiprocessing_eval import MultiProcessEval
+from parlai.scripts.train_model import TrainModel
+from parlai.scripts.eval_model import EvalModel
 from parlai.core.teachers import register_teacher, DialogTeacher
 
 __location__ = os.getcwd()
@@ -56,7 +56,7 @@ DisplayModel.main(
 # --fp16-impl mem_efficient --update-freq 2 --gradient-clip 0.1 --skip-generation True -vp 10 -vmt ppl -vmm min 
 # --model-file /tmp/test_train_27B
 
-MultiProcessTrain.main(
+TrainModel.main(
     # similar to before
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
@@ -96,7 +96,7 @@ MultiProcessTrain.main(
 )
 
 # Evaluate Base Model
-MultiProcessEval.main(
+EvalModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
     model_file='zoo:blender/reddit_3B/model',
@@ -112,7 +112,7 @@ DisplayModel.main(
 )
 
 # Evaluate Fine Tuned Model
-MultiProcessEval.main(
+EvalModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model', 

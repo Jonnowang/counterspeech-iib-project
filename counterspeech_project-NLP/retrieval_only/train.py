@@ -3,8 +3,8 @@ import os
 
 from parlai.scripts.display_data import DisplayData
 from parlai.scripts.display_model import DisplayModel
-from parlai.scripts.multiprocessing_train import MultiProcessTrain
-from parlai.scripts.multiprocessing_eval import MultiProcessEval
+from parlai.scripts.train_model import TrainModel
+from parlai.scripts.eval_model import EvalModel
 from parlai.core.teachers import register_teacher, DialogTeacher
 
 __location__ = os.getcwd()
@@ -66,7 +66,7 @@ DisplayModel.main(
     encode_candidate_vecs=True,
 )
 
-MultiProcessTrain.main(
+TrainModel.main(
     # similar to before
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
@@ -110,7 +110,7 @@ MultiProcessTrain.main(
     batchsize=32, eval_batchsize=10, fp16=True,
 )
 
-MultiProcessEval.main(
+EvalModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
     model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model',
@@ -129,7 +129,7 @@ DisplayModel.main(
     encode_candidate_vecs=True,
 )
 
-MultiProcessEval.main(
+EvalModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
     model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model',
