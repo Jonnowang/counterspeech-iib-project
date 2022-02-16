@@ -84,7 +84,7 @@ TrainModel.main(
     lr_scheduler_patience=0, lr_scheduler_decay=0.4,
     data_parallel=True, history_size=20, label_truncate=72,
     text_truncate=360, veps=0.5, vme=8000,
-    save_after_valid=True, log_every_n_secs=20, candidates='batch',
+    save_after_valid=True, log_every_n_secs=20, candidates='fixed',
     dict_tokenizer='bpe', dict_lower=True,
     variant='xlm', reduction_type='mean', share_encoders=False,
     learn_positional_embeddings=True, n_layers=12, n_heads=12,
