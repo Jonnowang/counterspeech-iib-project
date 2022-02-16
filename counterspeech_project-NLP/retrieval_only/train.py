@@ -77,7 +77,7 @@ TrainModel.main(
     
     # initialize with a pretrained model
     init_model='zoo:pretrained_transformers/poly_model_huge_reddit/model',
-    dict_file='zoo:pretrained_transformers/poly_model_huge_reddit/model.dict',
+    dict_file=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab.dict",
     
     # arguments we get from the pretrained model.
     # Unfortunately, these must be looked up separately for each model.
