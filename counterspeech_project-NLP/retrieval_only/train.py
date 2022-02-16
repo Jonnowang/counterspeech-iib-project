@@ -84,7 +84,7 @@ TrainModel.main(
     lr_scheduler_patience=0, lr_scheduler_decay=0.4,
     data_parallel=True, history_size=20, label_truncate=72,
     text_truncate=360, veps=0.5, vme=8000,
-    save_after_valid=True, log_every_n_secs=20, candidates='fixed',
+    save_after_valid=True, log_every_n_secs=20, candidates='batch',
     dict_tokenizer='bpe', dict_lower=True,
     variant='xlm', reduction_type='mean', share_encoders=False,
     learn_positional_embeddings=True, n_layers=12, n_heads=12,
@@ -93,7 +93,7 @@ TrainModel.main(
     activation='gelu', embeddings_scale=False, n_segments=2,
     learn_embeddings=True, polyencoder_type='codes',
     poly_n_codes=64, poly_attention_type='basic',
-    dict_endtoken='__start__', eval_candidates='fixed',
+    dict_endtoken='__start__', eval_candidates='batch',
     encode_candidate_vecs=True, ignore_bad_candidates=True,
 
     # some training arguments, specific to this fine-tuning
