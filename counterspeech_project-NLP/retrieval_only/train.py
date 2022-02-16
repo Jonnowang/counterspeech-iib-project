@@ -55,17 +55,6 @@ class MyTeacher(DialogTeacher):
         for query, response in zip(queries, responses):
             yield (query, response), True
         
-DisplayModel.main(
-    task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data",
-    fromfile_datatype_extension=True,
-    model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model',
-    num_examples=10,
-    eval_candidates='fixed',
-    fixed_candidates_path=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt",
-    encode_candidate_vecs=True,
-)
-
 TrainModel.main(
     # similar to before
     task="fromfile:parlaiformat",
@@ -110,14 +99,14 @@ TrainModel.main(
     batchsize=32, eval_batchsize=10, fp16=True,
 )
 
-EvalModel.main(
-    task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
-    model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model',
-    eval_candidates='fixed',
-    fixed_candidates_path=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt",
-    encode_candidate_vecs=True,
-)
+# EvalModel.main(
+#     task="fromfile:parlaiformat",
+#     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
+#     model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model',
+#     eval_candidates='fixed',
+#     fixed_candidates_path=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt",
+#     encode_candidate_vecs=True,
+# )
 
 DisplayModel.main(
     task="fromfile:parlaiformat",
@@ -125,8 +114,6 @@ DisplayModel.main(
     model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model', 
     num_examples=10,
     eval_candidates='fixed',
-    fixed_candidates_path=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt",
-    encode_candidate_vecs=True,
 )
 
 EvalModel.main(
