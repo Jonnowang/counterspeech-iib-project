@@ -108,13 +108,13 @@ TrainModel.main(
 #     encode_candidate_vecs=True,
 # )
 
-DisplayModel.main(
-    task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
-    model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model', 
-    num_examples=10,
-    eval_candidates='fixed',
-)
+# DisplayModel.main(
+#     task="fromfile:parlaiformat",
+#     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
+#     model_file='zoo:pretrained_transformers/poly_model_huge_reddit/model', 
+#     num_examples=10,
+#     eval_candidates='fixed',
+# )
 
 EvalModel.main(
     task="fromfile:parlaiformat",
