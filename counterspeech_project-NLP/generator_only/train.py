@@ -94,11 +94,11 @@ class MyTeacher(DialogTeacher):
 # )
 
 # Evaluate Fine Tuned Model
-EvalModel.main(
-    task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_trial.txt",
-    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model', 
-)
+# EvalModel.main(
+#     task="fromfile:parlaiformat",
+#     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_trial.txt",
+#     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model', 
+# )
 
 DisplayModel.main(
     task="fromfile:parlaiformat",
@@ -107,4 +107,7 @@ DisplayModel.main(
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model', 
     num_examples=20,
     skip_generation=False,
+    inference="nucleus",
 )
+
+# print(DisplayModel.help(model='transformer/generator'))
