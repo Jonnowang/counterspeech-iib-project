@@ -105,6 +105,6 @@ DisplayModel.main(
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_trial.txt",
     force_fp16_tokens=True,
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model', 
-    num_examples=28,
+    num_examples=20,
     skip_generation=False,
 )

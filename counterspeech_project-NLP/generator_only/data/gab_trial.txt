@@ -1,28 +1,20 @@
 text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
-text:He is a nigger	labels:Please note that the "n word" as used here is prohibited.	episode_done:True
-text:you're fucking retarded	labels:"Retarded" as used pejoratively here offends the mentally disabled and their families	episode_done:True
-text:He's a nigger (in case you didnt know) who's greatest achievement as a nigger is bagging a mudshark. Funny how niggers always define their self worth by their ability to compete with Whitey on some miniscule level.	labels:Do not use hateful racial words in your posts	episode_done:True
-text:Dear cucks! Why public schools don’t work, some people graduate them and even write books but never learn that anecdotal evidence isn’t really evidence. Pointing at an outlier and pretending it’s the median is lying.	labels:Avoid using sexual slurs in response to posts on this feed.	episode_done:True
-text:(sexist) What a cunt	labels:Avoid using inappropriate language when responding to posts.	episode_done:True
-text:(racist) 2/  It should be somewhat obvious this is parallel to Arab societies and the causes for the terrorism is similar.  Like... who the fuck wants to live in a society like that? It's really nigger tier shit.	labels:Do not use racial slurs when voicing your opinions.	episode_done:True
-text:(sexist) Yes. We're just intimidated by strong, independent wimminz. She totally doesn't act like an insufferable cunt all day on social media or anything.	labels:Stop calling women names.	episode_done:True
-text:(racist) remember, the only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp	labels:stop with the negative racial slurs.	episode_done:True
-text:(sexist) Bye globalist cunt	labels:stop calling women names.	episode_done:True
-text:dyke	labels:Stop negative sexual profiling.	episode_done:True
-text:If this little spic hasn't been caged and thrown over the Rio Grande, Trump is not doing his job	labels:Stop calling people names and advocating violence.	episode_done:True
-text:Yet another retard beyond any help with her mental illness & illusions. What's the odds she's one ugly fat stinking blimp? She obviously has no brain capability to understand the legal principle of innocent until proven guilty. Another democRAT	labels:Avoid using racially driven language. Refrain from using religious names in a derogatory sense.  AVoid using strong and offensive wording.	episode_done:True
-text:1 									Jesus, retard. You don't have the slightest clue why the linked article was written. Of course you can't hit targets using magic skills - you need to know how far away the guy is. That's why the average numbers used to estimate the distance & the bullet drop are given to you. Just go away dumbass.	labels:Refrain from using the word "retarded" due to it's offensive nature.   Do not use the word "jesus" inappropriately.	episode_done:True
-text:So trump got payed 200k a year from age three. I'm not a faggot so I won't cry about it.   However if you bought something today at 200k it's roughly 18k back then.   Ppl who pay money, but don't get money should be pissed at the stewards of our econs.   So there's nothing to the rich get richer meme? As to motivation.	labels:Avoid using the word 'poor" in a discriminatory context.  Avoid using the word "faggot", it offends certain demographics.	episode_done:True
-text:(homophobic) @jack @Twitter @TwitterSupport    The New & Improved Faggot Jack    SJW ◀️ SJWNPC	labels:Refrain from using the word "faggot", which is insulting to individuals with homosexual preferences.	episode_done:True
-text:(homophobic) 10/ Semi-related, that's the same with 2nd Amendment absolutists.  Like Jim Losi seriously and literally says that there should be no restrictions on guns, including for criminals and the mentally ill.  He told me that directly.  If that's your position and you think you're a "super patriot," you're actually just a retard.	labels:Avoid using terms that are derogatory towards homosexuality.	episode_done:True
-text:(sexist) No mother fucker. The 'Chosen People' isn't selective DNA based on Creed BUT But but...   IT'S about, right here, right now ... for everyone, from everywhere, living in these END TIMES & more importantly based on our individual Choice/Direction/Belief - Got it motherfucker?   God is real therefore he is looking for his REAL people. Not some preachy cunt like you - https://youtu.be/5cjqFHTjVFQ	labels:Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.	episode_done:True
-text:(hate) Danny Trejo is the most annoying spic ever. Until Elizabeth Warrens DNA teas came back showing she's a spic. Spicahontas.	labels:Keep your opinion constructive, no need for hate labels.	episode_done:True
-text:(sexist) I still like their old stuff. Before Bozo became the cunt he is now.	labels:Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.	episode_done:True
-text:@jack @Twitter @TwitterSupport    The New & Improved Faggot Jack    SJW ◀️ SJWNPC	labels:Refrain from using the word "faggot", which is insulting to individuals with homosexual preferences.	episode_done:True
-text:10/ Semi-related, that's the same with 2nd Amendment absolutists.  Like Jim Losi seriously and literally says that there should be no restrictions on guns, including for criminals and the mentally ill.  He told me that directly.  If that's your position and you think you're a "super patriot," you're actually just a retard.	labels:Avoid using terms that are derogatory towards homosexuality.	episode_done:True
-text:No mother fucker. The 'Chosen People' isn't selective DNA based on Creed BUT But but...   IT'S about, right here, right now ... for everyone, from everywhere, living in these END TIMES & more importantly based on our individual Choice/Direction/Belief - Got it motherfucker?   God is real therefore he is looking for his REAL people. Not some preachy cunt like you - https://youtu.be/5cjqFHTjVFQ	labels:Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.	episode_done:True
-text:Danny Trejo is the most annoying spic ever. Until Elizabeth Warrens DNA teas came back showing she's a spic. Spicahontas.	labels:Keep your opinion constructive, no need for hate labels.	episode_done:True
-text:I still like their old stuff. Before Bozo became the cunt he is now.	labels:Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.	episode_done:True
-text:I really enjoy drinking coffee and tea.	labels:Yes! My favourite is earl grey.	episode_done:True
-text:Have you seen the new spiderman movie? 	labels:No I haven't is it any good?	episode_done:True
-text:When are you going to go to the park today?	labels:No it's really rainy today.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
+text:faggot	labels:The term "faggot" is offensive to many people and so should not be used here.	episode_done:True
