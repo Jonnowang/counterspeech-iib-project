@@ -9,38 +9,54 @@ import pandas as pd
 import regex as re
 
 __location__ = os.getcwd()
-reddit_dataset = pd.read_csv(f"{__location__}/counterspeech_project-NLP/data/reddit.csv")
-gab_dataset = pd.read_csv(f"{__location__}/counterspeech_project-NLP/data/gab.csv")
+with open(f"{__location__}/counterspeech_project-NLP/data/CONAN.json",'r') as f:
+    conan_data = json.loads(f.read())
+conan_df = pd.json_normalize(conan_data, record_path =['conan'])
+counters = []
+for lang, hate, counter, typecn in zip(conan_df["cn_id"], conan_df['hateSpeech'], conan_df['counterSpeech'], conan_df['cnType']):
+    if lang[:2] != 'EN':
+        continue
+    if typecn == 'humor':
+        if counter not in counters:
+            counters.append((hate, counter))
+    # with open(f"{__location__}/conan_pairs.txt", 'a') as fw:
+    #     fw.write(f"{entry['hateSpeech'].strip()}\t{entry['counterSpeech'].strip()}\n")
+    # with open(f"{__location__}/conan_cands.txt", 'a') as fc:
+    #     fc.write(f"{entry['counterSpeech'].strip()}\n")
+print(counters)
 
-existing = dict()
+# reddit_dataset = pd.read_csv(f"{__location__}/counterspeech_project-NLP/data/reddit.csv")
+# gab_dataset = pd.read_csv(f"{__location__}/counterspeech_project-NLP/data/gab.csv")
 
-for responses in gab_dataset['response']:
-    try:
-        responses = ast.literal_eval(responses)
-    except:
-        responses = []
-    for response in responses:
-        try: 
-            if existing[response] == 1:
-                pass
-        except KeyError:
-            existing[response] = 1
-            with open(f"{__location__}/counter_speech_cand.txt", 'a') as f:
-                f.write(f"{response.strip()}\n")
+# existing = dict()
 
-for responses in reddit_dataset['response']:
-    try:
-        responses = ast.literal_eval(responses)
-    except:
-        responses = []
-    for response in responses:
-        try: 
-            if existing[response] == 1:
-                pass
-        except KeyError:
-            existing[response] = 1
-            with open(f"{__location__}/counter_speech_cand.txt", 'a') as f:
-                f.write(f"{response.strip()}\n")
+# for responses in gab_dataset['response']:
+#     try:
+#         responses = ast.literal_eval(responses)
+#     except:
+#         responses = []
+#     for response in responses:
+#         try: 
+#             if existing[response] == 1:
+#                 pass
+#         except KeyError:
+#             existing[response] = 1
+#             with open(f"{__location__}/counter_speech_cand.txt", 'a') as f:
+#                 f.write(f"{response.strip()}\n")
+
+# for responses in reddit_dataset['response']:
+#     try:
+#         responses = ast.literal_eval(responses)
+#     except:
+#         responses = []
+#     for response in responses:
+#         try: 
+#             if existing[response] == 1:
+#                 pass
+#         except KeyError:
+#             existing[response] = 1
+#             with open(f"{__location__}/counter_speech_cand.txt", 'a') as f:
+#                 f.write(f"{response.strip()}\n")
 
 # i = 0
 # query_file = list()
