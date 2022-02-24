@@ -107,7 +107,6 @@ DisplayModel.main(
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_trial.txt",
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model', 
     num_examples=20,
-    skip_generation=False,
     display_add_fields="beam_texts",
 )
 
