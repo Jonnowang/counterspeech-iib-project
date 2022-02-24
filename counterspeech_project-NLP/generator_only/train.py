@@ -76,7 +76,7 @@ TrainModel.main(
     # depend on your gpu. If you have a V100, this is good
     batchsize=32, eval_batchsize=10, fp16=True,
 
-    inference="nucleus",
+    beam_size=20, inference='beam',
 )
 
 # # Evaluate Base Model
