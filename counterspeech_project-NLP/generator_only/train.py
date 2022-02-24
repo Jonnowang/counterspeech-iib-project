@@ -105,6 +105,7 @@ class MyTeacher(DialogTeacher):
 DisplayModel.main(
     task="fromfile:parlaiformat",
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_trial.txt",
+    model='transformer/generator',
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model', 
     num_examples=20,
     display_add_fields="beam_texts",
