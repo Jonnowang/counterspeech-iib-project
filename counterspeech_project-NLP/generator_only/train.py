@@ -109,7 +109,7 @@ DisplayModel.main(
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model', 
     num_examples=20,
     skip_generation=False,
-    beam_size=20, inference='beam',
+    display_add_fields="beam_texts",
 )
 
 # print(DisplayModel.help(model='transformer/generator'))
