@@ -110,6 +110,7 @@ DisplayModel.main(
     num_examples=20,
     display_add_fields="beam_texts",
     skip_generation=False,
+    verbose=True,
 )
 
 # print(DisplayModel.help(model='transformer/generator'))
