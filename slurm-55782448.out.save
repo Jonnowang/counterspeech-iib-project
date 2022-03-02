@@ -1,0 +1,411 @@
+Loading rhel7/default-gpu
+  Loading requirement: dot slurm turbovnc/2.0.1 vgl/2.5.1/64 singularity/current
+    rhel7/global cuda/8.0 gcc-5.4.0-gcc-4.8.5-fis24gg
+    openmpi-1.10.7-gcc-5.4.0-jdc7f4f cmake/latest
+2022-02-24 16:04:06,780 WARNING  | Overriding opt["fromfile_datapath"] to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt (previously: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data)
+2022-02-24 16:04:06,781 WARNING  | Overriding opt["skip_generation"] to False (previously: True)
+2022-02-24 16:04:07,564 INFO     | Using CUDA
+2022-02-24 16:04:07,573 INFO     | loading dictionary from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model.dict
+2022-02-24 16:04:07,596 INFO     | num words = 8008
+2022-02-24 16:04:52,751 INFO     | Total parameters: 2,696,268,800 (2,695,613,440 trainable)
+2022-02-24 16:04:52,752 INFO     | Loading existing model params from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model
+2022-02-24 16:07:09,839 INFO     | creating task(s): fromfile:parlaiformat
+2022-02-24 16:07:09,863 WARNING  | You are using this fromfile data as a valid or test set without setting fromfile_datatype_extension to true. Please be aware this uses directly the file you indicated, make sure this is not the same as your training file.
+2022-02-24 16:07:09,863 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt
+2022-02-24 16:07:09,919 INFO     | Opt:
+2022-02-24 16:07:09,919 INFO     |     activation: gelu
+2022-02-24 16:07:09,920 INFO     |     adafactor_eps: '[1e-30, 0.001]'
+2022-02-24 16:07:09,920 INFO     |     adam_eps: 1e-08
+2022-02-24 16:07:09,920 INFO     |     add_p1_after_newln: False
+2022-02-24 16:07:09,920 INFO     |     aggregate_micro: False
+2022-02-24 16:07:09,920 INFO     |     allow_missing_init_opts: False
+2022-02-24 16:07:09,920 INFO     |     attention_dropout: 0.0
+2022-02-24 16:07:09,920 INFO     |     batchsize: 32
+2022-02-24 16:07:09,920 INFO     |     beam_block_full_context: True
+2022-02-24 16:07:09,920 INFO     |     beam_block_list_filename: None
+2022-02-24 16:07:09,920 INFO     |     beam_block_ngram: -1
+2022-02-24 16:07:09,920 INFO     |     beam_context_block_ngram: -1
+2022-02-24 16:07:09,920 INFO     |     beam_delay: 30
+2022-02-24 16:07:09,920 INFO     |     beam_length_penalty: 0.65
+2022-02-24 16:07:09,920 INFO     |     beam_min_length: 1
+2022-02-24 16:07:09,920 INFO     |     beam_size: 20
+2022-02-24 16:07:09,920 INFO     |     betas: '[0.9, 0.999]'
+2022-02-24 16:07:09,920 INFO     |     bpe_add_prefix_space: None
+2022-02-24 16:07:09,920 INFO     |     bpe_debug: False
+2022-02-24 16:07:09,920 INFO     |     bpe_dropout: None
+2022-02-24 16:07:09,920 INFO     |     bpe_merge: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model.dict-merges.txt
+2022-02-24 16:07:09,920 INFO     |     bpe_vocab: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model.dict-vocab.json
+2022-02-24 16:07:09,920 INFO     |     checkpoint_activations: False
+2022-02-24 16:07:09,920 INFO     |     compute_tokenized_bleu: False
+2022-02-24 16:07:09,920 INFO     |     datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data
+2022-02-24 16:07:09,920 INFO     |     datatype: train
+2022-02-24 16:07:09,920 INFO     |     delimiter: '  '
+2022-02-24 16:07:09,921 INFO     |     dict_class: parlai.core.dict:DictionaryAgent
+2022-02-24 16:07:09,921 INFO     |     dict_endtoken: __end__
+2022-02-24 16:07:09,921 INFO     |     dict_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model.dict
+2022-02-24 16:07:09,921 INFO     |     dict_include_test: False
+2022-02-24 16:07:09,921 INFO     |     dict_include_valid: False
+2022-02-24 16:07:09,921 INFO     |     dict_initpath: None
+2022-02-24 16:07:09,921 INFO     |     dict_language: english
+2022-02-24 16:07:09,921 INFO     |     dict_loaded: True
+2022-02-24 16:07:09,921 INFO     |     dict_lower: False
+2022-02-24 16:07:09,921 INFO     |     dict_max_ngram_size: -1
+2022-02-24 16:07:09,921 INFO     |     dict_maxexs: -1
+2022-02-24 16:07:09,921 INFO     |     dict_maxtokens: -1
+2022-02-24 16:07:09,921 INFO     |     dict_minfreq: 0
+2022-02-24 16:07:09,921 INFO     |     dict_nulltoken: __null__
+2022-02-24 16:07:09,921 INFO     |     dict_starttoken: __start__
+2022-02-24 16:07:09,921 INFO     |     dict_textfields: text,labels
+2022-02-24 16:07:09,921 INFO     |     dict_tokenizer: bytelevelbpe
+2022-02-24 16:07:09,921 INFO     |     dict_unktoken: __unk__
+2022-02-24 16:07:09,921 INFO     |     display_add_fields: beam_texts
+2022-02-24 16:07:09,921 INFO     |     display_examples: False
+2022-02-24 16:07:09,921 INFO     |     download_path: None
+2022-02-24 16:07:09,921 INFO     |     dropout: 0.1
+2022-02-24 16:07:09,921 INFO     |     dynamic_batching: None
+2022-02-24 16:07:09,921 INFO     |     embedding_projection: random
+2022-02-24 16:07:09,921 INFO     |     embedding_size: 2560
+2022-02-24 16:07:09,921 INFO     |     embedding_type: random
+2022-02-24 16:07:09,921 INFO     |     embeddings_scale: True
+2022-02-24 16:07:09,921 INFO     |     eval_batchsize: 10
+2022-02-24 16:07:09,922 INFO     |     eval_dynamic_batching: None
+2022-02-24 16:07:09,922 INFO     |     evaltask: None
+2022-02-24 16:07:09,922 INFO     |     ffn_size: 10240
+2022-02-24 16:07:09,922 INFO     |     final_extra_opt: 
+2022-02-24 16:07:09,922 INFO     |     force_fp16_tokens: True
+2022-02-24 16:07:09,922 INFO     |     fp16: True
+2022-02-24 16:07:09,922 INFO     |     fp16_impl: safe
+2022-02-24 16:07:09,922 INFO     |     fromfile_datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt
+2022-02-24 16:07:09,922 INFO     |     fromfile_datatype_extension: True
+2022-02-24 16:07:09,922 INFO     |     gpu: -1
+2022-02-24 16:07:09,922 INFO     |     gradient_clip: 0.1
+2022-02-24 16:07:09,922 INFO     |     hide_labels: False
+2022-02-24 16:07:09,922 INFO     |     history_add_global_end_token: end
+2022-02-24 16:07:09,922 INFO     |     history_reversed: False
+2022-02-24 16:07:09,922 INFO     |     history_size: -1
+2022-02-24 16:07:09,922 INFO     |     image_cropsize: 224
+2022-02-24 16:07:09,922 INFO     |     image_mode: raw
+2022-02-24 16:07:09,922 INFO     |     image_size: 256
+2022-02-24 16:07:09,922 INFO     |     inference: beam
+2022-02-24 16:07:09,922 INFO     |     init_model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data/models/blender/reddit_3B/model
+2022-02-24 16:07:09,922 INFO     |     init_opt: None
+2022-02-24 16:07:09,922 INFO     |     interactive_mode: False
+2022-02-24 16:07:09,922 INFO     |     invsqrt_lr_decay_gamma: -1
+2022-02-24 16:07:09,922 INFO     |     is_debug: False
+2022-02-24 16:07:09,922 INFO     |     label_truncate: 128
+2022-02-24 16:07:09,922 INFO     |     learn_positional_embeddings: False
+2022-02-24 16:07:09,922 INFO     |     learningrate: 7e-06
+2022-02-24 16:07:09,922 INFO     |     log_every_n_secs: 10.0
+2022-02-24 16:07:09,922 INFO     |     log_every_n_steps: 50
+2022-02-24 16:07:09,923 INFO     |     loglevel: info
+2022-02-24 16:07:09,923 INFO     |     lr_scheduler: reduceonplateau
+2022-02-24 16:07:09,923 INFO     |     lr_scheduler_decay: 0.5
+2022-02-24 16:07:09,923 INFO     |     lr_scheduler_patience: 3
+2022-02-24 16:07:09,923 INFO     |     max_train_steps: -1
+2022-02-24 16:07:09,923 INFO     |     max_train_time: 43200.0
+2022-02-24 16:07:09,923 INFO     |     metrics: default
+2022-02-24 16:07:09,923 INFO     |     model: transformer/generator
+2022-02-24 16:07:09,923 INFO     |     model_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model
+2022-02-24 16:07:09,923 INFO     |     model_parallel: True
+2022-02-24 16:07:09,923 INFO     |     momentum: 0
+2022-02-24 16:07:09,923 INFO     |     multitask_weights: '[1.0, 3.0, 3.0, 3.0]'
+2022-02-24 16:07:09,923 INFO     |     mutators: None
+2022-02-24 16:07:09,923 INFO     |     n_decoder_layers: 24
+2022-02-24 16:07:09,923 INFO     |     n_encoder_layers: 2
+2022-02-24 16:07:09,923 INFO     |     n_heads: 32
+2022-02-24 16:07:09,923 INFO     |     n_layers: 2
+2022-02-24 16:07:09,923 INFO     |     n_positions: 128
+2022-02-24 16:07:09,923 INFO     |     n_segments: 0
+2022-02-24 16:07:09,923 INFO     |     nesterov: True
+2022-02-24 16:07:09,923 INFO     |     no_cuda: False
+2022-02-24 16:07:09,923 INFO     |     num_epochs: 8.0
+2022-02-24 16:07:09,923 INFO     |     num_examples: 20
+2022-02-24 16:07:09,923 INFO     |     num_workers: 0
+2022-02-24 16:07:09,923 INFO     |     nus: [0.7]
+2022-02-24 16:07:09,923 INFO     |     optimizer: adam
+2022-02-24 16:07:09,923 INFO     |     output_scaling: 1.0
+2022-02-24 16:07:09,923 INFO     |     override: "{'task': 'fromfile:parlaiformat', 'fromfile_datapath': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt', 'model': 'transformer/generator', 'model_file': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model', 'num_examples': '20', 'display_add_fields': 'beam_texts', 'skip_generation': False}"
+2022-02-24 16:07:09,924 INFO     |     parlai_home: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages
+2022-02-24 16:07:09,924 INFO     |     person_tokens: False
+2022-02-24 16:07:09,924 INFO     |     rank_candidates: False
+2022-02-24 16:07:09,924 INFO     |     relu_dropout: 0.0
+2022-02-24 16:07:09,924 INFO     |     save_after_valid: True
+2022-02-24 16:07:09,924 INFO     |     save_every_n_secs: -1
+2022-02-24 16:07:09,924 INFO     |     share_word_embeddings: True
+2022-02-24 16:07:09,924 INFO     |     short_final_eval: False
+2022-02-24 16:07:09,924 INFO     |     skip_generation: False
+2022-02-24 16:07:09,924 INFO     |     special_tok_lst: None
+2022-02-24 16:07:09,924 INFO     |     split_lines: False
+2022-02-24 16:07:09,924 INFO     |     starttime: Feb24_03-17
+2022-02-24 16:07:09,924 INFO     |     task: fromfile:parlaiformat
+2022-02-24 16:07:09,924 INFO     |     temperature: 1.0
+2022-02-24 16:07:09,924 INFO     |     tensorboard_log: False
+2022-02-24 16:07:09,924 INFO     |     tensorboard_logdir: None
+2022-02-24 16:07:09,924 INFO     |     text_truncate: 128
+2022-02-24 16:07:09,924 INFO     |     topk: 10
+2022-02-24 16:07:09,924 INFO     |     topp: 0.9
+2022-02-24 16:07:09,924 INFO     |     truncate: 128
+2022-02-24 16:07:09,924 INFO     |     update_freq: 2
+2022-02-24 16:07:09,924 INFO     |     use_reply: label
+2022-02-24 16:07:09,924 INFO     |     validation_cutoff: 1.0
+2022-02-24 16:07:09,924 INFO     |     validation_every_n_epochs: 0.25
+2022-02-24 16:07:09,924 INFO     |     validation_every_n_secs: -1
+2022-02-24 16:07:09,924 INFO     |     validation_every_n_steps: -1
+2022-02-24 16:07:09,924 INFO     |     validation_max_exs: -1
+2022-02-24 16:07:09,924 INFO     |     validation_metric: ppl
+2022-02-24 16:07:09,924 INFO     |     validation_metric_mode: max
+2022-02-24 16:07:09,925 INFO     |     validation_patience: 10
+2022-02-24 16:07:09,925 INFO     |     validation_share_agent: False
+2022-02-24 16:07:09,925 INFO     |     variant: prelayernorm
+2022-02-24 16:07:09,925 INFO     |     verbose: False
+2022-02-24 16:07:09,925 INFO     |     wandb_entity: None
+2022-02-24 16:07:09,925 INFO     |     wandb_log: False
+2022-02-24 16:07:09,925 INFO     |     wandb_name: None
+2022-02-24 16:07:09,925 INFO     |     wandb_project: None
+2022-02-24 16:07:09,925 INFO     |     warmup_rate: 0.0001
+2022-02-24 16:07:09,925 INFO     |     warmup_updates: 100
+2022-02-24 16:07:09,925 INFO     |     weight_decay: None
+2022-02-24 16:07:10,164 INFO     | Current ParlAI commit: 2e5744a1edfad5fee68f95d55b3225ff58c7f0ec
+2022-02-24 16:07:10,427 INFO     | Current internal commit: 2e5744a1edfad5fee68f95d55b3225ff58c7f0ec
+2022-02-24 16:07:10,571 INFO     | Current fb commit: 2e5744a1edfad5fee68f95d55b3225ff58c7f0ec
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+[data/gab_data_test.txt]: faggot
+[eval_labels]: The term "faggot" is offensive to many people and so should not be used here.
+   [beam_texts]: ('Use of the slur here is unacceptable in our discourse as it demeans and insults gays.', -0.8724358081817627)
+  ('Use of the slur here is unacceptable in discourse as it demeans and insults gays.', -1.4949538707733154)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults gays.', -2.011080265045166)
+  ("Just because someone likes the same sex doesn't mean they deserve to be made fun of.", -2.2033326625823975)
+  ('Use of the slurs here is unacceptable in discourse as it demeans and insults gays.', -2.6122589111328125)
+  ... (5 of 21 shown)
+   [TransformerGenerator]: Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: He is a nigger
+[eval_labels]: Please note that the "n word" as used here is prohibited.
+   [beam_texts]: ('Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.', -0.9605071544647217)
+  ('Use of the n-word is unacceptable in discourse as it demeans and insults blacks.', -1.160857915878296)
+  ('Your post uses speech that denigrates race in violation of our Community Guidelines and TOS Agreement.', -2.1189656257629395)
+  ('The N word is highly offensive.   All ethnicities and social groups deserve tolerance.', -2.429279327392578)
+  ("Just because someone is a different race doesn't mean they deserve to be made fun of.", -2.7833023071289062)
+  ... (5 of 28 shown)
+   [TransformerGenerator]: Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: you're fucking retarded
+[eval_labels]: "Retarded" as used pejoratively here offends the mentally disabled and their families
+   [beam_texts]: ('Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.', -0.8407305479049683)
+  ('Use of the r-word is unacceptable in discourse as it demeans and insults people with mental disabilities.', -1.1254180669784546)
+  ('Your post uses speech that denigrates disability in violation of our Community Guidelines and TOS Agreement.', -2.0545778274536133)
+  ('Hi There, Please refrain from using racist or derogatory comments. They are hurtful and do not reflect the views of most people here. Thanks', -2.2568657398223877)
+  ('The R word is highly offensive.  Spread the word to end the word!', -2.368638515472412)
+  ... (5 of 25 shown)
+   [TransformerGenerator]: Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: He's a nigger (in case you didnt know) who's greatest achievement as a nigger is bagging a mudshark. Funny how niggers always define their self worth by their ability to compete with Whitey on some miniscule level.
+[eval_labels]: Do not use hateful racial words in your posts
+   [beam_texts]: ('Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.', -1.2448704242706299)
+  ('Use of the n-word is unacceptable in discourse as it demeans and insults blacks.', -1.4432690143585205)
+  ('Your post uses speech that denigrates race in violation of our Community Guidelines and TOS Agreement.', -1.9399291276931763)
+  ('The N word is highly offensive.   All ethnicities and social groups deserve tolerance.', -2.8139750957489014)
+  ("Just because someone is a different race doesn't mean they deserve to be made fun of.", -2.925394296646118)
+  ... (5 of 29 shown)
+   [TransformerGenerator]: Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: Dear cucks! Why public schools don’t work, some people graduate them and even write books but never learn that anecdotal evidence isn’t really evidence. Pointing at an outlier and pretending it’s the median is lying.
+[eval_labels]: Avoid using sexual slurs in response to posts on this feed.
+   [beam_texts]: ('Use of the c-word is unacceptable in our discourse as it demeans and insults women.', -1.0905629396438599)
+  ('Use of the c-word is unacceptable in discourse as it demeans and insults women.', -1.34428071975708)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults gays.', -1.4480737447738647)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults women.', -1.9563019275665283)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults Mexicans.', -1.9979623556137085)
+  ... (5 of 20 shown)
+   [TransformerGenerator]: Use of the c-word is unacceptable in our discourse as it demeans and insults women.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: What a cunt
+[eval_labels]: Avoid using inappropriate language when responding to posts.
+   [beam_texts]: ('Use of the c-word is unacceptable in our discourse as it demeans and insults women.', -0.9220790266990662)
+  ('Use of the c-word is unacceptable in discourse as it demeans and insults women.', -1.4349654912948608)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults women.', -2.102177381515503)
+  ('Use of the c-word is unacceptable in our discourse as it demeans and insults woman.', -2.4863338470458984)
+  ("Just because someone likes the same sex doesn't mean they deserve to be made fun of.", -2.7164549827575684)
+  ... (5 of 33 shown)
+   [TransformerGenerator]: Use of the c-word is unacceptable in our discourse as it demeans and insults women.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: 2/  It should be somewhat obvious this is parallel to Arab societies and the causes for the terrorism is similar.  Like... who the fuck wants to live in a society like that? It's really nigger tier shit.
+[eval_labels]: Do not use racial slurs when voicing your opinions.
+   [beam_texts]: ('Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.', -1.1758767366409302)
+  ('Use of the n-word is unacceptable in discourse as it demeans and insults blacks.', -1.23540461063385)
+  ('Your post uses speech that denigrates race in violation of our Community Guidelines and TOS Agreement.', -2.2739920616149902)
+  ('Use of the n-word is unacceptable in our discourse as it demeans and insults Blacks.', -2.963583469390869)
+  ('Use of the n-word is unacceptable in our discourse as it demeans and insults black people.', -2.987713098526001)
+  ... (5 of 25 shown)
+   [TransformerGenerator]: Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: Yes. We're just intimidated by strong, independent wimminz. She totally doesn't act like an insufferable cunt all day on social media or anything.
+[eval_labels]: Stop calling women names.
+   [beam_texts]: ('Use of the c-word is unacceptable in our discourse as it demeans and insults women.', -0.9711401462554932)
+  ('Use of the c-word is unacceptable in discourse as it demeans and insults women.', -1.37582528591156)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults women.', -1.8100839853286743)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults women.', -2.4080169200897217)
+  ('Use of the c-word is unacceptable in our discourse as it demeans and insults woman.', -2.470855951309204)
+  ... (5 of 31 shown)
+   [TransformerGenerator]: Use of the c-word is unacceptable in our discourse as it demeans and insults women.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: remember, the only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp
+[eval_labels]: stop with the negative racial slurs.
+   [beam_texts]: ('Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.', -1.2492347955703735)
+  ('Use of the n-word is unacceptable in discourse as it demeans and insults blacks.', -1.442771077156067)
+  ('Your post uses speech that denigrates race in violation of our Community Guidelines and TOS Agreement.', -2.314507007598877)
+  ("Just because someone is a different race doesn't mean they deserve to be made fun of.", -2.8281445503234863)
+  ('The N word is unacceptable in our discourse as it demeans and insults blacks.', -2.8297975063323975)
+  ... (5 of 29 shown)
+   [TransformerGenerator]: Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: Bye globalist cunt
+[eval_labels]: stop calling women names.
+   [beam_texts]: ('Use of the c-word is unacceptable in our discourse as it demeans and insults women.', -0.874569296836853)
+  ('Use of the c-word is unacceptable in discourse as it demeans and insults women.', -1.2771551609039307)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults women.', -1.694127082824707)
+  ('Your post uses speech that denigrates sex and gender in violation of our Community Guidelines and TOS Agreement.', -2.3042922019958496)
+  ('Use of the c-word is unacceptable in our discourse as it demeans and insults woman.', -2.452927589416504)
+  ... (5 of 20 shown)
+   [TransformerGenerator]: Use of the c-word is unacceptable in our discourse as it demeans and insults women.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: dyke
+[eval_labels]: Stop negative sexual profiling.
+   [beam_texts]: ('Use of the slur here is unacceptable in our discourse as it demeans and insults gays.', -0.8836587071418762)
+  ('Use of the slur here is unacceptable in discourse as it demeans and insults gays.', -1.6678962707519531)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults lesbians.', -2.003117322921753)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.', -2.03134822845459)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults gays.', -2.0659430027008057)
+  ... (5 of 23 shown)
+   [TransformerGenerator]: Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: If this little spic hasn't been caged and thrown over the Rio Grande, Trump is not doing his job
+[eval_labels]: Stop calling people names and advocating violence.
+   [beam_texts]: ('Use of the slur here is unacceptable in our discourse as it demeans and insults Mexicans.', -1.159628987312317)
+  ('Use of the slur here is unacceptable in discourse as it demeans and insults Mexicans.', -2.0579521656036377)
+  ('Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.', -2.1919994354248047)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults Mexicans.', -2.2452502250671387)
+  ('Use of the n-word is unacceptable in discourse as it demeans and insults blacks.', -2.284546375274658)
+  ... (5 of 21 shown)
+   [TransformerGenerator]: Use of the slur here is unacceptable in our discourse as it demeans and insults Mexicans.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: Yet another retard beyond any help with her mental illness & illusions. What's the odds she's one ugly fat stinking blimp? She obviously has no brain capability to understand the legal principle of innocent until proven guilty. Another democRAT
+[eval_labels]: Avoid using racially driven language. Refrain from using religious names in a derogatory sense.  AVoid using strong and offensive wording.
+   [beam_texts]: ('Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.', -0.9365003108978271)
+  ('Use of the r-word is unacceptable in discourse as it demeans and insults people with mental disabilities.', -1.2183127403259277)
+  ('Your post uses speech that denigrates disability in violation of our Community Guidelines and TOS Agreement.', -1.913062334060669)
+  ('Using the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.', -2.167102575302124)
+  ('The R word is highly offensive.  Spread the word to end the word!', -2.358660936355591)
+  ... (5 of 37 shown)
+   [TransformerGenerator]: Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: 1 
+[eval_labels]: Refrain from using the word "retarded" due to it's offensive nature.   Do not use the word "jesus" inappropriately.
+   [beam_texts]: ('Use of the slur here is unacceptable in our discourse as it demeans and insults gays.', -1.3263986110687256)
+  ('Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.', -1.4590789079666138)
+  ('Use of the n-word is unacceptable in discourse as it demeans and insults blacks.', -1.488439917564392)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults Mexicans.', -1.607224702835083)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults Muslims.', -1.680884838104248)
+  ... (5 of 21 shown)
+   [TransformerGenerator]: Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: So trump got payed 200k a year from age three. I'm not a faggot so I won't cry about it.   However if you bought something today at 200k it's roughly 18k back then.   Ppl who pay money, but don't get money should be pissed at the stewards of our econs.   So there's nothing to the rich get richer meme? As to motivation.
+[eval_labels]: Avoid using the word 'poor" in a discriminatory context.  Avoid using the word "faggot", it offends certain demographics.
+   [beam_texts]: ('Use of the slur here is unacceptable in our discourse as it demeans and insults gays.', -0.8537733554840088)
+  ('Use of the slur here is unacceptable in discourse as it demeans and insults gays.', -1.5830175876617432)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults gays.', -1.8855607509613037)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.', -2.2599780559539795)
+  ("Just because someone likes the same sex doesn't mean they deserve to be made fun of.", -2.5073020458221436)
+  ... (5 of 20 shown)
+   [TransformerGenerator]: Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: @jack @Twitter @TwitterSupport    The New & Improved Faggot Jack    SJW ◀️ SJWNPC
+[eval_labels]: Refrain from using the word "faggot", which is insulting to individuals with homosexual preferences.
+   [beam_texts]: ('Use of the slur here is unacceptable in our discourse as it demeans and insults gays.', -0.893841028213501)
+  ('Use of the slur here is unacceptable in discourse as it demeans and insults gays.', -1.51563560962677)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults gays.', -1.859473705291748)
+  ('Your post uses speech that denigrates sexual orientation in violation of our Community Guidelines and TOS Agreement.', -1.9177780151367188)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults and alienates others.', -2.0639326572418213)
+  ... (5 of 20 shown)
+   [TransformerGenerator]: Use of the slur here is unacceptable in our discourse as it demeans and insults gays.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: 10/ Semi-related, that's the same with 2nd Amendment absolutists.  Like Jim Losi seriously and literally says that there should be no restrictions on guns, including for criminals and the mentally ill.  He told me that directly.  If that's your position and you think you're a "super patriot," you're actually just a retard.
+[eval_labels]: Avoid using terms that are derogatory towards homosexuality.
+   [beam_texts]: ('Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.', -1.026671290397644)
+  ('Use of the r-word is unacceptable in discourse as it demeans and insults people with mental disabilities.', -1.2913044691085815)
+  ('Using the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.', -1.9306339025497437)
+  ('Your post uses speech that denigrates disability in violation of our Community Guidelines and TOS Agreement.', -2.07536244392395)
+  ('Using the r-word is unacceptable in discourse as it demeans and insults people with mental disabilities.', -2.154961109161377)
+  ... (5 of 44 shown)
+   [TransformerGenerator]: Use of the r-word is unacceptable in our discourse as it demeans and insults people with mental disabilities.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: No mother fucker. The 'Chosen People' isn't selective DNA based on Creed BUT But but...   IT'S about, right here, right now ... for everyone, from everywhere, living in these END TIMES & more importantly based on our individual Choice/Direction/Belief - Got it motherfucker?   God is real therefore he is looking for his REAL people. Not some preachy cunt like you - https://youtu.be/5cjqFHTjVFQ
+[eval_labels]: Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.
+   [beam_texts]: ('Use of the c-word is unacceptable in our discourse as it demeans and insults women.', -1.1410422325134277)
+  ('Use of the c-word is unacceptable in discourse as it demeans and insults women.', -1.4924081563949585)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults women.', -2.0049421787261963)
+  ('Use of the slurs here is unacceptable in our discourse as it demeans and insults women.', -2.5899064540863037)
+  ('Use of the c-word is unacceptable in our discourse as it demeans and insults woman.', -2.6547439098358154)
+  ... (5 of 27 shown)
+   [TransformerGenerator]: Use of the c-word is unacceptable in our discourse as it demeans and insults women.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: Danny Trejo is the most annoying spic ever. Until Elizabeth Warrens DNA teas came back showing she's a spic. Spicahontas.
+[eval_labels]: Keep your opinion constructive, no need for hate labels.
+   [beam_texts]: ('Use of the slur here is unacceptable in our discourse as it demeans and insults Mexicans.', -1.190443515777588)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults Spics.', -1.9841976165771484)
+  ('Use of the n-word is unacceptable in our discourse as it demeans and insults blacks.', -2.1015572547912598)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults spics.', -2.1124050617218018)
+  ('Use of the slur here is unacceptable in discourse as it demeans and insults Mexicans.', -2.1561334133148193)
+  ... (5 of 26 shown)
+   [TransformerGenerator]: Use of the slur here is unacceptable in our discourse as it demeans and insults Mexicans.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[data/gab_data_test.txt]: I still like their old stuff. Before Bozo became the cunt he is now.
+[eval_labels]: Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.
+   [beam_texts]: ('Use of the c-word is unacceptable in our discourse as it demeans and insults women.', -1.0186192989349365)
+  ('Use of the c-word is unacceptable in discourse as it demeans and insults women.', -1.4184330701828003)
+  ('Use of the c-word is unacceptable in our discourse as it demeans and insults woman.', -2.470447301864624)
+  ('Use of the slur here is unacceptable in our discourse as it demeans and insults women.', -2.5873236656188965)
+  ('Use of the c-word is unacceptable in discourse as it demeans and insults woman.', -2.8815364837646484)
+  ... (5 of 20 shown)
+   [TransformerGenerator]: Use of the c-word is unacceptable in our discourse as it demeans and insults women.
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+Changed directory to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project.
+
+JobID: 55782448
+======
+Time: Thu 24 Feb 16:10:11 GMT 2022
+Running on master node: gpu-q-47
+Current directory: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project
+/usr/bin/perl: symbol lookup error: /usr/local/software/slurm/slurm-19.05.5/lib64/perl5/auto/Slurm/Slurm.so: undefined symbol: Perl_xs_apiversion_bootcheck
+
+Nodes allocated:
+================
+
+
+numtasks=1, numnodes=1, mpi_tasks_per_node=1 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+ 
+
