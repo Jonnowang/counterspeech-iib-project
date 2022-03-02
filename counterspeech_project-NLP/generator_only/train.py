@@ -1,9 +1,6 @@
 import os
 
-from parlai.scripts.display_data import DisplayData
-from parlai.scripts.display_model import DisplayModel
 from parlai.scripts.train_model import TrainModel
-from parlai.scripts.eval_model import EvalModel
 from parlai.core.teachers import register_teacher, DialogTeacher
 
 __location__ = os.getcwd()
@@ -70,8 +67,8 @@ TrainModel.main(
     # early stopping on perplexity
     validation_metric='ppl',
     validation_metric_mode='max',
-    # train at most 10 minutes, and validate every 0.25 epochs
-    max_train_time=43200, validation_every_n_epochs=0.25, num_epochs=8.0,
+    # train at most 10 minutes, and validate every epoch
+    max_train_time=43200, validation_every_n_epochs=1.0, num_epochs=8.0,
     
     # depend on your gpu. If you have a V100, this is good
     batchsize=32, eval_batchsize=10, fp16=True,
