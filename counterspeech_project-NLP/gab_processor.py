@@ -98,3 +98,20 @@ with jsonlines.open(f"{__location__}/RUBER/data/gab_finetune_data.jsonl", 'a') a
 fq.close()
 fr.close()
 fjs.close()
+
+# with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_query.txt") as fq:
+#     queries = fq.readlines()
+# with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_response.txt") as fr:
+#     responses = fr.readlines()
+
+# for query, response in zip(queries[:7000], responses[:7000]):
+#     with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_train.txt", 'a') as f:
+#         f.write(f"text:{query.rstrip()}\tlabels:{response.rstrip()}\tepisode_done:{True}\n")
+
+# for query, response in zip(queries[7000:9000], responses[7000:9000]):
+#     with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_valid.txt", 'a') as f:
+#         f.write(f"text:{query.rstrip()}\tlabels:{response.rstrip()}\tepisode_done:{True}\n")
+
+# for query, response in zip(queries[9000:], responses[9000:]):
+#     with open(f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt", 'a') as f:
+#         f.write(f"text:{query.rstrip()}\tlabels:{response.rstrip()}\tepisode_done:{True}\n")
