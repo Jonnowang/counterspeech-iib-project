@@ -108,7 +108,6 @@ DisplayModel.main(
     model='transformer/generator',
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model', 
     num_examples=20,
-    display_add_fields="beam_texts",
     skip_generation=False,
     verbose=True,
 )
