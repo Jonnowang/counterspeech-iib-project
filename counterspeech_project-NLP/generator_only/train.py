@@ -38,14 +38,14 @@ class MyTeacher(DialogTeacher):
 TrainModel.main(
     # similar to before
     task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/conan_data",
     fromfile_datatype_extension=True,
     model='transformer/generator',
-    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model',
+    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model',
     
     # initialize with a pretrained model
-    init_model='zoo:blender/reddit_3B/model',
-    dict_file='zoo:blender/reddit_3B/model.dict',
+    init_model=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model',
+    dict_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model.dict',
     
     # arguments we get from the pretrained model.
     # Unfortunately, these must be looked up separately for each model.

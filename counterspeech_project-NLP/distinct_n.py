@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import nltk
 import numpy as np
 import pandas as pd
+import re
 from nltk.corpus import stopwords
 
 __location__ = os.getcwd()
@@ -19,8 +20,13 @@ num_words=['1.', '2.', '3.', '4.', '5.']
 
 gab = pd.read_csv('counterspeech_project-NLP/data/gab.csv')
 
-with open(f"{__location__}/all_data/gab_response_gpt3_tuned.txt",'r') as f:
-    gab_responses = f.readlines()
+with open(f"{__location__}/all_data/blender_responses.txt",'r') as f:
+    blender_responses = f.readlines()
+# blender_responses = re.findall("   \[text\]: .*",blender_responses)
+# for response in blender_responses:
+#     filtered_response = re.sub("   \[text\]: ","",response)
+#     with open(f"{__location__}/blender_responses.txt", 'a') as fw:
+#         fw.write(f"{filtered_response}\n")
 
 gab_words = gab['text'].str.split().map(lambda x: len(x))
 # print(gab_words.max())
@@ -39,7 +45,7 @@ plt.show()
 # conan = pd.read_json('counterspeech_project-NLP/data/CONAN.json')
 # print(conan.head(3))
 
-word_set = pd.DataFrame(gab_responses)[0]
+word_set = pd.DataFrame(blender_responses)[0]
 print(word_set)
 
 corpus=[]
