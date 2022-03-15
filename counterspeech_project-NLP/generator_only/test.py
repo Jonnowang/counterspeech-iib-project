@@ -35,7 +35,7 @@ DisplayModel.main(
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
     model='transformer/generator',
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model', 
-    num_examples=952,
+    num_examples=10,
     skip_generation=False,
     verbose=True,
 )
