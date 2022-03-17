@@ -1,3 +1,4 @@
+import os
 from collections import defaultdict
 
 import seaborn as sns
@@ -6,34 +7,36 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 import matplotlib.pyplot as plt
 import nltk
-import numpy as np
-import pandas as pd
 from nltk.corpus import stopwords
 
 nltk.download('stopwords')
 stop=set(stopwords.words('english'))
 num_words=['1.', '2.', '3.', '4.', '5.']
 
-gab = pd.read_csv('counterspeech_project-NLP/data/gab.csv')
+__location__ = os.getcwd()
 
-gab_words = gab['text'].str.split().map(lambda x: len(x))
-print(gab_words.max())
-print(gab_words.min())
-gab_words.hist(bins=500, range=(0,1000))
-plt.show()
+# gab = pd.read_csv('counterspeech_project-NLP/data/gab.csv')
 
-reddit = pd.read_csv('counterspeech_project-NLP/data/reddit.csv')
+# gab_words = gab['text'].str.split().map(lambda x: len(x))
+# print(gab_words.max())
+# print(gab_words.min())
+# gab_words.hist(bins=500, range=(0,1000))
+# plt.show()
 
-reddit_words = reddit['text'].str.split().map(lambda x: len(x))
-print(reddit_words.max())
-print(reddit_words.min())
-reddit_words.hist(bins=500, range=(0,1000))
-plt.show()
+# reddit = pd.read_csv('counterspeech_project-NLP/data/reddit.csv')
 
-conan = pd.read_json('counterspeech_project-NLP/data/CONAN.json')
-print(conan.head(3))
+# reddit_words = reddit['text'].str.split().map(lambda x: len(x))
+# print(reddit_words.max())
+# print(reddit_words.min())
+# reddit_words.hist(bins=500, range=(0,1000))
+# plt.show()
 
-word_set = reddit['text']
+# conan = pd.read_json('counterspeech_project-NLP/data/CONAN.json')
+# print(conan.head(3))
+
+with open(f"{__location__}/counterspeech_project-NLP/data/blender_output.txt",'r') as f:
+    blender_data = f.readlines()
+print(blender_data)
 
 corpus=[]
 new= word_set.str.split()
