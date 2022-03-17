@@ -38,14 +38,14 @@ class MyTeacher(DialogTeacher):
 TrainModel.main(
     # similar to before
     task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/conan_data",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
     fromfile_datatype_extension=True,
     model='transformer/generator',
-    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model',
+    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_temperature/model',
     
     # initialize with a pretrained model
-    init_model=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model',
-    dict_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model.dict',
+    init_model='zoo:blender/reddit_3B/model',
+    dict_file='zoo:blender/reddit_3B/model.dict',
     
     # arguments we get from the pretrained model.
     # Unfortunately, these must be looked up separately for each model.
@@ -68,7 +68,7 @@ TrainModel.main(
     validation_metric='ppl',
     validation_metric_mode='max',
     # train at most 10 minutes, and validate every epoch
-    max_train_time=43200, validation_every_n_epochs=1.0, num_epochs=40.0,
+    max_train_time=43200, validation_every_n_epochs=1.0, num_epochs=10.0,
     
     # depend on your gpu. If you have a V100, this is good
     batchsize=32, eval_batchsize=10, fp16=True,
