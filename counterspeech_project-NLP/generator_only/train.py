@@ -58,7 +58,7 @@ TrainModel.main(
     relu_dropout=0.0, activation='gelu', model_parallel=True,
     save_after_valid=True, text_truncate=128, truncate=128,
     update_freq=2, gradient_clip=0.1, skip_generation=True, vp=10,
-    vmt='ppl', vmm='min',
+    vmt='ppl', vmm='min', topk=25, temperature=4,
 
     # some training arguments, specific to this fine-tuning
     # use a small learning rate with ADAM optimizer
