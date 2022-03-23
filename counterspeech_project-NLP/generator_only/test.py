@@ -23,19 +23,19 @@ DisplayModel.main(
 )
 """
 
-# Evaluate Fine Tuned Model
-EvalModel.main(
-    task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
-    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_temperature/model', 
-)
+# # Evaluate Fine Tuned Model
+# EvalModel.main(
+#     task="fromfile:parlaiformat",
+#     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
+#     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_conan_temperature/model', 
+# )
 
 DisplayModel.main(
     task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data_test.txt",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_trial.txt",
     model='transformer/generator',
-    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_temperature/model', 
-    num_examples=10,
+    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_conan_temperature/model', 
+    num_examples=3,
     skip_generation=False,
     verbose=True,
 )
