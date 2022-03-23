@@ -79,7 +79,7 @@ CMD="$application $options"
 #CMD="mpirun -npernode $mpi_tasks_per_node -np $np $application $options"
 
 source python3.8/bin/activate
-python /home/jw2055/rds/rds-gvdd-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/test.py
+python /home/jw2055/rds/rds-gvdd-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/train.py
 
 ###############################################################
 ### You should not have to change anything below this line ####
