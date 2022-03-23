@@ -44,8 +44,8 @@ TrainModel.main(
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_conan_temperature/model',
     
     # initialize with a pretrained model
-    init_model=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_2/model',
-    dict_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_2/model.dict',
+    init_model=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model',
+    dict_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict',
     
     # arguments we get from the pretrained model.
     # Unfortunately, these must be looked up separately for each model.
