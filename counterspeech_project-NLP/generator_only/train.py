@@ -38,7 +38,7 @@ class MyTeacher(DialogTeacher):
 TrainModel.main(
     # similar to before
     task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/conan_data",
     fromfile_datatype_extension=True,
     model='transformer/generator',
     model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_conan_temperature/model',
