@@ -38,14 +38,14 @@ class MyTeacher(DialogTeacher):
 TrainModel.main(
     # similar to before
     task="fromfile:parlaiformat",
-    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/conan_data",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/gab_data",
     fromfile_datatype_extension=True,
     model='transformer/generator',
-    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model',
+    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_conan_temperature/model',
     
     # initialize with a pretrained model
-    init_model=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model',
-    dict_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative2/model.dict',
+    init_model=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_2/model',
+    dict_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_2/model.dict',
     
     # arguments we get from the pretrained model.
     # Unfortunately, these must be looked up separately for each model.
@@ -58,7 +58,7 @@ TrainModel.main(
     relu_dropout=0.0, activation='gelu', model_parallel=True,
     save_after_valid=True, text_truncate=128, truncate=128,
     update_freq=2, gradient_clip=0.1, skip_generation=True, vp=10,
-    vmt='ppl', vmm='min', topk=25, temperature=4,
+    vmt='ppl', vmm='min', topk=25, temperature=4.0,
 
     # some training arguments, specific to this fine-tuning
     # use a small learning rate with ADAM optimizer
@@ -68,7 +68,7 @@ TrainModel.main(
     validation_metric='ppl',
     validation_metric_mode='max',
     # train at most 10 minutes, and validate every epoch
-    max_train_time=43200, validation_every_n_epochs=1.0, num_epochs=40.0,
+    max_train_time=43200, validation_every_n_epochs=1.0, num_epochs=10.0,
     
     # depend on your gpu. If you have a V100, this is good
     batchsize=32, eval_batchsize=10, fp16=True,
