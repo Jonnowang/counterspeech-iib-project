@@ -31,15 +31,15 @@ __location__ = os.getcwd()
 #     encode_candidate_vecs=True,
 # )
 
-# DisplayModel.main(
-#     task="fromfile:parlaiformat",
-#     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
-#     model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 
-#     num_examples=30,
-#     eval_candidates='fixed',
-#     fixed_candidates_path=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt",
-#     encode_candidate_vecs=True,
-#     verbose=True,
-# )
+DisplayModel.main(
+    task="fromfile:parlaiformat",
+    fromfile_datapath=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt",
+    model_file=f'{__location__}/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 
+    num_examples=20,
+    eval_candidates='fixed',
+    fixed_candidates_path=f"{__location__}/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt",
+    encode_candidate_vecs=True,
+    verbose=True,
+)
 
 print(DisplayModel.help(model='transformer/biencoder'))
