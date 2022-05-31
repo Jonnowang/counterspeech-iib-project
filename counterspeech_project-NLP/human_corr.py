@@ -1,16 +1,16 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+from scipy.stats import pearsonr
 import re
 
-df = pd.read_csv("C:\workspaces\IIB_MEng_Project\counterspeech-iib-project\RUBER\Counter Speech Selection Survey.csv")
+df = pd.read_csv("counterspeech_project-NLP\Counter Speech Selection Survey.csv")
 sers = df.sum(axis=0)
-print(sers)
 human_scores = np.array([i for i in sers[1:]])
 
 min_max = MinMaxScaler()
 human_scaled = min_max.fit_transform(human_scores.reshape(-1,1))
-print(human_scaled)
+# print(human_scaled)
 
 # from bert_score import score, plot_example
 
@@ -171,24 +171,31 @@ bertscore = np.array([1.0000,
 
 min_max = MinMaxScaler()
 w2v_scaled = min_max.fit_transform(w2v.reshape(-1,1))
-print(w2v_scaled)
+# print(w2v_scaled)
 
 birnn_scaled = min_max.fit_transform(birnn.reshape(-1,1))
-print(birnn_scaled)
+# print(birnn_scaled)
 
 bertscore_scaled = min_max.fit_transform(bertscore.reshape(-1,1))
-print(bertscore_scaled)
+# print(bertscore_scaled)
 
 avg_score = (w2v_scaled + birnn_scaled + bertscore_scaled)/3
-print(avg_score)
+# print(avg_score)
 
 import matplotlib.pyplot as plt
 
-a, b = np.polyfit(human_scaled[0], avg_score[0], 1)
+human_scaled = [i[0] for i in human_scaled]
+avg_score = [j[0] for j in avg_score]
+
+a, b = np.polyfit(human_scaled, avg_score, 1)
 x = np.linspace(0,1,101)
 y = a*x + b
-print(x,y)
 
 plt.scatter(human_scaled, avg_score)
+
+corr, _ = pearsonr(human_scaled, avg_score)
+print(corr)
 plt.plot(x,y)
+plt.xlabel("Human Score")
+plt.ylabel("Automated Score")
 plt.show()
