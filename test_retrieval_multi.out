@@ -1,0 +1,803 @@
+Loading rhel7/default-gpu
+  Loading requirement: dot slurm turbovnc/2.0.1 vgl/2.5.1/64 singularity/current
+    rhel7/global cuda/8.0 gcc-5.4.0-gcc-4.8.5-fis24gg
+    openmpi-1.10.7-gcc-5.4.0-jdc7f4f cmake/latest
+2022-03-24 11:31:50,039 WARNING  | Overriding opt["fromfile_datapath"] to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt (previously: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/data/gab_data)
+2022-03-24 11:31:50,039 WARNING  | Overriding opt["eval_candidates"] to fixed (previously: batch)
+2022-03-24 11:31:50,819 INFO     | Using CUDA
+2022-03-24 11:31:50,837 INFO     | loading dictionary from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model.dict
+2022-03-24 11:31:50,962 INFO     | num words = 54944
+2022-03-24 11:31:53,653 INFO     | Total parameters: 256,131,072 (256,131,072 trainable)
+2022-03-24 11:31:53,806 INFO     | Loading existing model parameters from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model
+2022-03-24 11:32:48,615 INFO     | Loading fixed candidate set from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt
+2022-03-24 11:32:48,708 INFO     | Loading fixed candidate set vectors from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model.counter_speech_cand.vecs
+2022-03-24 11:32:48,806 INFO     | Loading fixed candidate set encodings from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model.counter_speech_cand.encs
+2022-03-24 11:32:49,836 INFO     | creating task(s): fromfile:parlaiformat
+2022-03-24 11:32:49,871 WARNING  | You are using this fromfile data as a valid or test set without setting fromfile_datatype_extension to true. Please be aware this uses directly the file you indicated, make sure this is not the same as your training file.
+2022-03-24 11:32:49,871 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt
+2022-03-24 11:32:49,926 INFO     | Opt:
+2022-03-24 11:32:49,926 INFO     |     activation: gelu
+2022-03-24 11:32:49,926 INFO     |     adafactor_eps: '[1e-30, 0.001]'
+2022-03-24 11:32:49,926 INFO     |     adam_eps: 1e-08
+2022-03-24 11:32:49,926 INFO     |     add_p1_after_newln: False
+2022-03-24 11:32:49,926 INFO     |     aggregate_micro: False
+2022-03-24 11:32:49,926 INFO     |     allow_missing_init_opts: False
+2022-03-24 11:32:49,926 INFO     |     attention_dropout: 0.1
+2022-03-24 11:32:49,926 INFO     |     batchsize: 32
+2022-03-24 11:32:49,927 INFO     |     betas: '[0.9, 0.999]'
+2022-03-24 11:32:49,927 INFO     |     bpe_add_prefix_space: None
+2022-03-24 11:32:49,927 INFO     |     bpe_debug: False
+2022-03-24 11:32:49,927 INFO     |     bpe_dropout: None
+2022-03-24 11:32:49,927 INFO     |     bpe_merge: None
+2022-03-24 11:32:49,927 INFO     |     bpe_vocab: None
+2022-03-24 11:32:49,927 INFO     |     candidates: batch
+2022-03-24 11:32:49,927 INFO     |     cap_num_predictions: 100
+2022-03-24 11:32:49,927 INFO     |     checkpoint_activations: False
+2022-03-24 11:32:49,927 INFO     |     codes_attention_num_heads: 4
+2022-03-24 11:32:49,927 INFO     |     codes_attention_type: basic
+2022-03-24 11:32:49,927 INFO     |     data_parallel: True
+2022-03-24 11:32:49,927 INFO     |     datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data
+2022-03-24 11:32:49,927 INFO     |     datatype: train
+2022-03-24 11:32:49,927 INFO     |     delimiter: '\n'
+2022-03-24 11:32:49,927 INFO     |     dict_class: parlai.core.dict:DictionaryAgent
+2022-03-24 11:32:49,927 INFO     |     dict_endtoken: __start__
+2022-03-24 11:32:49,927 INFO     |     dict_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model.dict
+2022-03-24 11:32:49,927 INFO     |     dict_include_test: False
+2022-03-24 11:32:49,927 INFO     |     dict_include_valid: False
+2022-03-24 11:32:49,927 INFO     |     dict_initpath: None
+2022-03-24 11:32:49,927 INFO     |     dict_language: english
+2022-03-24 11:32:49,927 INFO     |     dict_loaded: True
+2022-03-24 11:32:49,927 INFO     |     dict_lower: True
+2022-03-24 11:32:49,927 INFO     |     dict_max_ngram_size: -1
+2022-03-24 11:32:49,927 INFO     |     dict_maxexs: -1
+2022-03-24 11:32:49,927 INFO     |     dict_maxtokens: -1
+2022-03-24 11:32:49,927 INFO     |     dict_minfreq: 0
+2022-03-24 11:32:49,928 INFO     |     dict_nulltoken: __null__
+2022-03-24 11:32:49,928 INFO     |     dict_starttoken: __start__
+2022-03-24 11:32:49,928 INFO     |     dict_textfields: text,labels
+2022-03-24 11:32:49,928 INFO     |     dict_tokenizer: bpe
+2022-03-24 11:32:49,928 INFO     |     dict_unktoken: __unk__
+2022-03-24 11:32:49,928 INFO     |     display_add_fields: 
+2022-03-24 11:32:49,928 INFO     |     display_examples: False
+2022-03-24 11:32:49,928 INFO     |     download_path: None
+2022-03-24 11:32:49,928 INFO     |     dropout: 0.1
+2022-03-24 11:32:49,928 INFO     |     dynamic_batching: None
+2022-03-24 11:32:49,928 INFO     |     embedding_projection: random
+2022-03-24 11:32:49,928 INFO     |     embedding_size: 768
+2022-03-24 11:32:49,928 INFO     |     embedding_type: random
+2022-03-24 11:32:49,928 INFO     |     embeddings_scale: False
+2022-03-24 11:32:49,928 INFO     |     encode_candidate_vecs: True
+2022-03-24 11:32:49,928 INFO     |     encode_candidate_vecs_batchsize: 256
+2022-03-24 11:32:49,928 INFO     |     eval_batchsize: 10
+2022-03-24 11:32:49,928 INFO     |     eval_candidates: fixed
+2022-03-24 11:32:49,928 INFO     |     eval_dynamic_batching: None
+2022-03-24 11:32:49,928 INFO     |     evaltask: None
+2022-03-24 11:32:49,928 INFO     |     ffn_size: 3072
+2022-03-24 11:32:49,928 INFO     |     final_extra_opt: 
+2022-03-24 11:32:49,928 INFO     |     fixed_candidate_vecs: reuse
+2022-03-24 11:32:49,928 INFO     |     fixed_candidates_path: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt
+2022-03-24 11:32:49,928 INFO     |     force_fp16_tokens: True
+2022-03-24 11:32:49,928 INFO     |     fp16: True
+2022-03-24 11:32:49,928 INFO     |     fp16_impl: safe
+2022-03-24 11:32:49,928 INFO     |     fromfile_datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt
+2022-03-24 11:32:49,928 INFO     |     fromfile_datatype_extension: True
+2022-03-24 11:32:49,929 INFO     |     gpu: -1
+2022-03-24 11:32:49,929 INFO     |     gradient_clip: 0.1
+2022-03-24 11:32:49,929 INFO     |     hide_labels: False
+2022-03-24 11:32:49,929 INFO     |     history_add_global_end_token: None
+2022-03-24 11:32:49,929 INFO     |     history_reversed: False
+2022-03-24 11:32:49,929 INFO     |     history_size: 20
+2022-03-24 11:32:49,929 INFO     |     ignore_bad_candidates: True
+2022-03-24 11:32:49,929 INFO     |     image_cropsize: 224
+2022-03-24 11:32:49,929 INFO     |     image_mode: raw
+2022-03-24 11:32:49,929 INFO     |     image_size: 256
+2022-03-24 11:32:49,929 INFO     |     inference: max
+2022-03-24 11:32:49,929 INFO     |     init_model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model.checkpoint
+2022-03-24 11:32:49,929 INFO     |     init_opt: None
+2022-03-24 11:32:49,929 INFO     |     interactive_candidates: fixed
+2022-03-24 11:32:49,929 INFO     |     interactive_mode: False
+2022-03-24 11:32:49,929 INFO     |     invsqrt_lr_decay_gamma: -1
+2022-03-24 11:32:49,929 INFO     |     is_debug: False
+2022-03-24 11:32:49,929 INFO     |     label_truncate: 72
+2022-03-24 11:32:49,929 INFO     |     learn_embeddings: True
+2022-03-24 11:32:49,929 INFO     |     learn_positional_embeddings: True
+2022-03-24 11:32:49,929 INFO     |     learningrate: 5e-05
+2022-03-24 11:32:49,929 INFO     |     log_every_n_secs: 20.0
+2022-03-24 11:32:49,929 INFO     |     log_every_n_steps: 50
+2022-03-24 11:32:49,929 INFO     |     loglevel: info
+2022-03-24 11:32:49,929 INFO     |     lr_scheduler: reduceonplateau
+2022-03-24 11:32:49,929 INFO     |     lr_scheduler_decay: 0.4
+2022-03-24 11:32:49,929 INFO     |     lr_scheduler_patience: 0
+2022-03-24 11:32:49,929 INFO     |     max_train_steps: -1
+2022-03-24 11:32:49,929 INFO     |     max_train_time: 43200.0
+2022-03-24 11:32:49,930 INFO     |     memory_attention: sqrt
+2022-03-24 11:32:49,930 INFO     |     metrics: default
+2022-03-24 11:32:49,930 INFO     |     model: transformer/polyencoder
+2022-03-24 11:32:49,930 INFO     |     model_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model
+2022-03-24 11:32:49,930 INFO     |     model_parallel: False
+2022-03-24 11:32:49,930 INFO     |     momentum: 0
+2022-03-24 11:32:49,930 INFO     |     multitask_weights: [1]
+2022-03-24 11:32:49,930 INFO     |     mutators: None
+2022-03-24 11:32:49,930 INFO     |     n_decoder_layers: -1
+2022-03-24 11:32:49,930 INFO     |     n_encoder_layers: -1
+2022-03-24 11:32:49,930 INFO     |     n_heads: 12
+2022-03-24 11:32:49,930 INFO     |     n_layers: 12
+2022-03-24 11:32:49,930 INFO     |     n_positions: 1024
+2022-03-24 11:32:49,930 INFO     |     n_segments: 2
+2022-03-24 11:32:49,930 INFO     |     nesterov: True
+2022-03-24 11:32:49,930 INFO     |     no_cuda: False
+2022-03-24 11:32:49,930 INFO     |     normalize_sent_emb: False
+2022-03-24 11:32:49,930 INFO     |     num_epochs: 8.0
+2022-03-24 11:32:49,930 INFO     |     num_examples: 20
+2022-03-24 11:32:49,930 INFO     |     num_workers: 0
+2022-03-24 11:32:49,930 INFO     |     nus: [0.7]
+2022-03-24 11:32:49,930 INFO     |     optimizer: adamax
+2022-03-24 11:32:49,930 INFO     |     output_scaling: 0.06
+2022-03-24 11:32:49,930 INFO     |     override: "{'task': 'fromfile:parlaiformat', 'fromfile_datapath': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/data/gab_data_test.txt', 'model_file': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/from_pretrained_retrieval/model', 'num_examples': '20', 'eval_candidates': 'fixed', 'fixed_candidates_path': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/retrieval_only/data/counter_speech_cand.txt', 'encode_candidate_vecs': True, 'verbose': True}"
+2022-03-24 11:32:49,930 INFO     |     parlai_home: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages
+2022-03-24 11:32:49,930 INFO     |     person_tokens: False
+2022-03-24 11:32:49,930 INFO     |     poly_attention_num_heads: 4
+2022-03-24 11:32:49,930 INFO     |     poly_attention_type: basic
+2022-03-24 11:32:49,930 INFO     |     poly_n_codes: 64
+2022-03-24 11:32:49,931 INFO     |     polyencoder_type: codes
+2022-03-24 11:32:49,931 INFO     |     rank_candidates: True
+2022-03-24 11:32:49,931 INFO     |     rank_top_k: -1
+2022-03-24 11:32:49,931 INFO     |     reduction_type: mean
+2022-03-24 11:32:49,931 INFO     |     relu_dropout: 0.0
+2022-03-24 11:32:49,931 INFO     |     repeat_blocking_heuristic: True
+2022-03-24 11:32:49,931 INFO     |     return_cand_scores: False
+2022-03-24 11:32:49,931 INFO     |     save_after_valid: True
+2022-03-24 11:32:49,931 INFO     |     save_every_n_secs: -1
+2022-03-24 11:32:49,931 INFO     |     share_encoders: False
+2022-03-24 11:32:49,931 INFO     |     share_word_embeddings: True
+2022-03-24 11:32:49,931 INFO     |     short_final_eval: False
+2022-03-24 11:32:49,931 INFO     |     special_tok_lst: None
+2022-03-24 11:32:49,931 INFO     |     split_lines: False
+2022-03-24 11:32:49,931 INFO     |     starttime: Feb16_20-18
+2022-03-24 11:32:49,931 INFO     |     task: fromfile:parlaiformat
+2022-03-24 11:32:49,931 INFO     |     tensorboard_log: False
+2022-03-24 11:32:49,931 INFO     |     tensorboard_logdir: None
+2022-03-24 11:32:49,931 INFO     |     text_truncate: 360
+2022-03-24 11:32:49,931 INFO     |     topk: 5
+2022-03-24 11:32:49,931 INFO     |     train_predict: False
+2022-03-24 11:32:49,931 INFO     |     truncate: 1024
+2022-03-24 11:32:49,931 INFO     |     update_freq: 1
+2022-03-24 11:32:49,931 INFO     |     use_memories: False
+2022-03-24 11:32:49,931 INFO     |     use_reply: label
+2022-03-24 11:32:49,931 INFO     |     validation_cutoff: 1.0
+2022-03-24 11:32:49,931 INFO     |     validation_every_n_epochs: 0.25
+2022-03-24 11:32:49,931 INFO     |     validation_every_n_secs: -1
+2022-03-24 11:32:49,931 INFO     |     validation_every_n_steps: -1
+2022-03-24 11:32:49,932 INFO     |     validation_max_exs: 8000
+2022-03-24 11:32:49,932 INFO     |     validation_metric: accuracy
+2022-03-24 11:32:49,932 INFO     |     validation_metric_mode: max
+2022-03-24 11:32:49,932 INFO     |     validation_patience: 10
+2022-03-24 11:32:49,932 INFO     |     validation_share_agent: False
+2022-03-24 11:32:49,932 INFO     |     variant: xlm
+2022-03-24 11:32:49,932 INFO     |     verbose: True
+2022-03-24 11:32:49,932 INFO     |     wandb_entity: None
+2022-03-24 11:32:49,932 INFO     |     wandb_log: False
+2022-03-24 11:32:49,932 INFO     |     wandb_name: None
+2022-03-24 11:32:49,932 INFO     |     wandb_project: None
+2022-03-24 11:32:49,932 INFO     |     warmup_rate: 0.0001
+2022-03-24 11:32:49,932 INFO     |     warmup_updates: 100
+2022-03-24 11:32:49,932 INFO     |     weight_decay: None
+2022-03-24 11:32:49,932 INFO     |     wrap_memory_encoder: False
+2022-03-24 11:32:50,000 INFO     | Current ParlAI commit: 95e0b37d7cd21c56912d5afa4849fcd41d85f5e2
+2022-03-24 11:32:50,042 INFO     | Current internal commit: 95e0b37d7cd21c56912d5afa4849fcd41d85f5e2
+2022-03-24 11:32:50,082 INFO     | Current fb commit: 95e0b37d7cd21c56912d5afa4849fcd41d85f5e2
+2022-03-24 11:32:50,345 WARNING  | [ Executing eval mode with a common set of fixed candidates (n = 29249). ]
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+[id]: data/gab_data_test.txt
+[text]: faggot
+[eval_labels]: The term "faggot" is offensive to many people and so should not be used here.
+   [id]: Polyencoder
+   [text_candidates]: ||'|ignore|Chill|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0     2       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen     mrr  rank  
+         0    21 28.55       0          0 .003584   279
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: He is a nigger
+[eval_labels]: Please note that the "n word" as used here is prohibited.
+   [id]: Polyencoder
+   [text]: because he has respect
+   [text_candidates]: because he has respect|It is not permitted here to call someone a nigger.|||Please refrain from calling T.I. a nigger. He's done way more good than bad, and is just a product of his environment.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0     4       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen     mrr  rank  
+         0    16 8.283       0          0 .001399   715
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: you're fucking retarded
+[eval_labels]: "Retarded" as used pejoratively here offends the mentally disabled and their families
+   [id]: Polyencoder
+   [text]: retards are actually smart
+   [text_candidates]: retards are actually smart|'retard|Things are not retarded people born with a deficiency are.|Threads couldn't possibly be retarded, they can possibly not make sense but not necessarily be retarded.|You are not retarded. A retarded person has a mental disability they have no control over. You are simply an idiot.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0     6       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0    20 9.247       0          0 .0004257  2349
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: He's a nigger (in case you didnt know) who's greatest achievement as a nigger is bagging a mudshark. Funny how niggers always define their self worth by their ability to compete with Whitey on some miniscule level.
+[eval_labels]: Do not use hateful racial words in your posts
+   [id]: Polyencoder
+   [text]: So your saying you can't compete.
+   [text_candidates]: So your saying you can't compete.|I don't get this reference. Mud can be all different colors. Even white.|Truly poignant commentary. Bravo.|Every group of people, or ethnicity, has been enslaved at some point in history.|If your from Europa, your not indigenous to America. This is a fact and simply history.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy    bleu-4  clen  ctrunc  ctrunclen  exs    f1  hits@1  hits@10  hits@100  \
+           0 1.396e-10    52       0          0    1 .1250       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0    12 9.432       0          0 .0003301  3029
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: Dear cucks! Why public schools don’t work, some people graduate them and even write books but never learn that anecdotal evidence isn’t really evidence. Pointing at an outlier and pretending it’s the median is lying.
+[eval_labels]: Avoid using sexual slurs in response to posts on this feed.
+   [id]: Polyencoder
+   [text]: Well in general, the liberals tend to be better educated, so those teachers are doing something.
+   [text_candidates]: Well in general, the liberals tend to be better educated, so those teachers are doing something.|A lot of parents use those to show off their kids and good grades.|Another example of American Parents AND Public Schools failures. *sigh*|The smarter all of our students are the better our country is.  Other countries aren't putting out dummies.|Wow. I am really glad my kids are almost out of high school and homeschooled!|... (5 of 100 shown)
+   [metrics]: 
+    accuracy    bleu-4  clen  ctrunc  ctrunclen  exs    f1  hits@1  hits@10  hits@100  \
+           0 8.839e-11    49       0          0    1 .1538       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen       mrr  rank  
+         0    15 11.21       0          0 7.417e-05 13483
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: What a cunt
+[eval_labels]: Avoid using inappropriate language when responding to posts.
+   [id]: Polyencoder
+   [text_candidates]: ||wow what a lad|'|10 cunt|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0     3       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0    11 13.64       0          0 .0002203  4539
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: 2/  It should be somewhat obvious this is parallel to Arab societies and the causes for the terrorism is similar.  Like... who the fuck wants to live in a society like that? It's really nigger tier shit.
+[eval_labels]: Do not use racial slurs when voicing your opinions.
+   [id]: Polyencoder
+   [text]: i don't wanna live in this world anymore
+   [text_candidates]: i don't wanna live in this world anymore|Try to see things from their perspective.  It's hard to live in a society that doesn't accept you.|It is really very sad that you live in fear, locked in your home, with guns drawn. it is no way to live.|It sounds like a very diverse neighborhood.|From your perspective that may be true, but think about black communities... they don't seem unhappy with their situations usually.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    46       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0    14 9.097       0          0 .0005144  1944
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: Yes. We're just intimidated by strong, independent wimminz. She totally doesn't act like an insufferable cunt all day on social media or anything.
+[eval_labels]: Stop calling women names.
+   [id]: Polyencoder
+   [text]: Stop bullying strong women!
+   [text_candidates]: Stop bullying strong women!|Just say you don't like her. You don't have to insult a woman just because you don't like her|Just because you don't like her, doesn't mean you have to offend all other women as well.|Being feminist does not make someone an idiot. Not all feminists play "victim" and telling them to shove it up their twat is so vulgar.|There's no need to use the C-word, just because she's a woman you don't like. It's uncalled for.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy    bleu-4  clen  ctrunc  ctrunclen  exs    f1  hits@1  hits@10  hits@100  \
+           0 5.373e-10    35       0          0    1 .5000       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen     mrr  rank  
+         0     7 7.531       0          0 .003322   301
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: remember, the only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp
+[eval_labels]: stop with the negative racial slurs.
+   [id]: Polyencoder
+   [text]: The court made it's decision. We don't need more black people in prison who don't need to be there.
+   [text_candidates]: The court made it's decision. We don't need more black people in prison who don't need to be there.|People shouldn't be locked up if there's evidence that they're innocent, no reason for anyone to eat anything or diet.|OJ killed his wife so I don't think anyone's daughter should be dating him.|She may not be a very good person but she has been sentenced and will do some time for her role in his death.|He feels real gangster in jail today.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    23       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen     mrr  rank  
+         0    10  7.98       0          0 .003289   304
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: Bye globalist cunt
+[eval_labels]: stop calling women names.
+   [id]: Polyencoder
+   [text_candidates]: ||and the same to you. bye bye you go|We are all global citizens, and we should be mindful of that in the 21st century.|I think it could make more sense to come together as a country, in any movement we have.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0     4       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0     7 9.526       0          0 .0006807  1469
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: dyke
+[eval_labels]: Stop negative sexual profiling.
+   [id]: Polyencoder
+   [text_candidates]: ||ignore|'|NA|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0     1       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0     8 28.24       0          0 .0006944  1440
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: If this little spic hasn't been caged and thrown over the Rio Grande, Trump is not doing his job
+[eval_labels]: Stop calling people names and advocating violence.
+   [id]: Polyencoder
+   [text]: He is doing a great job in office
+   [text_candidates]: He is doing a great job in office|Trump has a lot on his plate, he has to do what he can to help all but he cannot please everyone, understand it from his point of view|If he is a CEO he is very competent ,|Seattle is very humid, nothing like the desert.|Regardless of your stand in politics, Donald Trump is our commander in chief and if you stand against him you are creating division.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    24       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen       mrr  rank  
+         0    10 11.18       0          0 7.942e-05 12592
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: Yet another retard beyond any help with her mental illness & illusions. What's the odds she's one ugly fat stinking blimp? She obviously has no brain capability to understand the legal principle of innocent until proven guilty. Another democRAT
+[eval_labels]: Avoid using racially driven language. Refrain from using religious names in a derogatory sense.  AVoid using strong and offensive wording.
+   [id]: Polyencoder
+   [text]: People with a mental disability cannot help the way they are.
+   [text_candidates]: People with a mental disability cannot help the way they are.|Not everyone can get a job. She may be disabled, or mentally ill. Either way she is a human and does not deserved to be called that.|I'm sure this woman is perfectly intelligent, although if not, there's nothing wrong with being intellectually disabled.|inform what actual disability and mental handicap is|Please don't call her a retard. She may make bad decisions but calling her a retard is not appropriate.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    48       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen       mrr  rank  
+         0    30  13.5       0          0 4.043e-05 24733
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[Jesus, retard. You don't have the slightest clue why the linked article was written. Of course you can't hit targets using magic skills - you need to know how far away the guy is. That's why the average numbers used to estimate the distance & the bullet drop are given to you. Just go away dumbass]: Jesus, retard. You don't have the slightest clue why the linked article was written. Of course you can't hit targets using magic skills - you need to know how far away the guy is. That's why the average numbers used to estimate the distance & the bullet drop are given to you. Just go away dumbass.
+[text]: 1 
+[eval_labels]: Refrain from using the word "retarded" due to it's offensive nature.   Do not use the word "jesus" inappropriately.
+   [id]: Polyencoder
+   [text_candidates]: ||'|ignore|stop|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0     1       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen       mrr  rank  
+         0    30 28.14       0          0 9.794e-05 10210
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: So trump got payed 200k a year from age three. I'm not a faggot so I won't cry about it.   However if you bought something today at 200k it's roughly 18k back then.   Ppl who pay money, but don't get money should be pissed at the stewards of our econs.   So there's nothing to the rich get richer meme? As to motivation.
+[eval_labels]: Avoid using the word 'poor" in a discriminatory context.  Avoid using the word "faggot", it offends certain demographics.
+   [id]: Polyencoder
+   [text]: I disagree. Trump did save rich people a lot of money, but that equals us more jobs and a better tax return.
+   [text_candidates]: I disagree. Trump did save rich people a lot of money, but that equals us more jobs and a better tax return.|He may never see all that money but at least he is able to get a nice monthly check of something.|I'm onboard with the loser paying to a charity!|Both a husband and wife combine funds during their marriage and so when the ends come all assets should be split accordingly.|I love Trump too!|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    88       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen     mrr  rank  
+         0    31 8.613       0          0 .002874   348
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: @jack @Twitter @TwitterSupport    The New & Improved Faggot Jack    SJW ◀️ SJWNPC
+[eval_labels]: Refrain from using the word "faggot", which is insulting to individuals with homosexual preferences.
+   [id]: Polyencoder
+   [text]: LGBT people make your games. Show some respect.
+   [text_candidates]: LGBT people make your games. Show some respect.|At least they can still love, User 1.|You need to find something better to do with your time than bully people on twitter.|The language used here is very harmful and offensive towards the LGBT+ community. You need to use a different choice of words!|You wrote a decent supporting message, really to be ok it´s jsut one word to change, otherwise, keep being awesome!|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    23       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0    21 9.379       0          0 .0003361  2975
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: 10/ Semi-related, that's the same with 2nd Amendment absolutists.  Like Jim Losi seriously and literally says that there should be no restrictions on guns, including for criminals and the mentally ill.  He told me that directly.  If that's your position and you think you're a "super patriot," you're actually just a retard.
+[eval_labels]: Avoid using terms that are derogatory towards homosexuality.
+   [id]: Polyencoder
+   [text]: The Second Amendment is for everyone.
+   [text_candidates]: The Second Amendment is for everyone.|Everyone should have at least one gun at home.|We have the right to an organized militia and the right to bear arms. Yet, notice the erosion of both by a standing military.|True many Americans do own guns, not just those on the right.|Either all citizens should carry guns or cops shouldn't.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    77       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen       mrr  rank  
+         0    13 12.96       0          0 5.768e-05 17336
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: No mother fucker. The 'Chosen People' isn't selective DNA based on Creed BUT But but...   IT'S about, right here, right now ... for everyone, from everywhere, living in these END TIMES & more importantly based on our individual Choice/Direction/Belief - Got it motherfucker?   God is real therefore he is looking for his REAL people. Not some preachy cunt like you - https://youtu.be/5cjqFHTjVFQ
+[eval_labels]: Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.
+   [id]: Polyencoder
+   [text]: we are all made in Gods image
+   [text_candidates]: we are all made in Gods image|I believe demons are mythological and that Satan's only sin was wanting God to love him best.|You all sound uneducated, also, noone knows who god hates,because he isnt real!|God made everything beautiful and perfect. Humans are the ones destroying everything.|god loves everyone|... (5 of 100 shown)
+   [metrics]: 
+    accuracy    bleu-4  clen  ctrunc  ctrunclen  exs     f1  hits@1  hits@10  \
+           0 5.135e-11   106       0          0    1 .08696       0        0   
+    hits@100  hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+           0       0    22 10.03       0          0 .0001696  5895
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: Danny Trejo is the most annoying spic ever. Until Elizabeth Warrens DNA teas came back showing she's a spic. Spicahontas.
+[eval_labels]: Keep your opinion constructive, no need for hate labels.
+   [id]: Polyencoder
+   [text]: Ethnicity-based hatred ("spic") is abhorrent and so banned here.
+   [text_candidates]: Ethnicity-based hatred ("spic") is abhorrent and so banned here.|The term "spic" is considered offensive and hate speech. Refrain these type of posts in the future.|This slur (spic) is not acceptable in our discourse because it denigrates people based on their ethnicity.|Using the word "spic" pejoratively is offensive and shall not be permitted here.|I appreciate multiculturalism and now I know who to admire, so thanks.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    35       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0    13 9.357       0          0 .0005504  1817
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: I still like their old stuff. Before Bozo became the cunt he is now.
+[eval_labels]: Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.
+   [id]: Polyencoder
+   [text]: You can get your point across without calling a woman cunt
+   [text_candidates]: You can get your point across without calling a woman cunt|Please do not refer to women as cunts.|Woman should not be called cunt|10 cunt|Please use an alternative to cunt.|... (5 of 100 shown)
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  hits@1  hits@10  hits@100  \
+           0       0    17       0          0    1   0       0        0         0   
+    hits@5  llen  loss  ltrunc  ltrunclen      mrr  rank  
+         0    22 9.731       0          0 .0002793  3580
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+usage: DisplayModel [--help] [--helpall] [--init-opt INIT_OPT]
+                    [--allow-missing-init-opts ALLOW_MISSING_INIT_OPTS]
+                    [--task TASK] [--datatype DATATYPE]
+                    [--batchsize BATCHSIZE]
+                    [--dynamic-batching {batchsort,None,full}] [--verbose]
+                    [--debug] [--datapath DATAPATH] [--model MODEL]
+                    [--model-file MODEL_FILE] [--im INIT_MODEL]
+                    [--num-examples NUM_EXAMPLES]
+                    [--display-add-fields DISPLAY_ADD_FIELDS]
+                    [--interactive-mode INTERACTIVE_MODE]
+                    [--embedding-type {random,glove,glove-fixed,fasttext,fasttext-fixed,fasttext_cc,fasttext_cc-fixed}]
+                    [--embedding-projection EMBEDDING_PROJECTION]
+                    [--fp16 FP16] [--fp16-impl {safe,mem_efficient}]
+                    [--optimizer OPTIMIZER] [--learningrate LEARNINGRATE]
+                    [--gradient-clip GRADIENT_CLIP]
+                    [--adafactor-eps ADAFACTOR_EPS] [--momentum MOMENTUM]
+                    [--nesterov NESTEROV] [--nus NUS] [--betas BETAS]
+                    [--weight-decay WEIGHT_DECAY]
+                    [--rank-candidates RANK_CANDIDATES] [--truncate TRUNCATE]
+                    [--text-truncate TEXT_TRUNCATE]
+                    [--label-truncate LABEL_TRUNCATE]
+                    [--history-reversed HISTORY_REVERSED]
+                    [--history-size HISTORY_SIZE]
+                    [--person-tokens PERSON_TOKENS]
+                    [--split-lines SPLIT_LINES] [--delimiter DELIMITER]
+                    [--special-tok-lst SPECIAL_TOK_LST] [-gpu GPU | --no-cuda]
+                    [--lr-scheduler {reduceonplateau,none,fixed,invsqrt,cosine,linear}]
+                    [--lr-scheduler-patience LR_SCHEDULER_PATIENCE]
+                    [--lr-scheduler-decay LR_SCHEDULER_DECAY]
+                    [--invsqrt-lr-decay-gamma INVSQRT_LR_DECAY_GAMMA]
+                    [--candidates {batch,inline,fixed,batch-all-cands}]
+                    [--eval-candidates {batch,inline,fixed,vocab,batch-all-cands}]
+                    [--interactive-candidates {fixed,inline,vocab}]
+                    [--repeat-blocking-heuristic REPEAT_BLOCKING_HEURISTIC]
+                    [--fixed-candidates-path FIXED_CANDIDATES_PATH]
+                    [--fixed-candidate-vecs FIXED_CANDIDATE_VECS]
+                    [--encode-candidate-vecs ENCODE_CANDIDATE_VECS]
+                    [--init-model INIT_MODEL] [--train-predict TRAIN_PREDICT]
+                    [--cap-num-predictions CAP_NUM_PREDICTIONS]
+                    [--ignore-bad-candidates IGNORE_BAD_CANDIDATES]
+                    [--rank-top-k RANK_TOP_K] [--inference {max,topk}]
+                    [--topk TOPK] [--return-cand-scores RETURN_CAND_SCORES]
+                    [--embedding-size EMBEDDING_SIZE] [--n-layers N_LAYERS]
+                    [--ffn-size FFN_SIZE] [--dropout DROPOUT]
+                    [--attention-dropout ATTENTION_DROPOUT]
+                    [--relu-dropout RELU_DROPOUT] [--n-heads N_HEADS]
+                    [--learn-positional-embeddings LEARN_POSITIONAL_EMBEDDINGS]
+                    [--embeddings-scale EMBEDDINGS_SCALE]
+                    [--n-segments N_SEGMENTS]
+                    [--variant {aiayn,prelayernorm,xlm,bart}]
+                    [--activation {gelu,relu}]
+                    [--output-scaling OUTPUT_SCALING]
+                    [--n-encoder-layers N_ENCODER_LAYERS]
+                    [--n-decoder-layers N_DECODER_LAYERS]
+                    [--model-parallel MODEL_PARALLEL]
+                    [--checkpoint-activations CHECKPOINT_ACTIVATIONS]
+                    [--use-memories USE_MEMORIES]
+                    [--wrap-memory-encoder WRAP_MEMORY_ENCODER]
+                    [--memory-attention {cosine,dot,sqrt}]
+                    [--normalize-sent-emb NORMALIZE_SENT_EMB]
+                    [--share-encoders SHARE_ENCODERS]
+                    [--share-word-embeddings SHARE_WORD_EMBEDDINGS]
+                    [--learn-embeddings LEARN_EMBEDDINGS]
+                    [--data-parallel DATA_PARALLEL]
+                    [--reduction-type {first,max,mean}]
+                    [--bpe-vocab BPE_VOCAB] [--bpe-merge BPE_MERGE]
+                    [--bpe-dropout BPE_DROPOUT]
+
+Display model predictions.
+
+optional arguments:
+  --help, --h
+        show this help message and exit
+  --helpall
+        Show usage, including advanced arguments.
+  --num-examples, --n, --ne NUM_EXAMPLES
+  --display-add-fields DISPLAY_ADD_FIELDS
+        Display these fields when verbose is off (e.g., "--display-add-fields
+        label_candidates,beam_texts") (default: )
+  --share-word-embeddings SHARE_WORD_EMBEDDINGS
+        Share word embeddings table for candidate and contextin the memory
+        network (default: True)
+
+Main ParlAI Arguments:
+  --init-opt, --o INIT_OPT
+        Path to json file of options. Note: Further Command-line arguments
+        override file-based options. (default: None)
+  --allow-missing-init-opts ALLOW_MISSING_INIT_OPTS
+        Warn instead of raising if an argument passed in with --init-opt is
+        not in the target opt. (default: False)
+  --task, --t TASK
+        ParlAI task(s), e.g. "babi:Task1" or "babi,cbt" (default: None)
+  --datatype, --dt DATATYPE
+        choose from: train, train:ordered, valid, test. to stream data add
+        ":stream" to any option (e.g., train:stream). by default train is
+        random with replacement, valid is ordered, test is ordered. (default:
+        valid)
+  --batchsize, --bs BATCHSIZE
+        batch size for minibatch training schemes (default: 1)
+  --dynamic-batching, --dynb {batchsort,None,full}
+        Use dynamic batching (default: None)
+  --verbose, --v
+        Print all messages
+  --debug
+        Enables some debug behavior
+  --datapath, --dp DATAPATH
+        path to datasets, defaults to {parlai_dir}/data (default: None)
+
+ParlAI Model Arguments:
+  --model, --m MODEL
+        the model class name. can match parlai/agents/<model> for agents in
+        that directory, or can provide a fully specified module for `from X
+        import Y` via `-m X:Y` (e.g. `-m
+        parlai.agents.seq2seq.seq2seq:Seq2SeqAgent`) (default: None)
+  --model-file, --mf MODEL_FILE
+        model file name for loading and saving models (default: None)
+  --im INIT_MODEL
+        Initialize model weights and dict from this file (default: None)
+
+TorchAgent Arguments:
+  --interactive-mode, --i INTERACTIVE_MODE
+        Whether in full interactive mode or not, which means generating text
+        or retrieving from a full set of candidates, which is necessary to
+        actually do full dialogue. However, during training or quick
+        validation (e.g. PPL for generation or ranking a few candidates for
+        ranking models) you might want these set to off. Typically, scripts
+        can set their preferred default behavior at the start, e.g. eval
+        scripts. (default: False)
+  --embedding-type, --emb {random,glove,glove-fixed,fasttext,fasttext-fixed,fasttext_cc,fasttext_cc-fixed}
+        Choose between different strategies for initializing word embeddings.
+        Default is random, but can also preinitialize from Glove or Fasttext.
+        Preinitialized embeddings can also be fixed so they are not updated
+        during training. (default: random)
+  --embedding-projection, --embp EMBEDDING_PROJECTION
+        If pretrained embeddings have a different dimensionality than your
+        embedding size, strategy for projecting to the correct size. If the
+        dimensions are the same, this is ignored unless you append "-force" to
+        your choice. (default: random)
+  --fp16 FP16
+        Use fp16 computations. (default: False)
+  --fp16-impl {safe,mem_efficient}
+        Implementation of FP16 to use (default: safe)
+  --rank-candidates, --rc RANK_CANDIDATES
+        Whether the model should parse candidates for ranking. (default:
+        False)
+  --truncate, --tr TRUNCATE
+        Truncate input lengths to increase speed / use less memory. (default:
+        1024)
+  --text-truncate TEXT_TRUNCATE
+        Text input truncation length: if not specified, this will default to
+        `truncate` (default: None)
+  --label-truncate LABEL_TRUNCATE
+        Label truncation length: if not specified, this will default to
+        `truncate` (default: None)
+  --history-reversed HISTORY_REVERSED
+        Reverse the history (default: False)
+  --history-size, --histsz HISTORY_SIZE
+        Number of past dialog utterances to remember. (default: -1)
+  --person-tokens, --pt PERSON_TOKENS
+        add person tokens to history. adds __p1__ in front of input text and
+        __p2__ in front of past labels when available or past utterances
+        generated by the model. these are added to the dictionary during
+        initialization. (default: False)
+  --split-lines SPLIT_LINES
+        split the dialogue history on newlines and save in separate vectors
+        (default: False)
+  --delimiter DELIMITER
+        Join history lines with this token, defaults to newline (default: )
+  --special-tok-lst SPECIAL_TOK_LST
+        Comma separated list of special tokens. In case of ambiguous parses
+        from special tokens, the ordering provided in this arg sets
+        precedence. (default: None)
+  -gpu, --gpu GPU
+        which GPU to use (default: -1)
+  --no-cuda
+        disable GPUs even if available. otherwise, will use GPUs if available
+        on the device.
+
+Optimizer Arguments:
+  --optimizer, --opt OPTIMIZER
+        Optimizer choice. Possible values: adadelta, adagrad, adam, adamw,
+        sparseadam, adamax, asgd, sgd, radam, rprop, rmsprop, optimizer,
+        nadam, lbfgs, mem_eff_adam, adafactor. (default: adamax)
+  --learningrate, --lr LEARNINGRATE
+        Learning rate (default: 0.0001)
+  --gradient-clip, --clip GRADIENT_CLIP
+        gradient clipping using l2 norm (default: 0.1)
+  --adafactor-eps ADAFACTOR_EPS
+        Epsilon values for adafactor optimizer: regularization constants for
+        square gradient and parameter scale respectively (default: 1e-30,1e-3)
+  --momentum, --mom MOMENTUM
+        if applicable, momentum value for optimizer. (default: 0)
+  --nesterov NESTEROV
+        if applicable, whether to use nesterov momentum. (default: True)
+  --nus, --nu NUS
+        if applicable, nu value(s) for optimizer. can use a single value like
+        0.7 or a comma-separated tuple like 0.7,1.0 (default: 0.7)
+  --betas, --beta BETAS
+        if applicable, beta value(s) for optimizer. can use a single value
+        like 0.9 or a comma-separated tuple like 0.9,0.999 (default:
+        0.9,0.999)
+  --weight-decay, --wdecay WEIGHT_DECAY
+        Weight decay on the weights. (default: None)
+
+Learning Rate Scheduler:
+  --lr-scheduler {reduceonplateau,none,fixed,invsqrt,cosine,linear}
+        Learning rate scheduler. (default: reduceonplateau)
+  --lr-scheduler-patience LR_SCHEDULER_PATIENCE
+        LR scheduler patience. In number of validation runs. If using fixed
+        scheduler, LR is decayed every <patience> validations. (default: 3)
+  --lr-scheduler-decay LR_SCHEDULER_DECAY
+        Decay factor for LR scheduler, or how much LR is multiplied by when it
+        is lowered. (default: 0.5)
+  --invsqrt-lr-decay-gamma INVSQRT_LR_DECAY_GAMMA
+        Constant used only to find the lr multiplier for the invsqrt
+        scheduler. Must be set for --lr-scheduler invsqrt (default: -1)
+
+TorchRankerAgent:
+  --candidates, --cands {batch,inline,fixed,batch-all-cands}
+        The source of candidates during training (see
+        TorchRankerAgent._build_candidates() for details). (default: inline)
+  --eval-candidates, --ecands {batch,inline,fixed,vocab,batch-all-cands}
+        The source of candidates during evaluation (defaults to the samevalue
+        as --candidates if no flag is given) (default: inline)
+  --interactive-candidates, --icands {fixed,inline,vocab}
+        The source of candidates during interactive mode. Since in interactive
+        mode, batchsize == 1, we cannot use batch candidates. (default: fixed)
+  --repeat-blocking-heuristic REPEAT_BLOCKING_HEURISTIC
+        Block repeating previous utterances. Helpful for many models that
+        score repeats highly, so switched on by default. (default: True)
+  --fixed-candidates-path, --fcp FIXED_CANDIDATES_PATH
+        A text file of fixed candidates to use for all examples, one candidate
+        per line (default: None)
+  --fixed-candidate-vecs FIXED_CANDIDATE_VECS
+        One of "reuse", "replace", or a path to a file with vectors
+        corresponding to the candidates at --fixed-candidates-path. The
+        default path is a /path/to/model-file.<cands_name>, where <cands_name>
+        is the name of the file (not the full path) passed by the flag
+        --fixed-candidates-path. By default, this file is created once and
+        reused. To replace it, use the "replace" option. (default: reuse)
+  --encode-candidate-vecs ENCODE_CANDIDATE_VECS
+        Cache and save the encoding of the candidate vecs. This might be used
+        when interacting with the model in real time or evaluating on fixed
+        candidate set when the encoding of the candidates is independent of
+        the input. (default: True)
+  --init-model INIT_MODEL
+        Initialize model with weights from this file. (default: None)
+  --train-predict TRAIN_PREDICT
+        Get predictions and calculate mean rank during the train step. Turning
+        this on may slow down training. (default: False)
+  --cap-num-predictions CAP_NUM_PREDICTIONS
+        Limit to the number of predictions in output.text_candidates (default:
+        100)
+  --ignore-bad-candidates IGNORE_BAD_CANDIDATES
+        Ignore examples for which the label is not present in the label
+        candidates. Default behavior results in RuntimeError. (default: False)
+  --rank-top-k RANK_TOP_K
+        Ranking returns the top k results of k > 0, otherwise sorts every
+        single candidate according to the ranking. (default: -1)
+  --inference {max,topk}
+        Final response output algorithm (default: max)
+  --topk TOPK
+        K used in Top K sampling inference, when selected (default: 5)
+  --return-cand-scores RETURN_CAND_SCORES
+        Return sorted candidate scores from eval_step (default: False)
+
+Transformer Arguments:
+  --embedding-size, --esz EMBEDDING_SIZE
+        Size of all embedding layers. Must be a multiple of --n-heads.
+        (default: 300)
+  --n-layers, --nl N_LAYERS
+        Number of transformer layers. (default: 2)
+  --ffn-size, --hid FFN_SIZE
+        Hidden size of the FFN layers (default: 300)
+  --dropout DROPOUT
+        Dropout used around embeddings and before layer layer normalizations.
+        This is used in Vaswani 2017 and works well on large datasets.
+        (default: 0.0)
+  --attention-dropout ATTENTION_DROPOUT
+        Dropout used after attention softmax. This is not used in Vaswani
+        2017. (default: 0.0)
+  --relu-dropout RELU_DROPOUT
+        Dropout used after the ReLU in the FFN. Not used in Vaswani 2017, but
+        used in Tensor2Tensor. (default: 0.0)
+  --n-heads N_HEADS
+        Number of multihead attention heads (default: 2)
+  --learn-positional-embeddings LEARN_POSITIONAL_EMBEDDINGS
+        If off, sinusoidal embeddings are used. If on, position embeddings are
+        learned from scratch. (default: False)
+  --embeddings-scale EMBEDDINGS_SCALE
+  --n-segments N_SEGMENTS
+        The number of segments that support the model. If zero no segment and
+        no langs_embedding. (default: 0)
+  --variant {aiayn,prelayernorm,xlm,bart}
+        Chooses locations of layer norms, etc. prelayernorm is used to match
+        some fairseq models (default: aiayn, recommended: xlm)
+  --activation {gelu,relu}
+        Nonlinear activation to use. AIAYN uses relu, but more recent papers
+        prefer gelu. (default: relu, recommended: gelu)
+  --output-scaling OUTPUT_SCALING
+        scale the output of every transformer by this quantity. (default: 1.0)
+  --n-encoder-layers, --nel N_ENCODER_LAYERS
+        This will overidde the n-layers for asymmetrical transformers
+        (default: -1)
+  --n-decoder-layers, --ndl N_DECODER_LAYERS
+        This will overidde the n-layers for asymmetrical transformers
+        (default: -1)
+  --model-parallel MODEL_PARALLEL
+        Shard the layers across multiple GPUs. (default: False)
+  --checkpoint-activations CHECKPOINT_ACTIVATIONS
+        Recompute activations on backward pass to conserve memory. (default:
+        False)
+  --use-memories USE_MEMORIES
+        use memories: must implement the function `_vectorize_memories` to use
+        this (default: False)
+  --wrap-memory-encoder WRAP_MEMORY_ENCODER
+        wrap memory encoder with MLP (default: False)
+  --memory-attention {cosine,dot,sqrt}
+        similarity for basic attention mechanism when using transformer to
+        encode memories (default: sqrt)
+  --normalize-sent-emb NORMALIZE_SENT_EMB
+  --share-encoders SHARE_ENCODERS
+  --learn-embeddings LEARN_EMBEDDINGS
+        learn embeddings (default: True)
+  --data-parallel DATA_PARALLEL
+        use model in data parallel, requires multiple gpus (default: False)
+  --reduction-type {first,max,mean}
+        Type of reduction at the end of transformer (default: mean)
+
+BPEHelper Arguments:
+  --bpe-vocab BPE_VOCAB
+        path to pre-trained tokenizer vocab (default: None)
+  --bpe-merge BPE_MERGE
+        path to pre-trained tokenizer merge (default: None)
+  --bpe-dropout BPE_DROPOUT
+        Use BPE dropout during training. (default: None)
+
+Changed directory to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project.
+
+JobID: 57633640
+======
+Time: Thu 24 Mar 11:33:04 GMT 2022
+Running on master node: gpu-q-27
+Current directory: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project
+/usr/bin/perl: symbol lookup error: /usr/local/software/slurm/slurm-19.05.5/lib64/perl5/auto/Slurm/Slurm.so: undefined symbol: Perl_xs_apiversion_bootcheck
+
+Nodes allocated:
+================
+
+
+numtasks=1, numnodes=1, mpi_tasks_per_node=1 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+ 
+

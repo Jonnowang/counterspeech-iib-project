@@ -41,15 +41,14 @@ TrainModel.main(
     fromfile_datapath=f"{__location__}/counterspeech_project-NLP/generator_only/data/conan_data",
     fromfile_datatype_extension=True,
     model='transformer/generator',
-    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative_conan_temperature/model',
+    model_file=f'{__location__}/counterspeech_project-NLP/generator_only/generative_greedy_double/model',
     
     # initialize with a pretrained model
-    init_model=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model',
-    dict_file=f'{__location__}/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict',
+    init_model=f'{__location__}/counterspeech_project-NLP/generator_only/generative_greedy/model',
+    dict_file=f'{__location__}/counterspeech_project-NLP/generator_only/generative_greedy/model.dict',
     
     # arguments we get from the pretrained model.
-    # Unfortunately, these must be looked up separately for each model.
-    multitask_weights=[1,3,3,3], veps=0.25, attention_dropout=0.0,
+    multitask_weights=[1], veps=0.25, attention_dropout=0.0,
     embedding_size=2560, ffn_size=10240, variant='prelayernorm',
     n_heads=32, n_positions=128, n_encoder_layers=2, n_decoder_layers=24,
     history_add_global_end_token='end', delimiter='  ', dict_tokenizer='bytelevelbpe',
@@ -58,20 +57,19 @@ TrainModel.main(
     relu_dropout=0.0, activation='gelu', model_parallel=True,
     save_after_valid=True, text_truncate=128, truncate=128,
     update_freq=2, gradient_clip=0.1, skip_generation=True, vp=10,
-    vmt='ppl', vmm='min', topk=25, temperature=4.0,
+    vmt='ppl', vmm='min',
 
     # some training arguments, specific to this fine-tuning
     # use a small learning rate with ADAM optimizer
-    lr=7e-06, optimizer='adam',
+    lr=2e-06, optimizer='adam',
     warmup_updates=100,
     # early stopping on perplexity
     validation_metric='ppl',
     validation_metric_mode='max',
     # train at most 10 minutes, and validate every epoch
-    max_train_time=43200, validation_every_n_epochs=1.0, num_epochs=10.0,
+    max_train_time=43200, validation_every_n_epochs=0.5, num_epochs=20.0,
     
     # depend on your gpu. If you have a V100, this is good
     batchsize=32, eval_batchsize=10, fp16=True,
-
-    beam_size=20, inference='beam',
+    inference='greedy',
 )

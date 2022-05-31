@@ -1,5 +1,9 @@
 /all_data
 /RUBER/scores
+/python3.8
+/counterspeech_project-NLP/generator_only
+/counterspeech_project-NLP/retrieval_only
+/counterspeech_project-NLP/retrieve_and_refine
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

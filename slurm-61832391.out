@@ -1,0 +1,489 @@
+Loading rhel7/default-gpu
+  Loading requirement: dot slurm turbovnc/2.0.1 vgl/2.5.1/64 singularity/current
+    rhel7/global cuda/8.0 gcc-5.4.0-gcc-4.8.5-fis24gg
+    openmpi-1.10.7-gcc-5.4.0-jdc7f4f cmake/latest
+2022-05-27 02:03:01,975 INFO     | building dictionary first...
+2022-05-27 02:03:01,988 INFO     | No model with opt yet at: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model(.opt)
+2022-05-27 02:03:02,002 WARNING  | your model is being loaded with opts that do not exist in the model you are initializing the weights with: download_path: None,verbose: False,datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data,load_from_checkpoint: True,interactive_mode: False
+2022-05-27 02:03:02,002 WARNING  | your model is being loaded with opts that differ from the model you are initializing the weights with. Add the following args to your run command to change this: 
+--fromfile-datapath /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data --learningrate 7e-06 --bpe-vocab /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data/models/blender/reddit_3B/model.dict-vocab.json --bpe-merge /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data/models/blender/reddit_3B/model.dict-merges.txt --dict-loaded True
+2022-05-27 02:03:02,693 INFO     | Using CUDA
+2022-05-27 02:03:02,708 INFO     | loading dictionary from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy/model.dict
+2022-05-27 02:03:02,737 INFO     | num words = 8008
+2022-05-27 02:03:46,370 INFO     | Total parameters: 2,696,268,800 (2,695,613,440 trainable)
+2022-05-27 02:03:46,371 INFO     | Loading existing model params from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy/model
+2022-05-27 02:05:36,874 WARNING  | Detected a fine-tune run. Resetting the optimizer.
+2022-05-27 02:05:36,874 WARNING  | Optimizer was reset. Also resetting LR scheduler.
+2022-05-27 02:05:36,911 INFO     | Opt:
+2022-05-27 02:05:36,912 INFO     |     activation: gelu
+2022-05-27 02:05:36,912 INFO     |     adafactor_eps: '(1e-30, 0.001)'
+2022-05-27 02:05:36,912 INFO     |     adam_eps: 1e-08
+2022-05-27 02:05:36,912 INFO     |     add_p1_after_newln: False
+2022-05-27 02:05:36,912 INFO     |     aggregate_micro: False
+2022-05-27 02:05:36,912 INFO     |     allow_missing_init_opts: False
+2022-05-27 02:05:36,912 INFO     |     attention_dropout: 0.0
+2022-05-27 02:05:36,912 INFO     |     batchsize: 32
+2022-05-27 02:05:36,912 INFO     |     beam_block_full_context: True
+2022-05-27 02:05:36,912 INFO     |     beam_block_list_filename: None
+2022-05-27 02:05:36,912 INFO     |     beam_block_ngram: -1
+2022-05-27 02:05:36,912 INFO     |     beam_context_block_ngram: -1
+2022-05-27 02:05:36,912 INFO     |     beam_delay: 30
+2022-05-27 02:05:36,912 INFO     |     beam_length_penalty: 0.65
+2022-05-27 02:05:36,912 INFO     |     beam_min_length: 1
+2022-05-27 02:05:36,912 INFO     |     beam_size: 1
+2022-05-27 02:05:36,912 INFO     |     betas: '(0.9, 0.999)'
+2022-05-27 02:05:36,912 INFO     |     bpe_add_prefix_space: None
+2022-05-27 02:05:36,912 INFO     |     bpe_debug: False
+2022-05-27 02:05:36,912 INFO     |     bpe_dropout: None
+2022-05-27 02:05:36,913 INFO     |     bpe_merge: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy/model.dict-merges.txt
+2022-05-27 02:05:36,913 INFO     |     bpe_vocab: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy/model.dict-vocab.json
+2022-05-27 02:05:36,913 INFO     |     checkpoint_activations: False
+2022-05-27 02:05:36,913 INFO     |     compute_tokenized_bleu: False
+2022-05-27 02:05:36,913 INFO     |     datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data
+2022-05-27 02:05:36,913 INFO     |     datatype: train
+2022-05-27 02:05:36,913 INFO     |     delimiter: '  '
+2022-05-27 02:05:36,913 INFO     |     dict_class: parlai.core.dict:DictionaryAgent
+2022-05-27 02:05:36,913 INFO     |     dict_endtoken: __end__
+2022-05-27 02:05:36,913 INFO     |     dict_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy/model.dict
+2022-05-27 02:05:36,913 INFO     |     dict_include_test: False
+2022-05-27 02:05:36,913 INFO     |     dict_include_valid: False
+2022-05-27 02:05:36,913 INFO     |     dict_initpath: None
+2022-05-27 02:05:36,913 INFO     |     dict_language: english
+2022-05-27 02:05:36,913 INFO     |     dict_loaded: True
+2022-05-27 02:05:36,913 INFO     |     dict_lower: False
+2022-05-27 02:05:36,913 INFO     |     dict_max_ngram_size: -1
+2022-05-27 02:05:36,913 INFO     |     dict_maxexs: -1
+2022-05-27 02:05:36,913 INFO     |     dict_maxtokens: -1
+2022-05-27 02:05:36,913 INFO     |     dict_minfreq: 0
+2022-05-27 02:05:36,913 INFO     |     dict_nulltoken: __null__
+2022-05-27 02:05:36,913 INFO     |     dict_starttoken: __start__
+2022-05-27 02:05:36,913 INFO     |     dict_textfields: text,labels
+2022-05-27 02:05:36,913 INFO     |     dict_tokenizer: bytelevelbpe
+2022-05-27 02:05:36,913 INFO     |     dict_unktoken: __unk__
+2022-05-27 02:05:36,913 INFO     |     display_examples: False
+2022-05-27 02:05:36,913 INFO     |     download_path: None
+2022-05-27 02:05:36,913 INFO     |     dropout: 0.1
+2022-05-27 02:05:36,914 INFO     |     dynamic_batching: None
+2022-05-27 02:05:36,914 INFO     |     embedding_projection: random
+2022-05-27 02:05:36,914 INFO     |     embedding_size: 2560
+2022-05-27 02:05:36,914 INFO     |     embedding_type: random
+2022-05-27 02:05:36,914 INFO     |     embeddings_scale: True
+2022-05-27 02:05:36,914 INFO     |     eval_batchsize: 10
+2022-05-27 02:05:36,914 INFO     |     eval_dynamic_batching: None
+2022-05-27 02:05:36,914 INFO     |     evaltask: None
+2022-05-27 02:05:36,914 INFO     |     ffn_size: 10240
+2022-05-27 02:05:36,914 INFO     |     final_extra_opt: 
+2022-05-27 02:05:36,914 INFO     |     force_fp16_tokens: False
+2022-05-27 02:05:36,914 INFO     |     fp16: True
+2022-05-27 02:05:36,914 INFO     |     fp16_impl: safe
+2022-05-27 02:05:36,914 INFO     |     fromfile_datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/conan_data
+2022-05-27 02:05:36,914 INFO     |     fromfile_datatype_extension: True
+2022-05-27 02:05:36,914 INFO     |     gpu: -1
+2022-05-27 02:05:36,914 INFO     |     gradient_clip: 0.1
+2022-05-27 02:05:36,914 INFO     |     hide_labels: False
+2022-05-27 02:05:36,914 INFO     |     history_add_global_end_token: end
+2022-05-27 02:05:36,914 INFO     |     history_reversed: False
+2022-05-27 02:05:36,914 INFO     |     history_size: -1
+2022-05-27 02:05:36,914 INFO     |     image_cropsize: 224
+2022-05-27 02:05:36,914 INFO     |     image_mode: raw
+2022-05-27 02:05:36,914 INFO     |     image_size: 256
+2022-05-27 02:05:36,914 INFO     |     inference: greedy
+2022-05-27 02:05:36,914 INFO     |     init_model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy/model
+2022-05-27 02:05:36,914 INFO     |     init_opt: None
+2022-05-27 02:05:36,914 INFO     |     interactive_mode: False
+2022-05-27 02:05:36,914 INFO     |     invsqrt_lr_decay_gamma: -1
+2022-05-27 02:05:36,914 INFO     |     is_debug: False
+2022-05-27 02:05:36,915 INFO     |     label_truncate: 128
+2022-05-27 02:05:36,915 INFO     |     learn_positional_embeddings: False
+2022-05-27 02:05:36,915 INFO     |     learningrate: 2e-06
+2022-05-27 02:05:36,915 INFO     |     load_from_checkpoint: True
+2022-05-27 02:05:36,915 INFO     |     log_every_n_secs: 10.0
+2022-05-27 02:05:36,915 INFO     |     log_every_n_steps: 50
+2022-05-27 02:05:36,915 INFO     |     loglevel: info
+2022-05-27 02:05:36,915 INFO     |     lr_scheduler: reduceonplateau
+2022-05-27 02:05:36,915 INFO     |     lr_scheduler_decay: 0.5
+2022-05-27 02:05:36,915 INFO     |     lr_scheduler_patience: 3
+2022-05-27 02:05:36,915 INFO     |     max_train_steps: -1
+2022-05-27 02:05:36,915 INFO     |     max_train_time: 43200.0
+2022-05-27 02:05:36,915 INFO     |     metrics: default
+2022-05-27 02:05:36,915 INFO     |     model: transformer/generator
+2022-05-27 02:05:36,915 INFO     |     model_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model
+2022-05-27 02:05:36,915 INFO     |     model_parallel: True
+2022-05-27 02:05:36,915 INFO     |     momentum: 0
+2022-05-27 02:05:36,915 INFO     |     multitask_weights: (1.0,)
+2022-05-27 02:05:36,915 INFO     |     mutators: None
+2022-05-27 02:05:36,915 INFO     |     n_decoder_layers: 24
+2022-05-27 02:05:36,915 INFO     |     n_encoder_layers: 2
+2022-05-27 02:05:36,915 INFO     |     n_heads: 32
+2022-05-27 02:05:36,915 INFO     |     n_layers: 2
+2022-05-27 02:05:36,915 INFO     |     n_positions: 128
+2022-05-27 02:05:36,915 INFO     |     n_segments: 0
+2022-05-27 02:05:36,915 INFO     |     nesterov: True
+2022-05-27 02:05:36,915 INFO     |     no_cuda: False
+2022-05-27 02:05:36,915 INFO     |     num_epochs: 20.0
+2022-05-27 02:05:36,915 INFO     |     num_workers: 0
+2022-05-27 02:05:36,916 INFO     |     nus: (0.7,)
+2022-05-27 02:05:36,916 INFO     |     optimizer: adam
+2022-05-27 02:05:36,916 INFO     |     output_scaling: 1.0
+2022-05-27 02:05:36,916 INFO     |     override: "{'task': 'fromfile:parlaiformat', 'fromfile_datapath': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/conan_data', 'fromfile_datatype_extension': True, 'model': 'transformer/generator', 'model_file': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model', 'init_model': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy/model', 'dict_file': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy/model.dict', 'multitask_weights': (1.0,), 'validation_every_n_epochs': 0.5, 'attention_dropout': 0.0, 'embedding_size': 2560, 'ffn_size': 10240, 'variant': 'prelayernorm', 'n_heads': 32, 'n_positions': 128, 'n_encoder_layers': 2, 'n_decoder_layers': 24, 'history_add_global_end_token': 'end', 'delimiter': '  ', 'dict_tokenizer': 'bytelevelbpe', 'dropout': 0.1, 'label_truncate': 128, 'log_every_n_secs': 10.0, 'lr_scheduler': 'reduceonplateau', 'lr_scheduler_patience': 3, 'relu_dropout': 0.0, 'activation': 'gelu', 'model_parallel': True, 'save_after_valid': True, 'text_truncate': 128, 'truncate': 128, 'update_freq': 2, 'gradient_clip': 0.1, 'skip_generation': True, 'validation_patience': 10, 'validation_metric': 'ppl', 'validation_metric_mode': 'max', 'learningrate': 2e-06, 'optimizer': 'adam', 'warmup_updates': 100, 'max_train_time': 43200.0, 'num_epochs': 20.0, 'batchsize': 32, 'eval_batchsize': 10, 'fp16': True, 'inference': 'greedy'}"
+2022-05-27 02:05:36,916 INFO     |     parlai_home: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages
+2022-05-27 02:05:36,916 INFO     |     person_tokens: False
+2022-05-27 02:05:36,916 INFO     |     rank_candidates: False
+2022-05-27 02:05:36,916 INFO     |     relu_dropout: 0.0
+2022-05-27 02:05:36,916 INFO     |     save_after_valid: True
+2022-05-27 02:05:36,916 INFO     |     save_every_n_secs: -1
+2022-05-27 02:05:36,916 INFO     |     share_word_embeddings: True
+2022-05-27 02:05:36,916 INFO     |     short_final_eval: False
+2022-05-27 02:05:36,916 INFO     |     skip_generation: True
+2022-05-27 02:05:36,916 INFO     |     special_tok_lst: None
+2022-05-27 02:05:36,916 INFO     |     split_lines: False
+2022-05-27 02:05:36,916 INFO     |     starttime: May27_02-03
+2022-05-27 02:05:36,916 INFO     |     task: fromfile:parlaiformat
+2022-05-27 02:05:36,916 INFO     |     temperature: 1.0
+2022-05-27 02:05:36,916 INFO     |     tensorboard_log: False
+2022-05-27 02:05:36,916 INFO     |     tensorboard_logdir: None
+2022-05-27 02:05:36,916 INFO     |     text_truncate: 128
+2022-05-27 02:05:36,916 INFO     |     topk: 10
+2022-05-27 02:05:36,916 INFO     |     topp: 0.9
+2022-05-27 02:05:36,916 INFO     |     truncate: 128
+2022-05-27 02:05:36,916 INFO     |     update_freq: 2
+2022-05-27 02:05:36,916 INFO     |     use_reply: label
+2022-05-27 02:05:36,916 INFO     |     validation_cutoff: 1.0
+2022-05-27 02:05:36,916 INFO     |     validation_every_n_epochs: 0.5
+2022-05-27 02:05:36,917 INFO     |     validation_every_n_secs: -1
+2022-05-27 02:05:36,917 INFO     |     validation_every_n_steps: -1
+2022-05-27 02:05:36,917 INFO     |     validation_max_exs: -1
+2022-05-27 02:05:36,917 INFO     |     validation_metric: ppl
+2022-05-27 02:05:36,917 INFO     |     validation_metric_mode: max
+2022-05-27 02:05:36,917 INFO     |     validation_patience: 10
+2022-05-27 02:05:36,917 INFO     |     validation_share_agent: False
+2022-05-27 02:05:36,917 INFO     |     variant: prelayernorm
+2022-05-27 02:05:36,917 INFO     |     verbose: False
+2022-05-27 02:05:36,917 INFO     |     wandb_entity: None
+2022-05-27 02:05:36,917 INFO     |     wandb_log: False
+2022-05-27 02:05:36,917 INFO     |     wandb_name: None
+2022-05-27 02:05:36,917 INFO     |     wandb_project: None
+2022-05-27 02:05:36,917 INFO     |     warmup_rate: 0.0001
+2022-05-27 02:05:36,917 INFO     |     warmup_updates: 100
+2022-05-27 02:05:36,917 INFO     |     weight_decay: None
+2022-05-27 02:05:37,063 INFO     | Current ParlAI commit: 95e0b37d7cd21c56912d5afa4849fcd41d85f5e2
+2022-05-27 02:05:37,129 INFO     | Current internal commit: 95e0b37d7cd21c56912d5afa4849fcd41d85f5e2
+2022-05-27 02:05:37,194 INFO     | Current fb commit: 95e0b37d7cd21c56912d5afa4849fcd41d85f5e2
+2022-05-27 02:05:37,217 INFO     | creating task(s): fromfile:parlaiformat
+2022-05-27 02:05:37,259 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/conan_data_train.txt
+2022-05-27 02:05:37,344 INFO     | training...
+2022-05-27 02:05:48,027 INFO     | time:11s total_exs:320 total_steps:5 epochs:0.32 time_left:649s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   27.52     1 880.6   852       0          0 30.81  320             32768  3.463   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2487  30.5 2.576 7e-06   976 944.2       0          0 13.14      .4661   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                    5 1857 1796 .4842
+
+2022-05-27 02:05:51,805 INFO     | time:14s total_exs:512 total_steps:8 epochs:0.51 time_left:550s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   28.08     1 898.7  1436       0          0 51.13  192             32768  2.931   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2440 30.85 2.492 7e-06 987.3  1578       0          0 12.09      .4801   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                    8 1886 3014 .8011
+
+2022-05-27 02:05:51,806 INFO     | creating task(s): fromfile:parlaiformat
+2022-05-27 02:05:51,807 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/conan_data_valid.txt
+2022-05-27 02:05:51,836 INFO     | running eval: valid
+2022-05-27 02:05:52,218 WARNING  | --skip-generation true produces limited metrics
+2022-05-27 02:05:56,627 INFO     | eval completed in 4.79s
+2022-05-27 02:05:56,627 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1184       0          0  31.4  150    .1930 36.17 2.532 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1132 .006667      .1200 12.58      .4666         0                    8 737.6 2316
+
+2022-05-27 02:05:56,627 SUCCESS  | new best ppl: 12.58
+2022-05-27 02:05:56,627 INFO     | saving best valid model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model
+2022-05-27 02:05:56,628 INFO     | Saving dictionary to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.dict
+2022-05-27 02:06:36,274 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:06:36,275 INFO     | Saving dictionary to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint.dict
+2022-05-27 02:07:26,807 INFO     | time:109s total_exs:960 total_steps:15 epochs:0.96 time_left:2171s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   27.79     1 889.1  1240       0          0 44.63  448             32768  2.806   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2457 30.26 2.374 7e-06 968.2  1350       0          0 10.74      .5000   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   15 1857 2590 .6990
+
+2022-05-27 02:07:28,235 INFO     | time:111s total_exs:1024 total_steps:16 epochs:1.02 time_left:2055s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   29.14     1 932.5  1336       0          0 45.84   64             32768  2.671   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2286 29.11 2.321 7e-06 931.5  1335       0          0 10.18      .5072   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   16 1864 2671 .7258
+
+2022-05-27 02:07:28,236 INFO     | running eval: valid
+2022-05-27 02:07:33,149 INFO     | eval completed in 4.91s
+2022-05-27 02:07:33,149 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1155       0          0 30.63  150    .1930 36.17 2.493 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1104 .006667      .1200 12.09      .4705         0                   16 737.6 2259
+
+2022-05-27 02:07:33,149 SUCCESS  | new best ppl: 12.09 (previous best was 12.58)
+2022-05-27 02:07:33,149 INFO     | saving best valid model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model
+2022-05-27 02:08:16,282 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:09:07,736 INFO     | time:210s total_exs:1536 total_steps:24 epochs:1.54 time_left:2529s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   27.62     1   884  1451       0          0 52.54  512             32768  2.606   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2514 30.64 2.144 7e-06 980.4  1610       0          0 8.534      .5383   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   24 1864 3061 .8218
+
+2022-05-27 02:09:07,736 INFO     | running eval: valid
+2022-05-27 02:09:12,531 INFO     | eval completed in 4.79s
+2022-05-27 02:09:12,531 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1185       0          0 31.43  150    .1930 36.17 2.473 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1133 .006667      .1200 11.86      .4729         0                   24 737.6 2318
+
+2022-05-27 02:09:12,531 SUCCESS  | new best ppl: 11.86 (previous best was 12.09)
+2022-05-27 02:09:12,531 INFO     | saving best valid model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model
+2022-05-27 02:09:52,562 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:10:43,103 INFO     | time:306s total_exs:2048 total_steps:32 epochs:2.05 time_left:2680s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   27.84     1   891  1477       0          0 53.05  512             32768  2.656   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2463  29.6 2.015 7e-06 947.2  1570       0          0 7.498      .5646   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   32 1838 3048 .8298
+
+2022-05-27 02:10:43,103 INFO     | running eval: valid
+2022-05-27 02:10:47,855 INFO     | eval completed in 4.75s
+2022-05-27 02:10:47,855 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1194       0          0 31.65  150    .1930 36.17 2.484 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1141 .006667      .1200 11.99      .4757         0                   32 737.6 2335
+
+2022-05-27 02:10:47,855 REPORT   | did not beat best ppl: 11.8588 impatience: 1
+2022-05-27 02:10:47,855 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:11:37,329 INFO     | time:360s total_exs:2560 total_steps:40 epochs:2.56 time_left:2452s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   26.67     1 853.4  1443       0          0  54.1  512             32768  2.693   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2479 31.08 1.895 7e-06 994.7  1682       0          0 6.652      .5869   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   40 1848 3124 .8460
+
+2022-05-27 02:11:37,330 INFO     | running eval: valid
+2022-05-27 02:11:42,015 INFO     | eval completed in 4.68s
+2022-05-27 02:11:42,015 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1211       0          0 32.11  150    .1930 36.17 2.498 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1157 .006667      .1200 12.16      .4736         0                   40 737.6 2368
+
+2022-05-27 02:11:42,015 REPORT   | did not beat best ppl: 11.8588 impatience: 2
+2022-05-27 02:11:42,015 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:12:35,947 INFO     | time:419s total_exs:3008 total_steps:47 epochs:3.01 time_left:2365s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   27.38     1   876  1134       0          0 41.43  448             32768  2.774   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2457 30.21 1.805 7e-06 966.7  1252       0          0 6.079      .5985   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   47 1843 2386 .6487
+
+2022-05-27 02:12:37,318 INFO     | time:420s total_exs:3072 total_steps:48 epochs:3.07 time_left:2314s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   29.59     1   947  1411       0          0 47.66   64             32768  2.705   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2316 30.75 1.622 7e-06   984  1466       0          0 5.062      .6372   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   48 1931 2876 .7570
+
+2022-05-27 02:12:37,318 INFO     | running eval: valid
+2022-05-27 02:12:42,205 INFO     | eval completed in 4.89s
+2022-05-27 02:12:42,205 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1162       0          0  30.8  150    .1930 36.17 2.522 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1110 .006667      .1200 12.45      .4712         0                   48 737.6 2272
+
+2022-05-27 02:12:42,205 REPORT   | did not beat best ppl: 11.8588 impatience: 3
+2022-05-27 02:12:42,205 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:13:38,772 INFO     | time:481s total_exs:3584 total_steps:56 epochs:3.58 time_left:2205s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   27.09     1 866.9  1295       0          0 47.79  512             32768  2.854   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2495 30.52 1.636 7e-06 976.6  1459       0          0 5.134      .6332   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   56 1844 2753 .7482
+
+2022-05-27 02:13:38,772 INFO     | running eval: valid
+2022-05-27 02:13:43,694 INFO     | eval completed in 4.92s
+2022-05-27 02:13:43,694 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1154       0          0  30.6  150    .1930 36.17  2.54 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1103 .006667      .1200 12.68      .4701         0                   56 737.6 2257
+
+2022-05-27 02:13:43,694 REPORT   | did not beat best ppl: 11.8588 impatience: 4
+2022-05-27 02:13:43,694 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:14:38,436 INFO     | time:541s total_exs:4096 total_steps:64 epochs:4.10 time_left:2101s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   27.85     1 891.2  1431       0          0 51.36  512             32768   2.85   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2393 30.12 1.516 7e-06 963.8  1547       0          0 4.556      .6587   
+    token_em  total_train_updates  tpb  tps   ups  
+     .001953                   64 1855 2977 .8034
+
+2022-05-27 02:14:38,436 INFO     | running eval: valid
+2022-05-27 02:14:43,271 INFO     | eval completed in 4.83s
+2022-05-27 02:14:43,271 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1174       0          0 31.14  150    .1930 36.17 2.562 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1122 .006667      .1200 12.96      .4705         0                   64 737.6 2297
+
+2022-05-27 02:14:43,272 REPORT   | did not beat best ppl: 11.8588 impatience: 5
+2022-05-27 02:14:43,272 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:15:33,485 INFO     | time:596s total_exs:4608 total_steps:72 epochs:4.61 time_left:1991s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   26.61     1 851.4  1403       0          0 52.74  512             32768  2.838   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2451  30.1 1.369 7e-06 963.3  1588       0          0 3.932      .6883   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   72 1815 2991 .8248
+
+2022-05-27 02:15:33,486 INFO     | running eval: valid
+2022-05-27 02:15:38,309 INFO     | eval completed in 4.82s
+2022-05-27 02:15:38,309 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1176       0          0 31.19  150    .1930 36.17 2.588 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1124 .006667      .1200 13.31      .4670         0                   72 737.6 2301
+
+2022-05-27 02:15:38,309 REPORT   | did not beat best ppl: 11.8588 impatience: 6
+2022-05-27 02:15:38,309 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:16:28,486 INFO     | time:651s total_exs:5120 total_steps:80 epochs:5.12 time_left:1892s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   27.51     1 880.4  1426       0          0 51.82  512             32768  2.987   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2417 31.64 1.282 7e-06  1012  1640       0          0 3.604      .7119   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   80 1893 3065 .8105
+
+2022-05-27 02:16:28,486 INFO     | running eval: valid
+2022-05-27 02:16:33,233 INFO     | eval completed in 4.75s
+2022-05-27 02:16:33,233 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1195       0          0 31.69  150    .1930 36.17 2.634 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1142 .006667      .1200 13.94      .4644         0                   80 737.6 2337
+
+2022-05-27 02:16:33,233 REPORT   | did not beat best ppl: 11.8588 impatience: 7
+2022-05-27 02:16:33,233 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:17:22,227 INFO     | time:705s total_exs:5632 total_steps:88 epochs:5.63 time_left:1798s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   26.04     1 833.3  1423       0          0 54.64  512             32768  2.997   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2398 30.21 1.161 7e-06 966.9  1651       0          0 3.194      .7371   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   88 1800 3074 .8545
+
+2022-05-27 02:17:22,227 INFO     | running eval: valid
+2022-05-27 02:17:26,940 INFO     | eval completed in 4.71s
+2022-05-27 02:17:26,940 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1204       0          0 31.91  150    .1930 36.17 2.676 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1150 .006667      .1200 14.53      .4646         0                   88 737.6 2354
+
+2022-05-27 02:17:26,941 REPORT   | did not beat best ppl: 11.8588 impatience: 8
+2022-05-27 02:17:26,941 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:18:17,801 INFO     | time:760s total_exs:6144 total_steps:96 epochs:6.14 time_left:1715s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   28.03     1 897.1  1505       0          0  53.7  512             32768  3.075   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2479 30.67 1.106 7e-06 981.4  1647       0          0 3.022      .7501   
+    token_em  total_train_updates  tpb  tps   ups  
+           0                   96 1878 3152 .8397
+
+2022-05-27 02:18:17,802 INFO     | running eval: valid
+2022-05-27 02:18:22,470 INFO     | eval completed in 4.67s
+2022-05-27 02:18:22,470 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1215       0          0 32.22  150    .1930 36.17 2.708 7e-06 360.5   
+    ltps  ltrunc  ltrunclen  ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1161 .006667      .1200   15      .4662         0                   96 737.6 2377
+
+2022-05-27 02:18:22,470 REPORT   | did not beat best ppl: 11.8588 impatience: 9
+2022-05-27 02:18:22,470 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:19:11,928 INFO     | time:815s total_exs:6656 total_steps:104 epochs:6.66 time_left:1633s
+    clen  clip  ctpb  ctps  ctrunc  ctrunclen  exps  exs  fp16_loss_scalar  gnorm  \
+   28.02     1 896.6  1539       0          0 54.91  512             32768  3.082   
+    gpu_mem  llen  loss    lr  ltpb  ltps  ltrunc  ltrunclen   ppl  token_acc  \
+      .2479 30.38 .9951 7e-06 972.1  1668       0          0 2.705      .7737   
+    token_em  total_train_updates  tpb  tps   ups  
+     .001953                  104 1869 3207 .8590
+
+2022-05-27 02:19:11,929 INFO     | running eval: valid
+2022-05-27 02:19:16,628 INFO     | eval completed in 4.70s
+2022-05-27 02:19:16,628 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1  1208       0          0 32.02  150    .1930 36.17 2.751 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+    1154 .006667      .1200 15.67      .4650         0                  104 737.6 2362
+
+2022-05-27 02:19:16,628 REPORT   | did not beat best ppl: 11.8588 impatience: 10
+2022-05-27 02:19:16,628 INFO     | saving model checkpoint: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.checkpoint
+2022-05-27 02:19:56,421 INFO     | ran out of patience! stopping training.
+2022-05-27 02:19:56,427 WARNING  | Overriding opt["multitask_weights"] to (1.0,) (previously: [1.0])
+2022-05-27 02:19:56,430 WARNING  | your model is being loaded with opts that do not exist in the model you are initializing the weights with: download_path: None,verbose: False,datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data,load_from_checkpoint: True,interactive_mode: False
+2022-05-27 02:19:56,430 WARNING  | your model is being loaded with opts that differ from the model you are initializing the weights with. Add the following args to your run command to change this: 
+--fromfile-datapath /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data --force-fp16-tokens False --learningrate 7e-06 --bpe-vocab /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data/models/blender/reddit_3B/model.dict-vocab.json --bpe-merge /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data/models/blender/reddit_3B/model.dict-merges.txt
+2022-05-27 02:19:56,431 INFO     | Using CUDA
+2022-05-27 02:19:56,432 INFO     | loading dictionary from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model.dict
+2022-05-27 02:19:56,445 INFO     | num words = 8008
+2022-05-27 02:20:21,547 INFO     | Total parameters: 2,696,268,800 (2,695,613,440 trainable)
+2022-05-27 02:20:21,548 INFO     | Loading existing model params from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/generative_greedy_double/model
+2022-05-27 02:21:47,621 INFO     | creating task(s): fromfile:parlaiformat
+2022-05-27 02:21:47,623 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/conan_data_valid.txt
+2022-05-27 02:21:48,136 INFO     | running eval: valid
+2022-05-27 02:21:57,873 INFO     | eval completed in 9.74s
+2022-05-27 02:21:57,873 REPORT   | valid:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   37.71 377.1   744       0          0 19.34  150    .1772 36.17 2.473 7e-06 360.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+   711.1 .006667      .1200 11.86      .4729         0                   24 737.6 1455
+
+2022-05-27 02:21:57,875 INFO     | creating task(s): fromfile:parlaiformat
+2022-05-27 02:21:57,876 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/conan_data_test.txt
+2022-05-27 02:21:57,906 INFO     | running eval: test
+2022-05-27 02:22:01,774 INFO     | eval completed in 3.87s
+2022-05-27 02:22:01,775 REPORT   | test:
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss    lr  ltpb  \
+   32.23 322.3  1003       0          0 31.12  120    .1772 31.95 2.453 7e-06 319.5   
+    ltps  ltrunc  ltrunclen   ppl  token_acc  token_em  total_train_updates   tpb  tps  
+   994.4       0          0 11.63      .4797         0                   24 641.8 1998
+
+Changed directory to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project.
+
+JobID: 61832391
+======
+Time: Fri 27 May 02:22:22 BST 2022
+Running on master node: gpu-q-27
+Current directory: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project
+/usr/bin/perl: symbol lookup error: /usr/local/software/slurm/slurm-20.11.9/lib64/perl5/auto/Slurm/Slurm.so: undefined symbol: Perl_xs_apiversion_bootcheck
+
+Nodes allocated:
+================
+
+
+numtasks=1, numnodes=1, mpi_tasks_per_node=1 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+ 
+

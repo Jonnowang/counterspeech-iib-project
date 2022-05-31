@@ -1,0 +1,617 @@
+Loading rhel7/default-gpu
+  Loading requirement: dot slurm turbovnc/2.0.1 vgl/2.5.1/64 singularity/current
+    rhel7/global cuda/8.0 gcc-5.4.0-gcc-4.8.5-fis24gg
+    openmpi-1.10.7-gcc-5.4.0-jdc7f4f cmake/latest
+2022-03-17 03:42:17,391 WARNING  | Overriding opt["datatype"] to valid (previously: train)
+2022-03-17 03:42:17,392 WARNING  | Overriding opt["fromfile_datapath"] to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt (previously: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/conan_data)
+2022-03-17 03:42:18,158 INFO     | Using CUDA
+2022-03-17 03:42:18,183 INFO     | loading dictionary from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.dict
+2022-03-17 03:42:18,221 INFO     | num words = 8008
+2022-03-17 03:51:09,727 INFO     | Total parameters: 2,696,268,800 (2,695,613,440 trainable)
+2022-03-17 03:51:09,727 INFO     | Loading existing model params from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model
+2022-03-17 04:02:46,879 INFO     | Opt:
+2022-03-17 04:02:46,880 INFO     |     activation: gelu
+2022-03-17 04:02:46,880 INFO     |     adafactor_eps: '[1e-30, 0.001]'
+2022-03-17 04:02:46,880 INFO     |     adam_eps: 1e-08
+2022-03-17 04:02:46,880 INFO     |     add_p1_after_newln: False
+2022-03-17 04:02:46,880 INFO     |     aggregate_micro: False
+2022-03-17 04:02:46,880 INFO     |     allow_missing_init_opts: False
+2022-03-17 04:02:46,880 INFO     |     area_under_curve_class: None
+2022-03-17 04:02:46,880 INFO     |     area_under_curve_digits: -1
+2022-03-17 04:02:46,880 INFO     |     attention_dropout: 0.0
+2022-03-17 04:02:46,880 INFO     |     batchsize: 32
+2022-03-17 04:02:46,880 INFO     |     beam_block_full_context: True
+2022-03-17 04:02:46,880 INFO     |     beam_block_list_filename: None
+2022-03-17 04:02:46,880 INFO     |     beam_block_ngram: -1
+2022-03-17 04:02:46,880 INFO     |     beam_context_block_ngram: -1
+2022-03-17 04:02:46,880 INFO     |     beam_delay: 30
+2022-03-17 04:02:46,880 INFO     |     beam_length_penalty: 0.65
+2022-03-17 04:02:46,880 INFO     |     beam_min_length: 1
+2022-03-17 04:02:46,880 INFO     |     beam_size: 20
+2022-03-17 04:02:46,880 INFO     |     betas: '[0.9, 0.999]'
+2022-03-17 04:02:46,881 INFO     |     bpe_add_prefix_space: None
+2022-03-17 04:02:46,881 INFO     |     bpe_debug: False
+2022-03-17 04:02:46,881 INFO     |     bpe_dropout: None
+2022-03-17 04:02:46,881 INFO     |     bpe_merge: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.dict-merges.txt
+2022-03-17 04:02:46,881 INFO     |     bpe_vocab: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.dict-vocab.json
+2022-03-17 04:02:46,881 INFO     |     checkpoint_activations: False
+2022-03-17 04:02:46,881 INFO     |     compute_tokenized_bleu: False
+2022-03-17 04:02:46,881 INFO     |     datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data
+2022-03-17 04:02:46,881 INFO     |     datatype: valid
+2022-03-17 04:02:46,881 INFO     |     delimiter: '  '
+2022-03-17 04:02:46,881 INFO     |     dict_class: parlai.core.dict:DictionaryAgent
+2022-03-17 04:02:46,881 INFO     |     dict_endtoken: __end__
+2022-03-17 04:02:46,881 INFO     |     dict_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.dict
+2022-03-17 04:02:46,881 INFO     |     dict_include_test: False
+2022-03-17 04:02:46,881 INFO     |     dict_include_valid: False
+2022-03-17 04:02:46,881 INFO     |     dict_initpath: None
+2022-03-17 04:02:46,881 INFO     |     dict_language: english
+2022-03-17 04:02:46,881 INFO     |     dict_loaded: True
+2022-03-17 04:02:46,881 INFO     |     dict_lower: False
+2022-03-17 04:02:46,881 INFO     |     dict_max_ngram_size: -1
+2022-03-17 04:02:46,881 INFO     |     dict_maxexs: -1
+2022-03-17 04:02:46,881 INFO     |     dict_maxtokens: -1
+2022-03-17 04:02:46,881 INFO     |     dict_minfreq: 0
+2022-03-17 04:02:46,881 INFO     |     dict_nulltoken: __null__
+2022-03-17 04:02:46,881 INFO     |     dict_starttoken: __start__
+2022-03-17 04:02:46,881 INFO     |     dict_textfields: text,labels
+2022-03-17 04:02:46,881 INFO     |     dict_tokenizer: bytelevelbpe
+2022-03-17 04:02:46,881 INFO     |     dict_unktoken: __unk__
+2022-03-17 04:02:46,881 INFO     |     display_examples: False
+2022-03-17 04:02:46,881 INFO     |     download_path: None
+2022-03-17 04:02:46,882 INFO     |     dropout: 0.1
+2022-03-17 04:02:46,882 INFO     |     dynamic_batching: None
+2022-03-17 04:02:46,882 INFO     |     embedding_projection: random
+2022-03-17 04:02:46,882 INFO     |     embedding_size: 2560
+2022-03-17 04:02:46,882 INFO     |     embedding_type: random
+2022-03-17 04:02:46,882 INFO     |     embeddings_scale: True
+2022-03-17 04:02:46,882 INFO     |     eval_batchsize: 10
+2022-03-17 04:02:46,882 INFO     |     eval_dynamic_batching: None
+2022-03-17 04:02:46,882 INFO     |     evaltask: None
+2022-03-17 04:02:46,882 INFO     |     ffn_size: 10240
+2022-03-17 04:02:46,882 INFO     |     final_extra_opt: 
+2022-03-17 04:02:46,882 INFO     |     force_fp16_tokens: True
+2022-03-17 04:02:46,882 INFO     |     fp16: True
+2022-03-17 04:02:46,882 INFO     |     fp16_impl: safe
+2022-03-17 04:02:46,882 INFO     |     fromfile_datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt
+2022-03-17 04:02:46,882 INFO     |     fromfile_datatype_extension: True
+2022-03-17 04:02:46,882 INFO     |     gpu: -1
+2022-03-17 04:02:46,882 INFO     |     gradient_clip: 0.1
+2022-03-17 04:02:46,882 INFO     |     hide_labels: False
+2022-03-17 04:02:46,882 INFO     |     history_add_global_end_token: end
+2022-03-17 04:02:46,882 INFO     |     history_reversed: False
+2022-03-17 04:02:46,882 INFO     |     history_size: -1
+2022-03-17 04:02:46,882 INFO     |     image_cropsize: 224
+2022-03-17 04:02:46,882 INFO     |     image_mode: raw
+2022-03-17 04:02:46,882 INFO     |     image_size: 256
+2022-03-17 04:02:46,882 INFO     |     inference: beam
+2022-03-17 04:02:46,882 INFO     |     init_model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.checkpoint
+2022-03-17 04:02:46,882 INFO     |     init_opt: None
+2022-03-17 04:02:46,882 INFO     |     interactive_mode: False
+2022-03-17 04:02:46,882 INFO     |     invsqrt_lr_decay_gamma: -1
+2022-03-17 04:02:46,882 INFO     |     is_debug: False
+2022-03-17 04:02:46,883 INFO     |     label_truncate: 128
+2022-03-17 04:02:46,883 INFO     |     learn_positional_embeddings: False
+2022-03-17 04:02:46,883 INFO     |     learningrate: 7e-06
+2022-03-17 04:02:46,883 INFO     |     log_every_n_secs: 10.0
+2022-03-17 04:02:46,883 INFO     |     log_every_n_steps: 50
+2022-03-17 04:02:46,883 INFO     |     log_keep_fields: all
+2022-03-17 04:02:46,883 INFO     |     loglevel: info
+2022-03-17 04:02:46,883 INFO     |     lr_scheduler: reduceonplateau
+2022-03-17 04:02:46,883 INFO     |     lr_scheduler_decay: 0.5
+2022-03-17 04:02:46,883 INFO     |     lr_scheduler_patience: 3
+2022-03-17 04:02:46,883 INFO     |     max_train_steps: -1
+2022-03-17 04:02:46,883 INFO     |     max_train_time: 43200.0
+2022-03-17 04:02:46,883 INFO     |     metrics: default
+2022-03-17 04:02:46,883 INFO     |     model: transformer/generator
+2022-03-17 04:02:46,883 INFO     |     model_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model
+2022-03-17 04:02:46,883 INFO     |     model_parallel: True
+2022-03-17 04:02:46,883 INFO     |     momentum: 0
+2022-03-17 04:02:46,883 INFO     |     multitask_weights: '[1.0, 3.0, 3.0, 3.0]'
+2022-03-17 04:02:46,883 INFO     |     mutators: None
+2022-03-17 04:02:46,883 INFO     |     n_decoder_layers: 24
+2022-03-17 04:02:46,883 INFO     |     n_encoder_layers: 2
+2022-03-17 04:02:46,883 INFO     |     n_heads: 32
+2022-03-17 04:02:46,883 INFO     |     n_layers: 2
+2022-03-17 04:02:46,883 INFO     |     n_positions: 128
+2022-03-17 04:02:46,883 INFO     |     n_segments: 0
+2022-03-17 04:02:46,883 INFO     |     nesterov: True
+2022-03-17 04:02:46,883 INFO     |     no_cuda: False
+2022-03-17 04:02:46,883 INFO     |     num_epochs: 40.0
+2022-03-17 04:02:46,884 INFO     |     num_examples: -1
+2022-03-17 04:02:46,884 INFO     |     num_workers: 0
+2022-03-17 04:02:46,884 INFO     |     nus: [0.7]
+2022-03-17 04:02:46,884 INFO     |     optimizer: adam
+2022-03-17 04:02:46,884 INFO     |     output_scaling: 1.0
+2022-03-17 04:02:46,884 INFO     |     override: "{'datatype': 'valid', 'task': 'fromfile:parlaiformat', 'fromfile_datapath': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt', 'model_file': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model'}"
+2022-03-17 04:02:46,884 INFO     |     parlai_home: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages
+2022-03-17 04:02:46,884 INFO     |     person_tokens: False
+2022-03-17 04:02:46,884 INFO     |     rank_candidates: False
+2022-03-17 04:02:46,884 INFO     |     relu_dropout: 0.0
+2022-03-17 04:02:46,884 INFO     |     report_filename: 
+2022-03-17 04:02:46,884 INFO     |     save_after_valid: True
+2022-03-17 04:02:46,884 INFO     |     save_every_n_secs: -1
+2022-03-17 04:02:46,884 INFO     |     save_format: conversations
+2022-03-17 04:02:46,884 INFO     |     share_word_embeddings: True
+2022-03-17 04:02:46,884 INFO     |     short_final_eval: False
+2022-03-17 04:02:46,884 INFO     |     skip_generation: True
+2022-03-17 04:02:46,884 INFO     |     special_tok_lst: None
+2022-03-17 04:02:46,884 INFO     |     split_lines: False
+2022-03-17 04:02:46,884 INFO     |     starttime: Mar15_17-06
+2022-03-17 04:02:46,884 INFO     |     task: fromfile:parlaiformat
+2022-03-17 04:02:46,884 INFO     |     temperature: 1.0
+2022-03-17 04:02:46,884 INFO     |     tensorboard_log: False
+2022-03-17 04:02:46,884 INFO     |     tensorboard_logdir: None
+2022-03-17 04:02:46,884 INFO     |     text_truncate: 128
+2022-03-17 04:02:46,884 INFO     |     topk: 10
+2022-03-17 04:02:46,884 INFO     |     topp: 0.9
+2022-03-17 04:02:46,884 INFO     |     truncate: 128
+2022-03-17 04:02:46,884 INFO     |     update_freq: 2
+2022-03-17 04:02:46,884 INFO     |     use_reply: label
+2022-03-17 04:02:46,884 INFO     |     validation_cutoff: 1.0
+2022-03-17 04:02:46,885 INFO     |     validation_every_n_epochs: 1.0
+2022-03-17 04:02:46,885 INFO     |     validation_every_n_secs: -1
+2022-03-17 04:02:46,885 INFO     |     validation_every_n_steps: -1
+2022-03-17 04:02:46,885 INFO     |     validation_max_exs: -1
+2022-03-17 04:02:46,885 INFO     |     validation_metric: ppl
+2022-03-17 04:02:46,885 INFO     |     validation_metric_mode: max
+2022-03-17 04:02:46,885 INFO     |     validation_patience: 10
+2022-03-17 04:02:46,885 INFO     |     validation_share_agent: False
+2022-03-17 04:02:46,885 INFO     |     variant: prelayernorm
+2022-03-17 04:02:46,885 INFO     |     verbose: False
+2022-03-17 04:02:46,885 INFO     |     wandb_entity: None
+2022-03-17 04:02:46,885 INFO     |     wandb_log: False
+2022-03-17 04:02:46,885 INFO     |     wandb_name: None
+2022-03-17 04:02:46,885 INFO     |     wandb_project: None
+2022-03-17 04:02:46,885 INFO     |     warmup_rate: 0.0001
+2022-03-17 04:02:46,885 INFO     |     warmup_updates: 100
+2022-03-17 04:02:46,885 INFO     |     weight_decay: None
+2022-03-17 04:02:46,885 INFO     |     world_logs: 
+2022-03-17 04:02:47,065 INFO     | Current ParlAI commit: 55c68370842ec83d25d418a74d081ed78dedfcf2
+2022-03-17 04:02:47,128 INFO     | Current internal commit: 55c68370842ec83d25d418a74d081ed78dedfcf2
+2022-03-17 04:02:47,195 INFO     | Current fb commit: 55c68370842ec83d25d418a74d081ed78dedfcf2
+2022-03-17 04:02:47,195 INFO     | Evaluating task fromfile:parlaiformat using datatype valid.
+2022-03-17 04:02:47,195 INFO     | creating task(s): fromfile:parlaiformat
+2022-03-17 04:02:47,197 WARNING  | You are using this fromfile data as a valid or test set without setting fromfile_datatype_extension to true. Please be aware this uses directly the file you indicated, make sure this is not the same as your training file.
+2022-03-17 04:02:47,197 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt
+2022-03-17 04:02:48,247 WARNING  | --skip-generation true produces limited metrics
+2022-03-17 04:02:58,070 INFO     | 11.2% complete (243 / 2,169), 0:00:10 elapsed, 0:01:19 eta
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   49.04 44.57  1091  .03719      4.463 24.56  243    .0161    20 2.997 19.98 489.2   
+    ltrunc  ltrunclen   ppl  token_acc  token_em   tpb  tps  
+         0          0 20.02      .4513         0 64.55 1581
+2022-03-17 04:03:07,306 INFO     | 22.6% complete (491 / 2,169), 0:00:20 elapsed, 0:01:09 eta
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   46.61  44.1  1081  .02664      2.514 24.66  491   .01611 20.78 2.836 20.77 509.4   
+    ltrunc  ltrunclen   ppl  token_acc  token_em   tpb  tps  
+         0          0 17.05      .4818         0 64.87 1591
+2022-03-17 04:03:17,334 INFO     | 35.0% complete (759 / 2,169), 0:00:30 elapsed, 0:00:56 eta
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   47.39 44.21  1117  .03175      3.181 25.35  759   .01611 20.73 2.703 20.73 523.6   
+    ltrunc  ltrunclen   ppl  token_acc  token_em   tpb  tps  
+         0          0 14.93      .4983         0 64.94 1640
+2022-03-17 04:03:27,367 INFO     | 47.3% complete (1,027 / 2,169), 0:00:40 elapsed, 0:00:45 eta
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   47.07 44.12  1131  .03027      2.942 25.69 1027   .01611 21.23 2.553 21.23 544.1   
+    ltrunc  ltrunclen   ppl  token_acc  token_em   tpb  tps  
+         0          0 12.85      .5185         0 65.36 1675
+2022-03-17 04:03:37,386 INFO     | 59.7% complete (1,295 / 2,169), 0:00:50 elapsed, 0:00:34 eta
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   48.15 44.67  1155  .03406      3.483  25.9 1295   .01611 21.71 2.473 21.71 561.1   
+    ltrunc  ltrunclen   ppl  token_acc  token_em   tpb  tps  
+         0          0 11.86      .5293         0 66.37 1716
+2022-03-17 04:03:47,414 INFO     | 72.1% complete (1,563 / 2,169), 0:01:00 elapsed, 0:00:23 eta
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   47.76 44.17  1148  .03462       3.59 26.04 1563   .01612 21.79 2.442 21.79 566.4   
+    ltrunc  ltrunclen  ppl  token_acc  token_em   tpb  tps  
+         0          0 11.5      .5333         0 65.96 1715
+2022-03-17 04:03:57,445 INFO     | 84.4% complete (1,831 / 2,169), 0:01:10 elapsed, 0:00:13 eta
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   47.43 44.08  1150  .03282      3.352 26.14 1831   .01611 21.95  2.45 21.96   573   
+    ltrunc  ltrunclen   ppl  token_acc  token_em   tpb  tps  
+         0          0 11.58      .5323         0 66.04 1723
+2022-03-17 04:04:07,483 INFO     | 96.8% complete (2,099 / 2,169), 0:01:20 elapsed, 0:00:03 eta
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   47.12 43.78  1146  .03197      3.338 26.21 2099   .01611 21.95 2.423 21.95 574.5   
+    ltrunc  ltrunclen   ppl  token_acc  token_em   tpb  tps  
+         0          0 11.28      .5362         0 65.73 1721
+2022-03-17 04:04:10,101 INFO     | Finished evaluating tasks ['fromfile:parlaiformat'] using datatype valid
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   46.85 43.62  1143  .03093       3.23 26.22 2169   .01608 21.99 2.435 21.99 575.9   
+    ltrunc  ltrunclen   ppl  token_acc  token_em   tpb  tps  
+         0          0 11.41      .5348         0 65.61 1718
+2022-03-17 04:04:10,117 WARNING  | Overriding opt["fromfile_datapath"] to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt (previously: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/conan_data)
+2022-03-17 04:04:10,117 WARNING  | Overriding opt["skip_generation"] to False (previously: True)
+2022-03-17 04:04:10,119 INFO     | Using CUDA
+2022-03-17 04:04:10,119 INFO     | loading dictionary from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.dict
+2022-03-17 04:04:10,132 INFO     | num words = 8008
+2022-03-17 04:04:35,056 INFO     | Total parameters: 2,696,268,800 (2,695,613,440 trainable)
+2022-03-17 04:04:35,056 INFO     | Loading existing model params from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model
+2022-03-17 04:06:30,067 INFO     | creating task(s): fromfile:parlaiformat
+2022-03-17 04:06:30,148 WARNING  | You are using this fromfile data as a valid or test set without setting fromfile_datatype_extension to true. Please be aware this uses directly the file you indicated, make sure this is not the same as your training file.
+2022-03-17 04:06:30,148 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt
+2022-03-17 04:06:30,166 INFO     | Opt:
+2022-03-17 04:06:30,166 INFO     |     activation: gelu
+2022-03-17 04:06:30,166 INFO     |     adafactor_eps: '[1e-30, 0.001]'
+2022-03-17 04:06:30,166 INFO     |     adam_eps: 1e-08
+2022-03-17 04:06:30,166 INFO     |     add_p1_after_newln: False
+2022-03-17 04:06:30,167 INFO     |     aggregate_micro: False
+2022-03-17 04:06:30,167 INFO     |     allow_missing_init_opts: False
+2022-03-17 04:06:30,167 INFO     |     attention_dropout: 0.0
+2022-03-17 04:06:30,167 INFO     |     batchsize: 32
+2022-03-17 04:06:30,167 INFO     |     beam_block_full_context: True
+2022-03-17 04:06:30,167 INFO     |     beam_block_list_filename: None
+2022-03-17 04:06:30,167 INFO     |     beam_block_ngram: -1
+2022-03-17 04:06:30,167 INFO     |     beam_context_block_ngram: -1
+2022-03-17 04:06:30,167 INFO     |     beam_delay: 30
+2022-03-17 04:06:30,167 INFO     |     beam_length_penalty: 0.65
+2022-03-17 04:06:30,167 INFO     |     beam_min_length: 1
+2022-03-17 04:06:30,167 INFO     |     beam_size: 20
+2022-03-17 04:06:30,167 INFO     |     betas: '[0.9, 0.999]'
+2022-03-17 04:06:30,167 INFO     |     bpe_add_prefix_space: None
+2022-03-17 04:06:30,167 INFO     |     bpe_debug: False
+2022-03-17 04:06:30,167 INFO     |     bpe_dropout: None
+2022-03-17 04:06:30,167 INFO     |     bpe_merge: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.dict-merges.txt
+2022-03-17 04:06:30,167 INFO     |     bpe_vocab: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.dict-vocab.json
+2022-03-17 04:06:30,167 INFO     |     checkpoint_activations: False
+2022-03-17 04:06:30,167 INFO     |     compute_tokenized_bleu: False
+2022-03-17 04:06:30,167 INFO     |     datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data
+2022-03-17 04:06:30,167 INFO     |     datatype: train
+2022-03-17 04:06:30,167 INFO     |     delimiter: '  '
+2022-03-17 04:06:30,167 INFO     |     dict_class: parlai.core.dict:DictionaryAgent
+2022-03-17 04:06:30,167 INFO     |     dict_endtoken: __end__
+2022-03-17 04:06:30,167 INFO     |     dict_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.dict
+2022-03-17 04:06:30,167 INFO     |     dict_include_test: False
+2022-03-17 04:06:30,167 INFO     |     dict_include_valid: False
+2022-03-17 04:06:30,168 INFO     |     dict_initpath: None
+2022-03-17 04:06:30,168 INFO     |     dict_language: english
+2022-03-17 04:06:30,168 INFO     |     dict_loaded: True
+2022-03-17 04:06:30,168 INFO     |     dict_lower: False
+2022-03-17 04:06:30,168 INFO     |     dict_max_ngram_size: -1
+2022-03-17 04:06:30,168 INFO     |     dict_maxexs: -1
+2022-03-17 04:06:30,168 INFO     |     dict_maxtokens: -1
+2022-03-17 04:06:30,168 INFO     |     dict_minfreq: 0
+2022-03-17 04:06:30,168 INFO     |     dict_nulltoken: __null__
+2022-03-17 04:06:30,168 INFO     |     dict_starttoken: __start__
+2022-03-17 04:06:30,168 INFO     |     dict_textfields: text,labels
+2022-03-17 04:06:30,168 INFO     |     dict_tokenizer: bytelevelbpe
+2022-03-17 04:06:30,168 INFO     |     dict_unktoken: __unk__
+2022-03-17 04:06:30,168 INFO     |     display_add_fields: 
+2022-03-17 04:06:30,168 INFO     |     display_examples: False
+2022-03-17 04:06:30,168 INFO     |     download_path: None
+2022-03-17 04:06:30,168 INFO     |     dropout: 0.1
+2022-03-17 04:06:30,168 INFO     |     dynamic_batching: None
+2022-03-17 04:06:30,168 INFO     |     embedding_projection: random
+2022-03-17 04:06:30,168 INFO     |     embedding_size: 2560
+2022-03-17 04:06:30,168 INFO     |     embedding_type: random
+2022-03-17 04:06:30,168 INFO     |     embeddings_scale: True
+2022-03-17 04:06:30,168 INFO     |     eval_batchsize: 10
+2022-03-17 04:06:30,168 INFO     |     eval_dynamic_batching: None
+2022-03-17 04:06:30,168 INFO     |     evaltask: None
+2022-03-17 04:06:30,169 INFO     |     ffn_size: 10240
+2022-03-17 04:06:30,169 INFO     |     final_extra_opt: 
+2022-03-17 04:06:30,169 INFO     |     force_fp16_tokens: True
+2022-03-17 04:06:30,169 INFO     |     fp16: True
+2022-03-17 04:06:30,169 INFO     |     fp16_impl: safe
+2022-03-17 04:06:30,169 INFO     |     fromfile_datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt
+2022-03-17 04:06:30,169 INFO     |     fromfile_datatype_extension: True
+2022-03-17 04:06:30,169 INFO     |     gpu: -1
+2022-03-17 04:06:30,169 INFO     |     gradient_clip: 0.1
+2022-03-17 04:06:30,169 INFO     |     hide_labels: False
+2022-03-17 04:06:30,169 INFO     |     history_add_global_end_token: end
+2022-03-17 04:06:30,169 INFO     |     history_reversed: False
+2022-03-17 04:06:30,169 INFO     |     history_size: -1
+2022-03-17 04:06:30,169 INFO     |     image_cropsize: 224
+2022-03-17 04:06:30,169 INFO     |     image_mode: raw
+2022-03-17 04:06:30,169 INFO     |     image_size: 256
+2022-03-17 04:06:30,169 INFO     |     inference: beam
+2022-03-17 04:06:30,169 INFO     |     init_model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model.checkpoint
+2022-03-17 04:06:30,169 INFO     |     init_opt: None
+2022-03-17 04:06:30,169 INFO     |     interactive_mode: False
+2022-03-17 04:06:30,169 INFO     |     invsqrt_lr_decay_gamma: -1
+2022-03-17 04:06:30,169 INFO     |     is_debug: False
+2022-03-17 04:06:30,169 INFO     |     label_truncate: 128
+2022-03-17 04:06:30,169 INFO     |     learn_positional_embeddings: False
+2022-03-17 04:06:30,169 INFO     |     learningrate: 7e-06
+2022-03-17 04:06:30,169 INFO     |     log_every_n_secs: 10.0
+2022-03-17 04:06:30,169 INFO     |     log_every_n_steps: 50
+2022-03-17 04:06:30,169 INFO     |     loglevel: info
+2022-03-17 04:06:30,169 INFO     |     lr_scheduler: reduceonplateau
+2022-03-17 04:06:30,170 INFO     |     lr_scheduler_decay: 0.5
+2022-03-17 04:06:30,170 INFO     |     lr_scheduler_patience: 3
+2022-03-17 04:06:30,170 INFO     |     max_train_steps: -1
+2022-03-17 04:06:30,170 INFO     |     max_train_time: 43200.0
+2022-03-17 04:06:30,170 INFO     |     metrics: default
+2022-03-17 04:06:30,170 INFO     |     model: transformer/generator
+2022-03-17 04:06:30,170 INFO     |     model_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model
+2022-03-17 04:06:30,170 INFO     |     model_parallel: True
+2022-03-17 04:06:30,170 INFO     |     momentum: 0
+2022-03-17 04:06:30,170 INFO     |     multitask_weights: '[1.0, 3.0, 3.0, 3.0]'
+2022-03-17 04:06:30,170 INFO     |     mutators: None
+2022-03-17 04:06:30,170 INFO     |     n_decoder_layers: 24
+2022-03-17 04:06:30,170 INFO     |     n_encoder_layers: 2
+2022-03-17 04:06:30,170 INFO     |     n_heads: 32
+2022-03-17 04:06:30,170 INFO     |     n_layers: 2
+2022-03-17 04:06:30,170 INFO     |     n_positions: 128
+2022-03-17 04:06:30,170 INFO     |     n_segments: 0
+2022-03-17 04:06:30,170 INFO     |     nesterov: True
+2022-03-17 04:06:30,170 INFO     |     no_cuda: False
+2022-03-17 04:06:30,170 INFO     |     num_epochs: 40.0
+2022-03-17 04:06:30,170 INFO     |     num_examples: 10
+2022-03-17 04:06:30,170 INFO     |     num_workers: 0
+2022-03-17 04:06:30,170 INFO     |     nus: [0.7]
+2022-03-17 04:06:30,170 INFO     |     optimizer: adam
+2022-03-17 04:06:30,170 INFO     |     output_scaling: 1.0
+2022-03-17 04:06:30,170 INFO     |     override: "{'task': 'fromfile:parlaiformat', 'fromfile_datapath': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data_test.txt', 'model': 'transformer/generator', 'model_file': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative3/model', 'num_examples': '10', 'skip_generation': False, 'verbose': True}"
+2022-03-17 04:06:30,170 INFO     |     parlai_home: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages
+2022-03-17 04:06:30,170 INFO     |     person_tokens: False
+2022-03-17 04:06:30,170 INFO     |     rank_candidates: False
+2022-03-17 04:06:30,171 INFO     |     relu_dropout: 0.0
+2022-03-17 04:06:30,171 INFO     |     save_after_valid: True
+2022-03-17 04:06:30,171 INFO     |     save_every_n_secs: -1
+2022-03-17 04:06:30,171 INFO     |     share_word_embeddings: True
+2022-03-17 04:06:30,171 INFO     |     short_final_eval: False
+2022-03-17 04:06:30,171 INFO     |     skip_generation: False
+2022-03-17 04:06:30,171 INFO     |     special_tok_lst: None
+2022-03-17 04:06:30,171 INFO     |     split_lines: False
+2022-03-17 04:06:30,171 INFO     |     starttime: Mar15_17-06
+2022-03-17 04:06:30,171 INFO     |     task: fromfile:parlaiformat
+2022-03-17 04:06:30,171 INFO     |     temperature: 1.0
+2022-03-17 04:06:30,171 INFO     |     tensorboard_log: False
+2022-03-17 04:06:30,171 INFO     |     tensorboard_logdir: None
+2022-03-17 04:06:30,171 INFO     |     text_truncate: 128
+2022-03-17 04:06:30,171 INFO     |     topk: 10
+2022-03-17 04:06:30,171 INFO     |     topp: 0.9
+2022-03-17 04:06:30,171 INFO     |     truncate: 128
+2022-03-17 04:06:30,171 INFO     |     update_freq: 2
+2022-03-17 04:06:30,171 INFO     |     use_reply: label
+2022-03-17 04:06:30,171 INFO     |     validation_cutoff: 1.0
+2022-03-17 04:06:30,171 INFO     |     validation_every_n_epochs: 1.0
+2022-03-17 04:06:30,171 INFO     |     validation_every_n_secs: -1
+2022-03-17 04:06:30,171 INFO     |     validation_every_n_steps: -1
+2022-03-17 04:06:30,171 INFO     |     validation_max_exs: -1
+2022-03-17 04:06:30,171 INFO     |     validation_metric: ppl
+2022-03-17 04:06:30,171 INFO     |     validation_metric_mode: max
+2022-03-17 04:06:30,171 INFO     |     validation_patience: 10
+2022-03-17 04:06:30,171 INFO     |     validation_share_agent: False
+2022-03-17 04:06:30,171 INFO     |     variant: prelayernorm
+2022-03-17 04:06:30,171 INFO     |     verbose: True
+2022-03-17 04:06:30,172 INFO     |     wandb_entity: None
+2022-03-17 04:06:30,172 INFO     |     wandb_log: False
+2022-03-17 04:06:30,172 INFO     |     wandb_name: None
+2022-03-17 04:06:30,172 INFO     |     wandb_project: None
+2022-03-17 04:06:30,172 INFO     |     warmup_rate: 0.0001
+2022-03-17 04:06:30,172 INFO     |     warmup_updates: 100
+2022-03-17 04:06:30,172 INFO     |     weight_decay: None
+2022-03-17 04:06:30,269 INFO     | Current ParlAI commit: 55c68370842ec83d25d418a74d081ed78dedfcf2
+2022-03-17 04:06:30,355 INFO     | Current internal commit: 55c68370842ec83d25d418a74d081ed78dedfcf2
+2022-03-17 04:06:30,440 INFO     | Current fb commit: 55c68370842ec83d25d418a74d081ed78dedfcf2
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/parlai/core/torch_generator_agent.py:1610: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  hyp_ids = best_idxs // voc_size
+[id]: data/gab_data_test.txt
+[text]: faggot
+[eval_labels]: The term "faggot" is offensive to many people and so should not be used here.
+   [id]: TransformerGenerator
+   [beam_texts]: ("Just because someone likes the same sex doesn't mean they are less than you.", -2.9523191452026367)
+  ("Just because someone likes the same sex, doesn't mean they are less than you.", -3.3495852947235107)
+  ('Just because someone likes the same sex, does not mean they are less than you.', -3.36169171333313)
+  ("Just because someone likes the same sex doesn't mean they deserve to be made fun of.", -3.4582130908966064)
+  ('Just because someone likes the same sex does not mean they are less than you.', -3.504385471343994)
+  ... (5 of 23 shown)
+   [text]: Just because someone likes the same sex doesn't mean they are less than you.
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  llen  loss  ltrunc  ltrunclen  \
+           0       0     4       0          0    1   0    21 1.882       0          0   
+     ppl  token_acc  token_em  
+   6.565      .6190         0
+   [token_losses]: ĠThe 3.103 | Ġterm 3.931 | Ġ" 6.808 | f 0.003182 | ag 0.08499 | got 0.003701 | " 0.01554 | Ġis 0.08645 | Ġoffensive 0.977 | Ġto 0.1531 | Ġmany 1.303 | Ġpeople 1.427 | Ġand 3.575 | Ġso 2.982 | Ġshould 1.225 | Ġnot 0.09314 | Ġbe 0.0002584 | Ġused 0.0067 | Ġhere 9.238 | . 0.0005884 | __end__ 4.499 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: He is a nigger
+[eval_labels]: Please note that the "n word" as used here is prohibited.
+   [id]: TransformerGenerator
+   [beam_texts]: ('Name calling does not help you make your point.', -3.283651351928711)
+  ('Name calling is a childish way to describe someone.', -3.4429643154144287)
+  ('The N word is unacceptable. Please refrain from its use.', -3.4986732006073)
+  ('This is not true. How can you say this about someone based on their race?', -3.5658133029937744)
+  ('How can you say that about someone based on their race?', -3.658926248550415)
+  ... (5 of 21 shown)
+   [text]: Name calling does not help you make your point.
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  llen  loss  ltrunc  ltrunclen  \
+           0       0     7       0          0    1   0    17 2.776       0          0   
+     ppl  token_acc  token_em  
+   16.05      .6471         0
+   [token_losses]: ĠPlease 4.529 | Ġnote 6.333 | Ġthat 0.4556 | Ġthe 1.384 | Ġ" 6.398 | n 0.2397 | Ġword 0.2467 | " 0.01612 | Ġas 10.49 | Ġused 0.4223 | Ġhere 0.07715 | Ġis 0.003298 | Ġpro 6.581 | hib 0.0008448 | ited 0.01823 | . 8.958 | __end__ 1.038 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: you're fucking retarded
+[eval_labels]: "Retarded" as used pejoratively here offends the mentally disabled and their families
+   [id]: TransformerGenerator
+   [beam_texts]: ('The R word is highly offensive.  Spread the word to end the word!', -2.101017951965332)
+  ('The R word is highly offensive.   Spread the word to end the word!', -3.1471076011657715)
+  ('Please do not use offensive language and/or language that denigrates disabilities.', -3.824742078781128)
+  ('How can you use such language to describe someone with a mental disability?', -3.8984127044677734)
+  ('How can you say that about someone with a mental disability?', -3.9411675930023193)
+  ... (5 of 21 shown)
+   [text]: The R word is highly offensive.  Spread the word to end the word!
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  llen  loss  ltrunc  ltrunclen  \
+           0       0     5       0          0    1   0    21 3.259       0          0   
+     ppl  token_acc  token_em  
+   26.03      .4762         0
+   [token_losses]: Ġ" 10.1 | R 0.04662 | et 0.1654 | arded 4.214 | " 0.1157 | Ġas 3.864 | Ġused 1.649 | Ġpe 9.038 | jor 0.0003333 | atively 0.004729 | Ġhere 5.781 | Ġoff 11.63 | ends 0.07653 | Ġthe 3.412 | Ġmentally 0.7255 | Ġdis 0.312 | abled 0.074 | Ġand 1.762 | Ġtheir 2.505 | Ġfamilies 0.8448 | __end__ 12.13 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: He's a nigger (in case you didnt know) who's greatest achievement as a nigger is bagging a mudshark. Funny how niggers always define their self worth by their ability to compete with Whitey on some miniscule level.
+[eval_labels]: Do not use hateful racial words in your posts
+   [id]: TransformerGenerator
+   [beam_texts]: ('This is not true. How can you say this about an entire race?', -3.170811653137207)
+  ('This is not true. How can you say this about an entire race? This is just hatred.', -3.6608119010925293)
+  ('How can you say this about an entire race? This is just hatred.', -3.7758355140686035)
+  ('How can you say this about an entire race?', -3.9216978549957275)
+  ('That is quite a generalisation. How can you say that about an entire race?', -4.192440032958984)
+  ... (5 of 20 shown)
+   [text]: This is not true. How can you say this about an entire race?
+   [metrics]: 
+    accuracy    bleu-4  clen  ctrunc  ctrunclen  exs     f1  llen  loss  ltrunc  \
+           0 9.578e-11    60       0          0    1 .09524    12 3.626       0   
+    ltrunclen   ppl  token_acc  token_em  
+            0 37.54      .3333         0
+   [token_losses]: ĠDo 4.327 | Ġnot 2.058 | Ġuse 0.33 | Ġhate 3.105 | ful 0.009388 | Ġrac 2.284 | ial 0.004462 | Ġwords 6.254 | Ġin 11.42 | Ġyour 0.008516 | Ġposts 4.756 | __end__ 8.949 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: Dear cucks! Why public schools don’t work, some people graduate them and even write books but never learn that anecdotal evidence isn’t really evidence. Pointing at an outlier and pretending it’s the median is lying.
+[eval_labels]: Avoid using sexual slurs in response to posts on this feed.
+   [id]: TransformerGenerator
+   [beam_texts]: ('Pointing at an outlier and pretending it’s the median is lying.', -3.5318009853363037)
+  ("Pointing at an outlier and pretending it's the median is lying.", -3.7352993488311768)
+  ('Evidence can be anecdotal. That does not mean it is not evidence.', -3.9031357765197754)
+  ('Evidence can be anecdotal. That does not mean that it is not evidence.', -4.13028621673584)
+  ('Evidence can be anecdotal, it does not mean it is not evidence.', -4.181636810302734)
+  ... (5 of 20 shown)
+   [text]: Pointing at an outlier and pretending it’s the median is lying.
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  llen  loss  ltrunc  ltrunclen  \
+           0       0    57       0          0    1   0    15 3.417       0          0   
+     ppl  token_acc  token_em  
+   30.46      .3333         0
+   [token_losses]: ĠAv 10.13 | oid 0.949 | Ġusing 0.8182 | Ġsexual 5.867 | Ġsl 2.638 | urs 0.3485 | Ġin 2.604 | Ġresponse 6.483 | Ġto 0.0001088 | Ġposts 4.893 | Ġon 4.218 | Ġthis 3.265 | Ġfeed 8.129 | . 0.08119 | __end__ 0.8239 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: What a cunt
+[eval_labels]: Avoid using inappropriate language when responding to posts.
+   [id]: TransformerGenerator
+   [beam_texts]: ("Just because someone likes the same sex doesn't mean they are less than you.", -3.7610530853271484)
+  ('How can you use such language to describe someone who has done nothing wrong?', -3.9957189559936523)
+  ("How can you use such language to describe someone you've never even met?", -4.038050651550293)
+  ('How can you say that about someone who has done so much for the game?', -4.133887767791748)
+  ("How can you say that about someone you've never even met?", -4.141617774963379)
+  ... (5 of 21 shown)
+   [text]: Just because someone likes the same sex doesn't mean they are less than you.
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  llen  loss  ltrunc  ltrunclen  \
+           0       0     4       0          0    1   0    15 1.863       0          0   
+    ppl  token_acc  token_em  
+   6.44      .7333         0
+   [token_losses]: ĠAv 10.49 | oid 0.05162 | Ġusing 0.4125 | Ġin 9.381 | app 0.7046 | ro 0.0035 | priate 0.002384 | Ġlanguage 0.217 | Ġwhen 3.51 | Ġrespond 0.5075 | ing 3.624e-05 | Ġto 0.003992 | Ġposts 2.105 | . 0.02166 | __end__ 0.5322 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: 2/  It should be somewhat obvious this is parallel to Arab societies and the causes for the terrorism is similar.  Like... who the fuck wants to live in a society like that? It's really nigger tier shit.
+[eval_labels]: Do not use racial slurs when voicing your opinions.
+   [id]: TransformerGenerator
+   [beam_texts]: ('Who the fuck wants to live in a society where people are judged by the content of their character and not the colour of their skin?', -2.670877695083618)
+  ('Who the fuck wants to live in a society where people are judged by the content of their character and not the color of their skin?', -2.961150884628296)
+  ('Who the fuck wants to live in a society where people are judged by the content of their character, not the colour of their skin?', -3.2056806087493896)
+  ('Who the fuck wants to live in a society where people are judged by the colour of their skin and not the content of their character?', -3.275681257247925)
+  ('Who the fuck wants to live in a society where people are judged by the content of their character rather than the colour of their skin?', -3.35296630859375)
+  ... (5 of 28 shown)
+   [text]: Who the fuck wants to live in a society where people are judged by the content of their character and not the colour of their skin?
+   [metrics]: 
+    accuracy    bleu-4  clen  ctrunc  ctrunclen  exs     f1  llen  loss  ltrunc  \
+           0 4.885e-11    54       0          0    1 .06452    15 2.019       0   
+    ltrunclen   ppl  token_acc  token_em  
+            0 7.532      .6000         0
+   [token_losses]: ĠDo 4.083 | Ġnot 4.561 | Ġuse 0.4788 | Ġrac 2.62 | ial 0.07365 | Ġsl 0.2151 | urs 0.0004981 | Ġwhen 6.615 | Ġv 8.737 | o 0.004552 | icing 0.0005353 | Ġyour 0.03123 | Ġopinions 2.584 | . 0.03336 | __end__ 0.2491 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: Yes. We're just intimidated by strong, independent wimminz. She totally doesn't act like an insufferable cunt all day on social media or anything.
+[eval_labels]: Stop calling women names.
+   [id]: TransformerGenerator
+   [beam_texts]: ('Why are you intimidated by women who are more successful than you?', -4.065732479095459)
+  ("Why are you intimidated by someone you've never even met?", -4.110134124755859)
+  ('Why are you intimidated by women who are better than you at something?', -4.4782633781433105)
+  ('How can you say this about an entire gender?', -4.493096828460693)
+  ("How can you say this about someone who has done so much for women's rights?", -4.5473480224609375)
+  ... (5 of 32 shown)
+   [text]: Why are you intimidated by women who are more successful than you?
+   [metrics]: 
+    accuracy    bleu-4  clen  ctrunc  ctrunclen  exs    f1  llen  loss  ltrunc  \
+           0 9.578e-11    38       0          0    1 .1250     6 2.502       0   
+    ltrunclen   ppl  token_acc  token_em  
+            0 12.21      .5000         0
+   [token_losses]: ĠStop 6.216 | Ġcalling 6.705 | Ġwomen 0.1434 | Ġnames 1.525 | . 0.1269 | __end__ 0.2953 | __null__ 0.0 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: remember, the only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp
+[eval_labels]: stop with the negative racial slurs.
+   [id]: TransformerGenerator
+   [beam_texts]: ('The only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp *and getting away with it*.', -3.639681339263916)
+  ('The only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp FIFY', -3.667468547821045)
+  ('The only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp *and being black*.', -3.6849608421325684)
+  ('The only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp with a baseball bat.', -3.7925472259521484)
+  ('The only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp **and getting away with it**.', -3.8107287883758545)
+  ... (5 of 26 shown)
+   [text]: The only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp *and getting away with it*.
+   [metrics]: 
+    accuracy    bleu-4  clen  ctrunc  ctrunclen  exs    f1  llen  loss  ltrunc  \
+           0 5.415e-11    28       0          0    1 .0800    10 3.628       0   
+    ltrunclen   ppl  token_acc  token_em  
+            0 37.65      .3000         0
+   [token_losses]: Ġstop 12.64 | Ġwith 4.671 | Ġthe 0.04801 | Ġnegative 4.276 | Ġrac 2.224 | ial 0.005764 | Ġsl 2.015 | urs 0.001928 | . 8.189 | __end__ 2.21 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+[id]: data/gab_data_test.txt
+[text]: Bye globalist cunt
+[eval_labels]: stop calling women names.
+   [id]: TransformerGenerator
+   [beam_texts]: ('Bye, Felicia.', -3.2955336570739746)
+  ('Bye, Felicia!', -3.391615867614746)
+  ('How can you say that about someone who has done so much for your country?', -4.080918788909912)
+  ('How can you say that about someone who has done so much for our country?', -4.215759754180908)
+  ('Bye now.', -4.273321628570557)
+  ... (5 of 25 shown)
+   [text]: Bye, Felicia.
+   [metrics]: 
+    accuracy  bleu-4  clen  ctrunc  ctrunclen  exs  f1  llen  loss  ltrunc  ltrunclen  \
+           0       0     6       0          0    1   0     6  3.35       0          0   
+     ppl  token_acc  token_em  
+   28.49      .5000         0
+   [token_losses]: Ġstop 12.81 | Ġcalling 4.298 | Ġwomen 0.2853 | Ġnames 2.146 | . 0.5054 | __end__ 0.05393 | __null__ 0.0 | __null__ 0.0
+- - - - - - - END OF EPISODE - - - - - - - - - -
+~~
+Changed directory to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project.
+
+JobID: 57122052
+======
+Time: Thu Mar 17 04:13:54 GMT 2022
+Running on master node: gpu-q-73
+Current directory: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project
+/usr/bin/perl: symbol lookup error: /usr/local/software/slurm/slurm-19.05.5/lib64/perl5/auto/Slurm/Slurm.so: undefined symbol: Perl_xs_apiversion_bootcheck
+
+Nodes allocated:
+================
+
+
+numtasks=1, numnodes=1, mpi_tasks_per_node=1 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+ 
+

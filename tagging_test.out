@@ -1,0 +1,481 @@
+Loading rhel7/default-gpu
+  Loading requirement: dot slurm turbovnc/2.0.1 vgl/2.5.1/64 singularity/current
+    rhel7/global cuda/8.0 gcc-5.4.0-gcc-4.8.5-fis24gg
+    openmpi-1.10.7-gcc-5.4.0-jdc7f4f cmake/latest
+2022-02-16 19:34:49,400 WARNING  | Overriding opt["datatype"] to valid (previously: train)
+2022-02-16 19:34:49,400 WARNING  | Overriding opt["fromfile_datapath"] to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_trial.txt (previously: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data)
+2022-02-16 19:34:49,962 INFO     | Using CUDA
+2022-02-16 19:34:49,999 INFO     | loading dictionary from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict
+2022-02-16 19:34:50,013 INFO     | num words = 8008
+2022-02-16 19:35:33,204 INFO     | Total parameters: 2,696,268,800 (2,695,613,440 trainable)
+2022-02-16 19:35:33,205 INFO     | Loading existing model params from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model
+2022-02-16 19:37:08,531 INFO     | Opt:
+2022-02-16 19:37:08,532 INFO     |     activation: gelu
+2022-02-16 19:37:08,532 INFO     |     adafactor_eps: '[1e-30, 0.001]'
+2022-02-16 19:37:08,532 INFO     |     adam_eps: 1e-08
+2022-02-16 19:37:08,532 INFO     |     add_p1_after_newln: False
+2022-02-16 19:37:08,532 INFO     |     aggregate_micro: False
+2022-02-16 19:37:08,532 INFO     |     allow_missing_init_opts: False
+2022-02-16 19:37:08,533 INFO     |     area_under_curve_class: None
+2022-02-16 19:37:08,533 INFO     |     area_under_curve_digits: -1
+2022-02-16 19:37:08,533 INFO     |     attention_dropout: 0.0
+2022-02-16 19:37:08,533 INFO     |     batchsize: 32
+2022-02-16 19:37:08,533 INFO     |     beam_block_full_context: True
+2022-02-16 19:37:08,533 INFO     |     beam_block_list_filename: None
+2022-02-16 19:37:08,533 INFO     |     beam_block_ngram: -1
+2022-02-16 19:37:08,533 INFO     |     beam_context_block_ngram: -1
+2022-02-16 19:37:08,533 INFO     |     beam_delay: 30
+2022-02-16 19:37:08,533 INFO     |     beam_length_penalty: 0.65
+2022-02-16 19:37:08,533 INFO     |     beam_min_length: 1
+2022-02-16 19:37:08,533 INFO     |     beam_size: 1
+2022-02-16 19:37:08,533 INFO     |     betas: '[0.9, 0.999]'
+2022-02-16 19:37:08,533 INFO     |     bpe_add_prefix_space: None
+2022-02-16 19:37:08,533 INFO     |     bpe_debug: False
+2022-02-16 19:37:08,533 INFO     |     bpe_dropout: None
+2022-02-16 19:37:08,533 INFO     |     bpe_merge: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict-merges.txt
+2022-02-16 19:37:08,533 INFO     |     bpe_vocab: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict-vocab.json
+2022-02-16 19:37:08,533 INFO     |     checkpoint_activations: False
+2022-02-16 19:37:08,533 INFO     |     compute_tokenized_bleu: False
+2022-02-16 19:37:08,533 INFO     |     datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data
+2022-02-16 19:37:08,533 INFO     |     datatype: valid
+2022-02-16 19:37:08,533 INFO     |     delimiter: '  '
+2022-02-16 19:37:08,533 INFO     |     dict_class: parlai.core.dict:DictionaryAgent
+2022-02-16 19:37:08,533 INFO     |     dict_endtoken: __end__
+2022-02-16 19:37:08,533 INFO     |     dict_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict
+2022-02-16 19:37:08,533 INFO     |     dict_include_test: False
+2022-02-16 19:37:08,533 INFO     |     dict_include_valid: False
+2022-02-16 19:37:08,533 INFO     |     dict_initpath: None
+2022-02-16 19:37:08,533 INFO     |     dict_language: english
+2022-02-16 19:37:08,534 INFO     |     dict_loaded: True
+2022-02-16 19:37:08,534 INFO     |     dict_lower: False
+2022-02-16 19:37:08,534 INFO     |     dict_max_ngram_size: -1
+2022-02-16 19:37:08,534 INFO     |     dict_maxexs: -1
+2022-02-16 19:37:08,534 INFO     |     dict_maxtokens: -1
+2022-02-16 19:37:08,534 INFO     |     dict_minfreq: 0
+2022-02-16 19:37:08,534 INFO     |     dict_nulltoken: __null__
+2022-02-16 19:37:08,534 INFO     |     dict_starttoken: __start__
+2022-02-16 19:37:08,534 INFO     |     dict_textfields: text,labels
+2022-02-16 19:37:08,534 INFO     |     dict_tokenizer: bytelevelbpe
+2022-02-16 19:37:08,534 INFO     |     dict_unktoken: __unk__
+2022-02-16 19:37:08,534 INFO     |     display_examples: False
+2022-02-16 19:37:08,534 INFO     |     download_path: None
+2022-02-16 19:37:08,534 INFO     |     dropout: 0.1
+2022-02-16 19:37:08,534 INFO     |     dynamic_batching: None
+2022-02-16 19:37:08,534 INFO     |     embedding_projection: random
+2022-02-16 19:37:08,534 INFO     |     embedding_size: 2560
+2022-02-16 19:37:08,534 INFO     |     embedding_type: random
+2022-02-16 19:37:08,534 INFO     |     embeddings_scale: True
+2022-02-16 19:37:08,534 INFO     |     eval_batchsize: 10
+2022-02-16 19:37:08,534 INFO     |     eval_dynamic_batching: None
+2022-02-16 19:37:08,534 INFO     |     evaltask: None
+2022-02-16 19:37:08,534 INFO     |     ffn_size: 10240
+2022-02-16 19:37:08,534 INFO     |     final_extra_opt: 
+2022-02-16 19:37:08,534 INFO     |     force_fp16_tokens: True
+2022-02-16 19:37:08,534 INFO     |     fp16: True
+2022-02-16 19:37:08,534 INFO     |     fp16_impl: safe
+2022-02-16 19:37:08,534 INFO     |     fromfile_datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_trial.txt
+2022-02-16 19:37:08,534 INFO     |     fromfile_datatype_extension: True
+2022-02-16 19:37:08,534 INFO     |     gpu: -1
+2022-02-16 19:37:08,535 INFO     |     gradient_clip: 0.1
+2022-02-16 19:37:08,535 INFO     |     hide_labels: False
+2022-02-16 19:37:08,535 INFO     |     history_add_global_end_token: end
+2022-02-16 19:37:08,535 INFO     |     history_reversed: False
+2022-02-16 19:37:08,535 INFO     |     history_size: -1
+2022-02-16 19:37:08,535 INFO     |     image_cropsize: 224
+2022-02-16 19:37:08,535 INFO     |     image_mode: raw
+2022-02-16 19:37:08,535 INFO     |     image_size: 256
+2022-02-16 19:37:08,535 INFO     |     inference: greedy
+2022-02-16 19:37:08,535 INFO     |     init_model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data/models/blender/reddit_3B/model
+2022-02-16 19:37:08,535 INFO     |     init_opt: None
+2022-02-16 19:37:08,535 INFO     |     interactive_mode: False
+2022-02-16 19:37:08,535 INFO     |     invsqrt_lr_decay_gamma: -1
+2022-02-16 19:37:08,535 INFO     |     is_debug: False
+2022-02-16 19:37:08,535 INFO     |     label_truncate: 128
+2022-02-16 19:37:08,535 INFO     |     learn_positional_embeddings: False
+2022-02-16 19:37:08,535 INFO     |     learningrate: 7e-06
+2022-02-16 19:37:08,535 INFO     |     log_every_n_secs: 10.0
+2022-02-16 19:37:08,535 INFO     |     log_every_n_steps: 50
+2022-02-16 19:37:08,535 INFO     |     log_keep_fields: all
+2022-02-16 19:37:08,535 INFO     |     loglevel: info
+2022-02-16 19:37:08,535 INFO     |     lr_scheduler: reduceonplateau
+2022-02-16 19:37:08,535 INFO     |     lr_scheduler_decay: 0.5
+2022-02-16 19:37:08,535 INFO     |     lr_scheduler_patience: 3
+2022-02-16 19:37:08,535 INFO     |     max_train_steps: -1
+2022-02-16 19:37:08,535 INFO     |     max_train_time: 43200.0
+2022-02-16 19:37:08,535 INFO     |     metrics: default
+2022-02-16 19:37:08,535 INFO     |     model: transformer/generator
+2022-02-16 19:37:08,536 INFO     |     model_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model
+2022-02-16 19:37:08,536 INFO     |     model_parallel: True
+2022-02-16 19:37:08,536 INFO     |     momentum: 0
+2022-02-16 19:37:08,536 INFO     |     multitask_weights: '[1.0, 3.0, 3.0, 3.0]'
+2022-02-16 19:37:08,536 INFO     |     mutators: None
+2022-02-16 19:37:08,536 INFO     |     n_decoder_layers: 24
+2022-02-16 19:37:08,536 INFO     |     n_encoder_layers: 2
+2022-02-16 19:37:08,536 INFO     |     n_heads: 32
+2022-02-16 19:37:08,536 INFO     |     n_layers: 2
+2022-02-16 19:37:08,536 INFO     |     n_positions: 128
+2022-02-16 19:37:08,536 INFO     |     n_segments: 0
+2022-02-16 19:37:08,536 INFO     |     nesterov: True
+2022-02-16 19:37:08,536 INFO     |     no_cuda: False
+2022-02-16 19:37:08,536 INFO     |     num_epochs: 8.0
+2022-02-16 19:37:08,536 INFO     |     num_examples: -1
+2022-02-16 19:37:08,536 INFO     |     num_workers: 0
+2022-02-16 19:37:08,536 INFO     |     nus: [0.7]
+2022-02-16 19:37:08,536 INFO     |     optimizer: adam
+2022-02-16 19:37:08,536 INFO     |     output_scaling: 1.0
+2022-02-16 19:37:08,536 INFO     |     override: "{'datatype': 'valid', 'task': 'fromfile:parlaiformat', 'fromfile_datapath': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_trial.txt', 'model_file': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model'}"
+2022-02-16 19:37:08,536 INFO     |     parlai_home: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages
+2022-02-16 19:37:08,536 INFO     |     person_tokens: False
+2022-02-16 19:37:08,536 INFO     |     rank_candidates: False
+2022-02-16 19:37:08,536 INFO     |     relu_dropout: 0.0
+2022-02-16 19:37:08,536 INFO     |     report_filename: 
+2022-02-16 19:37:08,536 INFO     |     save_after_valid: True
+2022-02-16 19:37:08,537 INFO     |     save_every_n_secs: -1
+2022-02-16 19:37:08,537 INFO     |     save_format: conversations
+2022-02-16 19:37:08,537 INFO     |     share_word_embeddings: True
+2022-02-16 19:37:08,537 INFO     |     short_final_eval: False
+2022-02-16 19:37:08,537 INFO     |     skip_generation: True
+2022-02-16 19:37:08,537 INFO     |     special_tok_lst: None
+2022-02-16 19:37:08,537 INFO     |     split_lines: False
+2022-02-16 19:37:08,537 INFO     |     starttime: Feb10_01-49
+2022-02-16 19:37:08,537 INFO     |     task: fromfile:parlaiformat
+2022-02-16 19:37:08,537 INFO     |     temperature: 1.0
+2022-02-16 19:37:08,537 INFO     |     tensorboard_log: False
+2022-02-16 19:37:08,537 INFO     |     tensorboard_logdir: None
+2022-02-16 19:37:08,537 INFO     |     text_truncate: 128
+2022-02-16 19:37:08,537 INFO     |     topk: 10
+2022-02-16 19:37:08,537 INFO     |     topp: 0.9
+2022-02-16 19:37:08,537 INFO     |     truncate: 128
+2022-02-16 19:37:08,537 INFO     |     update_freq: 2
+2022-02-16 19:37:08,537 INFO     |     use_reply: label
+2022-02-16 19:37:08,537 INFO     |     validation_cutoff: 1.0
+2022-02-16 19:37:08,537 INFO     |     validation_every_n_epochs: 0.25
+2022-02-16 19:37:08,537 INFO     |     validation_every_n_secs: -1
+2022-02-16 19:37:08,537 INFO     |     validation_every_n_steps: -1
+2022-02-16 19:37:08,537 INFO     |     validation_max_exs: -1
+2022-02-16 19:37:08,537 INFO     |     validation_metric: ppl
+2022-02-16 19:37:08,537 INFO     |     validation_metric_mode: max
+2022-02-16 19:37:08,537 INFO     |     validation_patience: 10
+2022-02-16 19:37:08,537 INFO     |     validation_share_agent: False
+2022-02-16 19:37:08,537 INFO     |     variant: prelayernorm
+2022-02-16 19:37:08,537 INFO     |     verbose: False
+2022-02-16 19:37:08,537 INFO     |     wandb_entity: None
+2022-02-16 19:37:08,537 INFO     |     wandb_log: False
+2022-02-16 19:37:08,538 INFO     |     wandb_name: None
+2022-02-16 19:37:08,538 INFO     |     wandb_project: None
+2022-02-16 19:37:08,538 INFO     |     warmup_rate: 0.0001
+2022-02-16 19:37:08,538 INFO     |     warmup_updates: 100
+2022-02-16 19:37:08,538 INFO     |     weight_decay: None
+2022-02-16 19:37:08,538 INFO     |     world_logs: 
+2022-02-16 19:37:08,682 INFO     | Current ParlAI commit: 704bfadc14a06c8aa01368aecff3b8db23252b3d
+2022-02-16 19:37:08,751 INFO     | Current internal commit: 704bfadc14a06c8aa01368aecff3b8db23252b3d
+2022-02-16 19:37:08,817 INFO     | Current fb commit: 704bfadc14a06c8aa01368aecff3b8db23252b3d
+2022-02-16 19:37:08,818 INFO     | Evaluating task fromfile:parlaiformat using datatype valid.
+2022-02-16 19:37:08,818 INFO     | creating task(s): fromfile:parlaiformat
+2022-02-16 19:37:08,819 WARNING  | You are using this fromfile data as a valid or test set without setting fromfile_datatype_extension to true. Please be aware this uses directly the file you indicated, make sure this is not the same as your training file.
+2022-02-16 19:37:08,819 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_trial.txt
+2022-02-16 19:37:09,714 WARNING  | --skip-generation true produces limited metrics
+2022-02-16 19:37:10,764 INFO     | Finished evaluating tasks ['fromfile:parlaiformat'] using datatype valid
+    clen  ctpb  ctps  ctrunc  ctrunclen  exps  exs  gpu_mem  llen  loss  ltpb  ltps  \
+   42.07 41.68 611.9  .07143      .3929 14.67   28   .01609 17.82 2.079 17.82 261.6   
+    ltrunc  ltrunclen   ppl  token_acc  token_em  tpb   tps  
+         0          0 7.998      .5711         0 59.5 873.5
+2022-02-16 19:37:10,945 WARNING  | Overriding opt["fromfile_datapath"] to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_trial.txt (previously: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_data)
+2022-02-16 19:37:10,945 WARNING  | Overriding opt["force_fp16_tokens"] to True (previously: False)
+2022-02-16 19:37:10,945 WARNING  | Overriding opt["skip_generation"] to False (previously: True)
+2022-02-16 19:37:10,947 INFO     | Using CUDA
+2022-02-16 19:37:10,948 INFO     | loading dictionary from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict
+2022-02-16 19:37:10,961 INFO     | num words = 8008
+2022-02-16 19:37:35,913 INFO     | Total parameters: 2,696,268,800 (2,695,613,440 trainable)
+2022-02-16 19:37:35,913 INFO     | Loading existing model params from /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model
+2022-02-16 19:37:51,006 INFO     | creating task(s): fromfile:parlaiformat
+2022-02-16 19:37:51,028 WARNING  | You are using this fromfile data as a valid or test set without setting fromfile_datatype_extension to true. Please be aware this uses directly the file you indicated, make sure this is not the same as your training file.
+2022-02-16 19:37:51,028 INFO     | Loading ParlAI text data: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_trial.txt
+2022-02-16 19:37:51,029 INFO     | Opt:
+2022-02-16 19:37:51,029 INFO     |     activation: gelu
+2022-02-16 19:37:51,029 INFO     |     adafactor_eps: '[1e-30, 0.001]'
+2022-02-16 19:37:51,029 INFO     |     adam_eps: 1e-08
+2022-02-16 19:37:51,029 INFO     |     add_p1_after_newln: False
+2022-02-16 19:37:51,029 INFO     |     aggregate_micro: False
+2022-02-16 19:37:51,029 INFO     |     allow_missing_init_opts: False
+2022-02-16 19:37:51,029 INFO     |     attention_dropout: 0.0
+2022-02-16 19:37:51,029 INFO     |     batchsize: 32
+2022-02-16 19:37:51,029 INFO     |     beam_block_full_context: True
+2022-02-16 19:37:51,029 INFO     |     beam_block_list_filename: None
+2022-02-16 19:37:51,029 INFO     |     beam_block_ngram: -1
+2022-02-16 19:37:51,029 INFO     |     beam_context_block_ngram: -1
+2022-02-16 19:37:51,029 INFO     |     beam_delay: 30
+2022-02-16 19:37:51,029 INFO     |     beam_length_penalty: 0.65
+2022-02-16 19:37:51,030 INFO     |     beam_min_length: 1
+2022-02-16 19:37:51,030 INFO     |     beam_size: 1
+2022-02-16 19:37:51,030 INFO     |     betas: '[0.9, 0.999]'
+2022-02-16 19:37:51,030 INFO     |     bpe_add_prefix_space: None
+2022-02-16 19:37:51,030 INFO     |     bpe_debug: False
+2022-02-16 19:37:51,030 INFO     |     bpe_dropout: None
+2022-02-16 19:37:51,030 INFO     |     bpe_merge: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict-merges.txt
+2022-02-16 19:37:51,030 INFO     |     bpe_vocab: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict-vocab.json
+2022-02-16 19:37:51,030 INFO     |     checkpoint_activations: False
+2022-02-16 19:37:51,030 INFO     |     compute_tokenized_bleu: False
+2022-02-16 19:37:51,030 INFO     |     datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data
+2022-02-16 19:37:51,030 INFO     |     datatype: train
+2022-02-16 19:37:51,030 INFO     |     delimiter: '  '
+2022-02-16 19:37:51,030 INFO     |     dict_class: parlai.core.dict:DictionaryAgent
+2022-02-16 19:37:51,030 INFO     |     dict_endtoken: __end__
+2022-02-16 19:37:51,030 INFO     |     dict_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model.dict
+2022-02-16 19:37:51,030 INFO     |     dict_include_test: False
+2022-02-16 19:37:51,030 INFO     |     dict_include_valid: False
+2022-02-16 19:37:51,030 INFO     |     dict_initpath: None
+2022-02-16 19:37:51,030 INFO     |     dict_language: english
+2022-02-16 19:37:51,030 INFO     |     dict_loaded: True
+2022-02-16 19:37:51,030 INFO     |     dict_lower: False
+2022-02-16 19:37:51,030 INFO     |     dict_max_ngram_size: -1
+2022-02-16 19:37:51,030 INFO     |     dict_maxexs: -1
+2022-02-16 19:37:51,030 INFO     |     dict_maxtokens: -1
+2022-02-16 19:37:51,030 INFO     |     dict_minfreq: 0
+2022-02-16 19:37:51,030 INFO     |     dict_nulltoken: __null__
+2022-02-16 19:37:51,030 INFO     |     dict_starttoken: __start__
+2022-02-16 19:37:51,031 INFO     |     dict_textfields: text,labels
+2022-02-16 19:37:51,031 INFO     |     dict_tokenizer: bytelevelbpe
+2022-02-16 19:37:51,031 INFO     |     dict_unktoken: __unk__
+2022-02-16 19:37:51,031 INFO     |     display_add_fields: 
+2022-02-16 19:37:51,031 INFO     |     display_examples: False
+2022-02-16 19:37:51,031 INFO     |     download_path: None
+2022-02-16 19:37:51,031 INFO     |     dropout: 0.1
+2022-02-16 19:37:51,031 INFO     |     dynamic_batching: None
+2022-02-16 19:37:51,031 INFO     |     embedding_projection: random
+2022-02-16 19:37:51,031 INFO     |     embedding_size: 2560
+2022-02-16 19:37:51,031 INFO     |     embedding_type: random
+2022-02-16 19:37:51,031 INFO     |     embeddings_scale: True
+2022-02-16 19:37:51,031 INFO     |     eval_batchsize: 10
+2022-02-16 19:37:51,031 INFO     |     eval_dynamic_batching: None
+2022-02-16 19:37:51,031 INFO     |     evaltask: None
+2022-02-16 19:37:51,031 INFO     |     ffn_size: 10240
+2022-02-16 19:37:51,031 INFO     |     final_extra_opt: 
+2022-02-16 19:37:51,031 INFO     |     force_fp16_tokens: True
+2022-02-16 19:37:51,031 INFO     |     fp16: True
+2022-02-16 19:37:51,031 INFO     |     fp16_impl: safe
+2022-02-16 19:37:51,031 INFO     |     fromfile_datapath: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_trial.txt
+2022-02-16 19:37:51,031 INFO     |     fromfile_datatype_extension: True
+2022-02-16 19:37:51,031 INFO     |     gpu: -1
+2022-02-16 19:37:51,031 INFO     |     gradient_clip: 0.1
+2022-02-16 19:37:51,031 INFO     |     hide_labels: False
+2022-02-16 19:37:51,031 INFO     |     history_add_global_end_token: end
+2022-02-16 19:37:51,031 INFO     |     history_reversed: False
+2022-02-16 19:37:51,031 INFO     |     history_size: -1
+2022-02-16 19:37:51,031 INFO     |     image_cropsize: 224
+2022-02-16 19:37:51,032 INFO     |     image_mode: raw
+2022-02-16 19:37:51,032 INFO     |     image_size: 256
+2022-02-16 19:37:51,032 INFO     |     inference: greedy
+2022-02-16 19:37:51,032 INFO     |     init_model: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages/data/models/blender/reddit_3B/model
+2022-02-16 19:37:51,032 INFO     |     init_opt: None
+2022-02-16 19:37:51,032 INFO     |     interactive_mode: False
+2022-02-16 19:37:51,032 INFO     |     invsqrt_lr_decay_gamma: -1
+2022-02-16 19:37:51,032 INFO     |     is_debug: False
+2022-02-16 19:37:51,032 INFO     |     label_truncate: 128
+2022-02-16 19:37:51,032 INFO     |     learn_positional_embeddings: False
+2022-02-16 19:37:51,032 INFO     |     learningrate: 7e-06
+2022-02-16 19:37:51,032 INFO     |     log_every_n_secs: 10.0
+2022-02-16 19:37:51,032 INFO     |     log_every_n_steps: 50
+2022-02-16 19:37:51,032 INFO     |     loglevel: info
+2022-02-16 19:37:51,032 INFO     |     lr_scheduler: reduceonplateau
+2022-02-16 19:37:51,032 INFO     |     lr_scheduler_decay: 0.5
+2022-02-16 19:37:51,032 INFO     |     lr_scheduler_patience: 3
+2022-02-16 19:37:51,032 INFO     |     max_train_steps: -1
+2022-02-16 19:37:51,032 INFO     |     max_train_time: 43200.0
+2022-02-16 19:37:51,032 INFO     |     metrics: default
+2022-02-16 19:37:51,032 INFO     |     model: transformer/generator
+2022-02-16 19:37:51,032 INFO     |     model_file: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model
+2022-02-16 19:37:51,032 INFO     |     model_parallel: True
+2022-02-16 19:37:51,032 INFO     |     momentum: 0
+2022-02-16 19:37:51,032 INFO     |     multitask_weights: '[1.0, 3.0, 3.0, 3.0]'
+2022-02-16 19:37:51,032 INFO     |     mutators: None
+2022-02-16 19:37:51,032 INFO     |     n_decoder_layers: 24
+2022-02-16 19:37:51,032 INFO     |     n_encoder_layers: 2
+2022-02-16 19:37:51,032 INFO     |     n_heads: 32
+2022-02-16 19:37:51,032 INFO     |     n_layers: 2
+2022-02-16 19:37:51,033 INFO     |     n_positions: 128
+2022-02-16 19:37:51,033 INFO     |     n_segments: 0
+2022-02-16 19:37:51,033 INFO     |     nesterov: True
+2022-02-16 19:37:51,033 INFO     |     no_cuda: False
+2022-02-16 19:37:51,033 INFO     |     num_epochs: 8.0
+2022-02-16 19:37:51,033 INFO     |     num_examples: 28
+2022-02-16 19:37:51,033 INFO     |     num_workers: 0
+2022-02-16 19:37:51,033 INFO     |     nus: [0.7]
+2022-02-16 19:37:51,033 INFO     |     optimizer: adam
+2022-02-16 19:37:51,033 INFO     |     output_scaling: 1.0
+2022-02-16 19:37:51,033 INFO     |     override: "{'task': 'fromfile:parlaiformat', 'fromfile_datapath': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/data/gab_trial.txt', 'force_fp16_tokens': True, 'model_file': '/rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/counterspeech_project-NLP/generator_only/from_pretrained_generative/model', 'num_examples': '28', 'skip_generation': False}"
+2022-02-16 19:37:51,033 INFO     |     parlai_home: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project/python3.8/lib/python3.8/site-packages
+2022-02-16 19:37:51,033 INFO     |     person_tokens: False
+2022-02-16 19:37:51,033 INFO     |     rank_candidates: False
+2022-02-16 19:37:51,033 INFO     |     relu_dropout: 0.0
+2022-02-16 19:37:51,033 INFO     |     save_after_valid: True
+2022-02-16 19:37:51,033 INFO     |     save_every_n_secs: -1
+2022-02-16 19:37:51,033 INFO     |     share_word_embeddings: True
+2022-02-16 19:37:51,033 INFO     |     short_final_eval: False
+2022-02-16 19:37:51,033 INFO     |     skip_generation: False
+2022-02-16 19:37:51,033 INFO     |     special_tok_lst: None
+2022-02-16 19:37:51,033 INFO     |     split_lines: False
+2022-02-16 19:37:51,033 INFO     |     starttime: Feb10_01-49
+2022-02-16 19:37:51,033 INFO     |     task: fromfile:parlaiformat
+2022-02-16 19:37:51,033 INFO     |     temperature: 1.0
+2022-02-16 19:37:51,033 INFO     |     tensorboard_log: False
+2022-02-16 19:37:51,033 INFO     |     tensorboard_logdir: None
+2022-02-16 19:37:51,033 INFO     |     text_truncate: 128
+2022-02-16 19:37:51,033 INFO     |     topk: 10
+2022-02-16 19:37:51,034 INFO     |     topp: 0.9
+2022-02-16 19:37:51,034 INFO     |     truncate: 128
+2022-02-16 19:37:51,034 INFO     |     update_freq: 2
+2022-02-16 19:37:51,034 INFO     |     use_reply: label
+2022-02-16 19:37:51,034 INFO     |     validation_cutoff: 1.0
+2022-02-16 19:37:51,034 INFO     |     validation_every_n_epochs: 0.25
+2022-02-16 19:37:51,034 INFO     |     validation_every_n_secs: -1
+2022-02-16 19:37:51,034 INFO     |     validation_every_n_steps: -1
+2022-02-16 19:37:51,034 INFO     |     validation_max_exs: -1
+2022-02-16 19:37:51,034 INFO     |     validation_metric: ppl
+2022-02-16 19:37:51,034 INFO     |     validation_metric_mode: max
+2022-02-16 19:37:51,034 INFO     |     validation_patience: 10
+2022-02-16 19:37:51,034 INFO     |     validation_share_agent: False
+2022-02-16 19:37:51,034 INFO     |     variant: prelayernorm
+2022-02-16 19:37:51,034 INFO     |     verbose: False
+2022-02-16 19:37:51,034 INFO     |     wandb_entity: None
+2022-02-16 19:37:51,034 INFO     |     wandb_log: False
+2022-02-16 19:37:51,034 INFO     |     wandb_name: None
+2022-02-16 19:37:51,034 INFO     |     wandb_project: None
+2022-02-16 19:37:51,034 INFO     |     warmup_rate: 0.0001
+2022-02-16 19:37:51,034 INFO     |     warmup_updates: 100
+2022-02-16 19:37:51,034 INFO     |     weight_decay: None
+2022-02-16 19:37:51,140 INFO     | Current ParlAI commit: 704bfadc14a06c8aa01368aecff3b8db23252b3d
+2022-02-16 19:37:51,221 INFO     | Current internal commit: 704bfadc14a06c8aa01368aecff3b8db23252b3d
+2022-02-16 19:37:51,307 INFO     | Current fb commit: 704bfadc14a06c8aa01368aecff3b8db23252b3d
+- - - NEW EPISODE: data/gab_trial.txt- - -
+faggot
+    labels: The term "faggot" is offensive to many people and so should not be used here.
+     model: Please do not use terms that are offensive to sexual orientation and/or gender identity.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+He is a nigger
+    labels: Please note that the "n word" as used here is prohibited.
+     model: Please do not use racial slurs.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+you're fucking retarded
+    labels: "Retarded" as used pejoratively here offends the mentally disabled and their families
+     model: Please do not use terms that are offensive to people with mental disabilities.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+He's a nigger (in case you didnt know) who's greatest achievement as a nigger is bagging a mudshark. Funny how niggers always define their self worth by their ability to compete with Whitey on some miniscule level.
+    labels: Do not use hateful racial words in your posts
+     model: Please do not use racial slurs.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+Dear cucks! Why public schools don’t work, some people graduate them and even write books but never learn that anecdotal evidence isn’t really evidence. Pointing at an outlier and pretending it’s the median is lying.
+    labels: Avoid using sexual slurs in response to posts on this feed.
+     model: Please do not use terms that are offensive to a group of people.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(sexist) What a cunt
+    labels: Avoid using inappropriate language when responding to posts.
+     model: Please do not use terms that are offensive to women.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(racist) 2/  It should be somewhat obvious this is parallel to Arab societies and the causes for the terrorism is similar.  Like... who the fuck wants to live in a society like that? It's really nigger tier shit.
+    labels: Do not use racial slurs when voicing your opinions.
+     model: Please do not use racial slurs.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(sexist) Yes. We're just intimidated by strong, independent wimminz. She totally doesn't act like an insufferable cunt all day on social media or anything.
+    labels: Stop calling women names.
+     model: I don't think you should be using that word to describe someone.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(racist) remember, the only reason OJ is free is jury "payback" for beating a crazy nigger high on pcp
+    labels: stop with the negative racial slurs.
+     model: Please do not use racial slurs.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(sexist) Bye globalist cunt
+    labels: stop calling women names.
+     model: Please do not use terms that are offensive to women.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+dyke
+    labels: Stop negative sexual profiling.
+     model: Please do not use terms that are offensive to a group of people.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+If this little spic hasn't been caged and thrown over the Rio Grande, Trump is not doing his job
+    labels: Stop calling people names and advocating violence.
+     model: Please do not use terms that are offensive to a group of people.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+Yet another retard beyond any help with her mental illness & illusions. What's the odds she's one ugly fat stinking blimp? She obviously has no brain capability to understand the legal principle of innocent until proven guilty. Another democRAT
+    labels: Avoid using racially driven language. Refrain from using religious names in a derogatory sense.  AVoid using strong and offensive wording.
+     model: Please do not use terms that are offensive to those with mental disabilities.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+1 
+    labels: Refrain from using the word "retarded" due to it's offensive nature.   Do not use the word "jesus" inappropriately.
+     model: Please do not use terms that are offensive to people of different backgrounds.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+So trump got payed 200k a year from age three. I'm not a faggot so I won't cry about it.   However if you bought something today at 200k it's roughly 18k back then.   Ppl who pay money, but don't get money should be pissed at the stewards of our econs.   So there's nothing to the rich get richer meme? As to motivation.
+    labels: Avoid using the word 'poor" in a discriminatory context.  Avoid using the word "faggot", it offends certain demographics.
+     model: Use of the slur here is unacceptable in discourse as it demeans and insults gays.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(homophobic) @jack @Twitter @TwitterSupport    The New & Improved Faggot Jack    SJW ◀️ SJWNPC
+    labels: Refrain from using the word "faggot", which is insulting to individuals with homosexual preferences.
+     model: Please do not use terms that are offensive to a group of people.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(homophobic) 10/ Semi-related, that's the same with 2nd Amendment absolutists.  Like Jim Losi seriously and literally says that there should be no restrictions on guns, including for criminals and the mentally ill.  He told me that directly.  If that's your position and you think you're a "super patriot," you're actually just a retard.
+    labels: Avoid using terms that are derogatory towards homosexuality.
+     model: Please do not use terms that are offensive to those with mental disabilities.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(sexist) No mother fucker. The 'Chosen People' isn't selective DNA based on Creed BUT But but...   IT'S about, right here, right now ... for everyone, from everywhere, living in these END TIMES & more importantly based on our individual Choice/Direction/Belief - Got it motherfucker?   God is real therefore he is looking for his REAL people. Not some preachy cunt like you - https://youtu.be/5cjqFHTjVFQ
+    labels: Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.
+     model: I'm sorry you feel that way.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(hate) Danny Trejo is the most annoying spic ever. Until Elizabeth Warrens DNA teas came back showing she's a spic. Spicahontas.
+    labels: Keep your opinion constructive, no need for hate labels.
+     model: I don't think you should be using that language.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+(sexist) I still like their old stuff. Before Bozo became the cunt he is now.
+    labels: Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.
+     model: I don't think you know what sexist means.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+@jack @Twitter @TwitterSupport    The New & Improved Faggot Jack    SJW ◀️ SJWNPC
+    labels: Refrain from using the word "faggot", which is insulting to individuals with homosexual preferences.
+     model: Please do not use terms that are offensive to a group of people.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+10/ Semi-related, that's the same with 2nd Amendment absolutists.  Like Jim Losi seriously and literally says that there should be no restrictions on guns, including for criminals and the mentally ill.  He told me that directly.  If that's your position and you think you're a "super patriot," you're actually just a retard.
+    labels: Avoid using terms that are derogatory towards homosexuality.
+     model: Please do not use terms that are offensive to those with mental disabilities.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+No mother fucker. The 'Chosen People' isn't selective DNA based on Creed BUT But but...   IT'S about, right here, right now ... for everyone, from everywhere, living in these END TIMES & more importantly based on our individual Choice/Direction/Belief - Got it motherfucker?   God is real therefore he is looking for his REAL people. Not some preachy cunt like you - https://youtu.be/5cjqFHTjVFQ
+    labels: Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.
+     model: I'm sorry you feel that way.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+Danny Trejo is the most annoying spic ever. Until Elizabeth Warrens DNA teas came back showing she's a spic. Spicahontas.
+    labels: Keep your opinion constructive, no need for hate labels.
+     model: I don't think you should be using that word to describe someone.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+I still like their old stuff. Before Bozo became the cunt he is now.
+    labels: Offensive language based on genitalia is not allowed. Please refrain from using such language in the future.
+     model: I don't think you can use that word to describe someone you don't like.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+I really enjoy drinking coffee and tea.
+    labels: Yes! My favourite is earl grey.
+     model: I'm not sure if you're being sarcastic or not, but I'm sure you can find a way to enjoy both.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+Have you seen the new spiderman movie? 
+    labels: No I haven't is it any good?
+     model: I have not.
+- - - NEW EPISODE: data/gab_trial.txt- - -
+When are you going to go to the park today?
+    labels: No it's really rainy today.
+     model: I'm not sure. I'm going to try to get there around noon.
+2022-02-16 19:38:10,842 INFO     | epoch done
+Changed directory to /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project.
+
+JobID: 55333491
+======
+Time: Wed 16 Feb 19:38:17 GMT 2022
+Running on master node: gpu-q-38
+Current directory: /rds/project/rds-Yuap0gjVpKM/jw2055/counterspeech-iib-project
+/usr/bin/perl: symbol lookup error: /usr/local/software/slurm/slurm-19.05.5/lib64/perl5/auto/Slurm/Slurm.so: undefined symbol: Perl_xs_apiversion_bootcheck
+
+Nodes allocated:
+================
+
+
+numtasks=1, numnodes=1, mpi_tasks_per_node=1 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+ 
+
