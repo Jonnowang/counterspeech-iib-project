@@ -184,16 +184,28 @@ avg_score = (w2v_scaled + birnn_scaled + bertscore_scaled)/3
 
 import matplotlib.pyplot as plt
 
+human_idx = [0,4,10]
+beam_idx = [1,5,7]
+ret_idx = [2,3,8]
+beam_2_idx = [6,9,16]
+
 human_scaled = [i[0] for i in human_scaled]
 avg_score = [j[0] for j in avg_score]
 
-a, b = np.polyfit(human_scaled, avg_score, 1)
+model_scores = [sum([avg_score[i] for i in human_idx])/3,sum([avg_score[i] for i in beam_idx])/3,sum([avg_score[i] for i in ret_idx])/3,sum([avg_score[i] for i in beam_2_idx])/3]
+human_scores = [sum([human_scaled[i] for i in beam_idx])/3,sum([human_scaled[i] for i in beam_2_idx])/3,sum([human_scaled[i] for i in ret_idx])/3,sum([human_scaled[i] for i in human_idx])/3]
+print(model_scores, human_scores)
+
+a, b = np.polyfit(model_scores, human_scores, 1)
 x = np.linspace(0,1,101)
 y = a*x + b
 
-plt.scatter(human_scaled, avg_score)
+annotations=["Human","Beam-1","Retrieval","Beam-2"]
+plt.scatter(model_scores, human_scores)
+for i, label in enumerate(annotations):
+    plt.annotate(label, (model_scores[i], human_scores[i]))
 
-corr, _ = pearsonr(human_scaled, avg_score)
+corr, _ = pearsonr(human_scores, model_scores)
 print(corr)
 plt.plot(x,y)
 plt.xlabel("Human Score")
