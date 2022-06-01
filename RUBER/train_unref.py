@@ -10,14 +10,14 @@ __location__ = os.getcwd()
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-train_dir', default=f"{__location__}/RUBER/train")
-    parser.add_argument('-query_file', default=f"{__location__}/RUBER/output/gab_query_short.txt.id60")
-    parser.add_argument('-reply_file', default=f"{__location__}/RUBER/output/gab_response_short.txt.id60")
+    parser.add_argument('-query_file', default=f"{__location__}/RUBER/output/inputs.txt.id60")
+    parser.add_argument('-reply_file', default=f"{__location__}/RUBER/output/human_response.txt.id60")
     parser.add_argument('-batch_size', type=int, default=128)
     parser.add_argument('-checkpoint_freq', help='checkpoint frequency', type=int, default=400)
     parser.add_argument('-query_max_len', default=60, type=int, help='max length of query')
     parser.add_argument('-reply_max_len', default=60, type=int, help='max length of reply')
-    parser.add_argument('-query_embed_file', help='query embedding file', default=f"{__location__}/RUBER/output/gab_query_short.txt.embed")
-    parser.add_argument('-reply_embed_file', help='reply embedding file', default=f"{__location__}/RUBER/output/gab_response_short.txt.embed")
+    parser.add_argument('-query_embed_file', help='query embedding file', default=f"{__location__}/RUBER/output/inputs.txt.embed")
+    parser.add_argument('-reply_embed_file', help='reply embedding file', default=f"{__location__}/RUBER/output/human_response.txt.embed")
     args = parser.parse_args()
 
     model = Unreferenced(

@@ -30,8 +30,8 @@ if __name__ == '__main__':
     parser.add_argument('-min_freq', type=int, default=0, help='min frequency of word')
     parser.add_argument('-query_max_len', default=60, type=int, help='max length of query')
     parser.add_argument('-reply_max_len', default=60, type=int, help='max length of reply')
-    parser.add_argument('-query_file', default=f"{__location__}/RUBER/data/gab_query_short.txt")
-    parser.add_argument('-reply_file', default=f"{__location__}/RUBER/data/gab_response_short.txt")
+    parser.add_argument('-query_file', default=f"{__location__}/RUBER/output_data/inputs.txt")
+    parser.add_argument('-reply_file', default=f"{__location__}/RUBER/output_data/human_response.txt")
     args = parser.parse_args()
 
     make_data(args, args.query_max_len, args.query_file)

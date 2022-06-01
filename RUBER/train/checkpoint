@@ -1,0 +1,6 @@
+model_checkpoint_path: "/home/jonathan/IIB_MEng_Project/RUBER/train/unref.model-2400"
+all_model_checkpoint_paths: "/home/jonathan/IIB_MEng_Project/RUBER/train/unref.model-800"
+all_model_checkpoint_paths: "/home/jonathan/IIB_MEng_Project/RUBER/train/unref.model-1200"
+all_model_checkpoint_paths: "/home/jonathan/IIB_MEng_Project/RUBER/train/unref.model-1600"
+all_model_checkpoint_paths: "/home/jonathan/IIB_MEng_Project/RUBER/train/unref.model-2000"
+all_model_checkpoint_paths: "/home/jonathan/IIB_MEng_Project/RUBER/train/unref.model-2400"
